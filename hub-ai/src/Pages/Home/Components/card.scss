@@ -1,5 +1,5 @@
 .card {
-    width: 250px;
+    width: 300px;
     height: 300px;
     padding: 28px 24px;
 
@@ -377,5 +377,160 @@
 
         box-shadow:
             0 0 25px rgba(236, 72, 153, 0.55);
+    }
+}
+
+.card.grafite {
+    background: rgb(30, 32, 38);
+    border-color: rgb(90, 95, 110);
+
+    #icone1 {
+        background: linear-gradient(
+            145deg,
+            rgb(100, 105, 120),
+            rgb(55, 58, 70)
+        );
+
+        border-color: rgb(155, 160, 175);
+        color: rgb(235, 238, 245);
+
+        box-shadow:
+            0 0 18px rgba(180, 185, 200, 0.25);
+
+        transition: 0.3s ease;
+    }
+
+    a {
+        color: rgb(190, 195, 210);
+
+        transition: 0.3s ease;
+
+        &:hover {
+            color: rgb(255, 255, 255);
+            transform: translateX(5px);
+        }
+    }
+
+    &:hover {
+        border-color: rgb(180, 185, 200);
+
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.4),
+            0 0 25px rgba(180, 185, 200, 0.18);
+    }
+
+    &:hover #icone1 {
+        transform: scale(1.08);
+
+        background: linear-gradient(
+            145deg,
+            rgb(140, 145, 160),
+            rgb(70, 74, 88)
+        );
+
+        box-shadow:
+            0 0 25px rgba(200, 205, 220, 0.4);
+    }
+}
+
+.card.vermelho {
+    background: rgb(53, 15, 20);
+    border-color: rgb(175, 48, 60);
+
+    #icone1 {
+        background: linear-gradient(
+            145deg,
+            rgb(220, 38, 60),
+            rgb(140, 25, 40)
+        );
+
+        border-color: rgb(255, 90, 105);
+        color: rgb(255, 190, 195);
+
+        box-shadow:
+            0 0 18px rgba(220, 38, 60, 0.35);
+    }
+
+    a {
+        color: rgb(255, 85, 105);
+
+        &:hover {
+            color: rgb(255, 190, 195);
+            transform: translateX(5px);
+        }
+    }
+
+    &:hover {
+        border-color: rgb(255, 85, 105);
+
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.35),
+            0 0 25px rgba(220, 38, 60, 0.28);
+    }
+
+    &:hover #icone1 {
+        transform: scale(1.08);
+
+        background: linear-gradient(
+            145deg,
+            rgb(245, 60, 80),
+            rgb(160, 25, 42)
+        );
+
+        box-shadow:
+            0 0 25px rgba(220, 38, 60, 0.55);
+    }
+}
+
+.card.petroleo {
+    background: rgb(8, 42, 48);
+    border-color: rgb(25, 139, 151);
+
+    #icone1 {
+        background: linear-gradient(
+            145deg,
+            rgb(13, 148, 160),
+            rgb(7, 91, 105)
+        );
+
+        border-color: rgb(45, 205, 215);
+        color: rgb(170, 245, 248);
+
+        box-shadow:
+            0 0 18px rgba(13, 148, 160, 0.35);
+
+        transition: 0.3s ease;
+    }
+
+    a {
+        color: rgb(45, 205, 215);
+
+        transition: 0.3s ease;
+
+        &:hover {
+            color: rgb(170, 245, 248);
+            transform: translateX(5px);
+        }
+    }
+
+    &:hover {
+        border-color: rgb(45, 205, 215);
+
+        box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.35),
+            0 0 25px rgba(13, 148, 160, 0.28);
+    }
+
+    &:hover #icone1 {
+        transform: scale(1.08);
+
+        background: linear-gradient(
+            145deg,
+            rgb(34, 211, 220),
+            rgb(8, 115, 130)
+        );
+
+        box-shadow:
+            0 0 25px rgba(13, 148, 160, 0.55);
     }
 }

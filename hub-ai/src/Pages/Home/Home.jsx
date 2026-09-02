@@ -114,8 +114,63 @@ function App() {
             titulo="Bons Prompts"
             info="Crie prompts claros e detalhados para obter respostas melhores da IA."
           />
+
+          <Card 
+            tema='grafite'
+            icone="fa-solid fa-lightbulb"
+            titulo="Ideias de Uso"
+            info="Descubra maneiras práticas e criativas de usar a inteligência artificial no seu dia a dia."
+          />
+
+            <Card 
+            tema='vermelho'
+            icone="fa-solid fa-shield"
+            titulo="Segurança e Privacidade"
+            info="Aprenda a usar IA com segurança, protegendo seus dados e sua privacidade."
+          />
+
+            <Card 
+            tema='petroleo'
+            icone="fa-solid fa-puzzle-piece"
+            titulo="Biblioteca de Prompts"
+            info="Encontre prompts prontos para diferentes situações e adapte-os às suas necessidades."
+          />
         </nav>
       </section>
+
+      <footer className="main-footer">
+        <div className="info-footer">
+          <div className="footer-info">
+              <img src="./Assets/Imgs/CerebroFavIcon.png" alt="" />
+              <div className="text">
+                  <h1><span>IA</span> na Prática</h1>
+                  <p>Inteligência que transforma</p>
+              </div>
+          </div>
+          <p className='bottom-info'>Mais conhecimento, mais ideias, <br />mais possibilidades.</p>
+        </div>
+
+        <div className="links-rapidos">
+          <h3>Links Rápidos</h3>
+          <ul>
+              <li><a href="">Início</a></li>
+              <li><a href="">Sobre</a></li>
+              <li><a href="">Tutoriais</a></li>
+              <li><a href="">Ferramentas</a></li>
+              <li><a href="">Boas Práticas</a></li>
+              <li><a href="">Contato</a></li>
+          </ul>
+        </div>
+
+        <div className="footer-insc">
+          <h2>A inteligência artificial <span>está ao seu alcance</span></h2>
+          <button>
+          <i className="fa-solid fa-brain" />
+            <p>Comece Agora</p>
+          </button>
+        </div>
+          
+      </footer>
       
     </div>
   );

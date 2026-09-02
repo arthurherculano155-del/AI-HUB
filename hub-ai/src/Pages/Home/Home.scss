@@ -236,5 +236,120 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
         margin: auto;
+        gap: 3rem;
+    }
+}
+
+.bottom-info{
+    margin: 1rem 8.2rem;
+}
+
+.main-footer{
+    display: flex;
+    color: white;
+    padding: 3rem;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.247);
+    background: linear-gradient(135deg, rgba(12, 12, 49, 0.637), rgb(20, 0, 109));
+
+    p{
+        color: rgba(230, 230, 230, 0.562);
+    }
+
+    .footer-info{
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+
+        img{
+            width: 70px;
+        }
+
+        h1{
+            font-size: 2.5rem;
+
+            span{
+                color: rgb(97, 40, 230);
+            }
+        }
+    }
+
+    .links-rapidos{
+        h3{
+            font-size: 1.5rem;
+        }
+
+        ul{
+            margin-top: 10px;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: .2s ease;
+
+            &:hover{
+                color: darkviolet;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .footer-insc{
+        width: 250px;
+        padding: 1rem 3rem;
+        background-color: rgba(3, 0, 29, 0.808);
+        border: 2px solid rgb(0, 110, 255);
+        box-shadow: 0px 0px 10px aqua;
+        border-radius: 10px;
+        font-size: 1.2rem;
+
+        span{
+            color: transparent;
+        background: linear-gradient(90deg, rgb(94, 96, 255), rgb(202, 80, 255), rgb(162, 130, 238));
+;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+    button {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        gap: 1rem;
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+        color: white;
+        background: linear-gradient(135deg,
+                rgb(37, 99, 235),
+                rgb(124, 58, 237),
+                rgb(192, 38, 211));
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: .2s;
+
+        p{
+            color: white;
+            text-align: center;
+        }
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    button:active {
+        transform: scale(.95);
+        background: linear-gradient(135deg,
+                rgba(37, 100, 235, .8),
+                rgba(124, 58, 237, .8),
+                rgba(191, 38, 211, .8));
+    }
     }
 }
