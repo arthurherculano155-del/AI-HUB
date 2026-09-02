@@ -71,7 +71,10 @@ body{
     padding: 1.5rem 4rem;
     font-size: 1.7rem;
     color: white;
-    background: linear-gradient(45deg, rgb(63, 20, 253), rgb(180, 148, 255) 50%);
+    background: linear-gradient(135deg, 
+    rgb(37, 99, 235), 
+    rgb(124, 58, 237),
+    rgb(192, 38, 211));
     border: none;
     cursor: pointer;
     border-radius: 10px;
