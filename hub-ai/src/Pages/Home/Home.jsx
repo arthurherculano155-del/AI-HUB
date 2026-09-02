@@ -80,11 +80,11 @@ function App() {
         <h2>Por onde você quer começar?</h2>
 
         <nav className="card">
-            <Card id="Card1">
-              icone="fa-solid fa-brief-case"
+           <Card
+            icone="fa-solid fa-house"
               titulo="No trabalho"
               info="Aumente sua produtividade, automatize suas tarefas e tome decisões melhores"
-            </Card>
+           />
         </nav>
       </section>
       
