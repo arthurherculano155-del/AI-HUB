@@ -22,10 +22,10 @@ function App() {
           <ul className='Links'>
 
             <li className="link">
-              <a href="">Início</a>
+              <a href="#inicio">Início</a>
             </li>
             <li className="link">
-              <a href="">Sobre</a>
+              <a href="#sobre">Sobre</a>
             </li>
             <li className="link">
               <a href="">Tutoriais</a>
@@ -50,7 +50,7 @@ function App() {
         </button>
       </header>
 
-      <section className="hero-section">
+      <section className="hero-section" id='inicio'>
         <nav className="hero-nav">
           <div className="hero-text">
 
@@ -76,15 +76,44 @@ function App() {
 
       <hr className="hr" />
 
-      <section className="info-section">
+      <section className="info-section" id='sobre'>
         <h2>Por onde você quer começar?</h2>
 
-        <nav className="card">
+        <nav className='cards'>
            <Card
-            icone="fa-solid fa-house"
+           tema='azul'
+            icone="fa-solid fa-briefcase"
               titulo="No trabalho"
-              info="Aumente sua produtividade, automatize suas tarefas e tome decisões melhores"
+              info="Aumente sua produtividade e encontre novas oportunidades."
            />
+
+          <Card 
+            tema='verde'
+            icone="fa-solid fa-graduation-cap"
+            titulo="Nos Estudos"
+            info="Aprenda mais rápido, resuma conteúdos e organize suas ideias"
+          />
+
+          <Card 
+            tema='laranja'
+            icone="fa-solid fa-store"
+            titulo="Nos Negócios"
+            info="Melhore vendas, organize processos e faça sua empresa crescer."
+          />
+
+          <Card 
+            tema='roxo'
+            icone="fa-solid fa-file"
+            titulo="Na Vida Cotidiana"
+            info="Resolva problemas do dia a dia, organize tarefas e organize seu tempo."
+          />
+
+          <Card 
+            tema='rosa'
+            icone="fa-solid fa-comment-dots"
+            titulo="Bons Prompts"
+            info="Crie prompts claros e detalhados para obter respostas melhores da IA."
+          />
         </nav>
       </section>
       

@@ -12,7 +12,15 @@ html {
 body {
     overflow-x: hidden;
     font-family: "MontSerrat", sans-serif;
-    background: linear-gradient(90deg, rgb(2, 0, 7), rgb(9, 0, 34), rgb(16, 0, 59));
+        background:
+        radial-gradient(circle at 85% 50%,
+            rgba(45, 20, 120, 0.35),
+            transparent 55%),
+        linear-gradient(110deg,
+            #000000 0%,
+            #070014 35%,
+            #150035 70%,
+            #090b30 100%);
 }
 
 .Home-Header {
@@ -21,6 +29,12 @@ body {
     background-color: black;
     color: rgb(238, 238, 238);
     align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    scroll-margin-top: 90px;
 
     .Menu-Info {
         display: flex;
@@ -100,23 +114,19 @@ body {
 }
 
 .hero-section {
+    margin-top: 80px;
     display: flex;
+    padding: 2rem 0;
     justify-content: space-between;
     gap: 3rem;
     color: white;
-    background:
-        radial-gradient(circle at 85% 50%,
-            rgba(45, 20, 120, 0.35),
-            transparent 55%),
-        linear-gradient(110deg,
-            #000000 0%,
-            #070014 35%,
-            #150035 70%,
-            #090b30 100%);
+    scroll-margin-top: 90px;
 
     .robot {
         object-fit: cover;
         filter: blur(0);
+        border-radius: 20px;
+        margin: 0 3rem;
     }
 
     .robot::after {
@@ -210,15 +220,21 @@ body {
 }
 
 .info-section{
+    scroll-margin-top: 90px;
+
     h2{
         color: white;
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-top: 10px;
     }
 
-    #Card1{
-        border: 1px solid white;
-        color: white;
+    .cards{
+        padding: 3rem 0;
+        display: flex;
+        margin: 0 3rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
     }
 }
