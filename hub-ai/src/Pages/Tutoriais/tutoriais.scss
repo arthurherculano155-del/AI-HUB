@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "MontSerrat", sans-serif;
+    background:
+        radial-gradient(circle at 85% 50%,
+            rgba(45, 20, 120, 0.35),
+            transparent 55%),
+        linear-gradient(110deg,
+            #000000 0%,
+            #070014 35%,
+            #150035 70%,
+            #090b30 100%);
+}
+
+.tutoriais {
+    .hero-section {
+        display: flex;
+        justify-content: space-between;
+
+        .Info-Tut {
+            width: 680px;
+            border-radius: 20px;
+            margin: -10px 20px;
+        }
+
+        .hero-info {
+            margin: 1rem 4rem;
+
+            p {
+                font-size: 1.6rem;
+                color: rgba(255, 255, 255, 0.726);
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 5.5rem;
+
+                span {
+                    background: linear-gradient(90deg, rgb(43, 46, 226), darkviolet, rgb(162, 130, 238));
+                    color: transparent;
+                    background-clip: text;
+                }
+            }
+
+            .heroText {
+                display: flex;
+                width: 150px;
+                gap: 1rem;
+                align-items: center;
+                font-size: 1.5rem;
+                padding: 5px 20px;
+                background: linear-gradient(130deg, rgba(72, 1, 94, 0.979), rgba(104, 0, 148, 0.753));
+                border-radius: 1000px;
+                border: 1px solid violet;
+            }
+        }
+    }
+
+    .informations {
+        margin-top: 15px;
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.linha {
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.videos .tuts {
+    img{
+        width: 40vw;
+        border-radius: 20px;
+    }
+
+    .vid {
+        font-size: 1.8rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        margin: 1.5rem;
+
+        i{
+            padding: 2rem;
+            font-size: 2.5rem;
+            width: 70px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, rgb(43, 46, 226), darkviolet, rgb(162, 130, 238));
+        }
+    }
+
+}

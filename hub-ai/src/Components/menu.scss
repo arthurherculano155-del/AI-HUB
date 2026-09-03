@@ -1,0 +1,89 @@
+.Home-Header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: rgb(238, 238, 238);
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    scroll-margin-top: 90px;
+
+    .Menu-Info {
+        display: flex;
+        gap: .5rem;
+        font-size: 1.4rem;
+        align-items: center;
+
+        .icone {
+            width: 60px;
+            margin: 1rem 3rem;
+        }
+
+        h1 span {
+            color: rgb(97, 40, 230);
+        }
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.562);
+    }
+
+    .Bnt-Links {
+        .Links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            font-size: 1.45rem;
+
+            li a {
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+                transition: .2s ease;
+            }
+
+            li a:hover {
+                color: rgba(168, 85, 247, 0.8);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .startNow {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 0rem 3rem;
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+        color: white;
+        background: linear-gradient(135deg,
+                rgb(37, 99, 235),
+                rgb(124, 58, 237),
+                rgb(192, 38, 211));
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: 700;
+        transition: .2s;
+
+        p{
+            color: white;
+        }
+    }
+
+    .startNow:hover {
+        transform: scale(1.05);
+    }
+
+    .startNow:active {
+        transform: scale(.95);
+        background: linear-gradient(135deg,
+                rgba(37, 100, 235, .8),
+                rgba(124, 58, 237, .8),
+                rgba(191, 38, 211, .8));
+    }
+}

@@ -28,15 +28,6 @@ export default function Card({
                 {info}
             </p>
 
-            <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-            >
-                Explorar Mais
-
-                <i className="fa-solid fa-arrow-right-long" />
-            </a>
-
         </div>
 
     );
