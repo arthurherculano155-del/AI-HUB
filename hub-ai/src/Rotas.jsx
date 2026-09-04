@@ -1,6 +1,6 @@
 import './index.scss';
 import App from './Pages/Home/Home.jsx';
-import Tutoriais from './Pages/Tutoriais/tutoriais,.jsx';
+import Tutoriais from './Pages/Tutoriais/tutoriais.jsx';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 export default function Router(){

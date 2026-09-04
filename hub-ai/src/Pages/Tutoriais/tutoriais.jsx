@@ -1,6 +1,7 @@
 import './tutoriais.scss';
 import Menu from '../../Components/menu';
 import CardInfo from '../../Components/cardInfo';
+import Video from '../../Components/videos';
 
 export default function Tutoriais() {
     return (
@@ -83,10 +84,18 @@ export default function Tutoriais() {
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div className="categorias">
-
-                </div>
+            <section className="videos">
+                <Video
+                    link="https://www.youtube.com/watch?v=oFGXr2pgKLY&t=9s"
+                    imagem="Capa-Video-Basico.png"
+                    tempo="8:18"
+                    titulo="
+Engenharia De Prompt: 7 Passos Para O Prompt Perfeito | ChatGPT"
+                    desc="Entenda como criar um prompt bom no ChatGPT através da Engenharia de Prompt."
+                    nivel="Básico"
+                />
             </section>
         </div>
     );

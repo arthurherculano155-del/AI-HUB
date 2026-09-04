@@ -1,0 +1,39 @@
+.video {
+    color: white;
+    width: 25vw;
+    height: 400px;
+    border-radius: 20px;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 0, 70, 0.4),
+        rgba(0, 0, 100, 0.4)
+    );
+
+    img {
+        width: 100%;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .card-text {
+        width: 4vw;
+        z-index: 800;
+        top: 118.5vh;
+        left: 20vw;
+        position: absolute;
+        padding: 5px 15px;
+        border-radius: 1000px;
+        background: linear-gradient(
+        90deg,
+        rgb(43, 46, 226), 
+        darkviolet, 
+        rgb(162, 130, 238));
+    }
+
+    .texts{
+        h2{
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    }
+}
