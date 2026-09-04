@@ -47,7 +47,7 @@ export default function Tutoriais() {
 
             <hr className='linha' />
 
-            <section className="videos">
+            <section className="videos" id='sobre'>
                 <div className="tuts">
                     <div className="vid">
                         <i class="fa-solid fa-play" />
