@@ -3,11 +3,15 @@
     width: 25vw;
     height: 400px;
     border-radius: 20px;
-    background: linear-gradient(
-        145deg,
-        rgba(0, 0, 70, 0.4),
-        rgba(0, 0, 100, 0.4)
-    );
+    background:
+        radial-gradient(circle at 85% 50%,
+            rgba(0, 80, 255, 0.35),
+            transparent 55%),
+        linear-gradient(110deg,
+            #000000 0%,
+            #000d2e 35%,
+            #001f66 70%,
+            #06164d 100%);
 
     img {
         width: 100%;
@@ -23,17 +27,35 @@
         position: absolute;
         padding: 5px 15px;
         border-radius: 1000px;
-        background: linear-gradient(
-        90deg,
-        rgb(43, 46, 226), 
-        darkviolet, 
-        rgb(162, 130, 238));
+        background: linear-gradient(90deg,
+                rgb(43, 46, 226),
+                darkviolet,
+                rgb(162, 130, 238));
     }
 
-    .texts{
-        h2{
+    .texts {
+        h2 {
             font-size: 20px;
             margin: 20px 0;
         }
+
+        p{
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 30px;
+        }
+    }
+
+    .nivelamento{
+        display: flex;
+        margin-top: 30px;
+        background: 
+         linear-gradient(90deg,
+                rgb(43, 46, 226),
+                darkviolet,
+                rgb(162, 130, 238));;
+        padding: 5px 10px;
+        gap: 10px;
+        font-size: 15px;
     }
 }

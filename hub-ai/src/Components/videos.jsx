@@ -2,16 +2,18 @@ import "./videos.scss";
 
 export default function Video({
     link,
-    imagem, 
-    tempo, 
-    titulo, 
-    desc, 
-    nivel}
-){
-    return(
+    imagem,
+    tempo,
+    titulo,
+    desc,
+    nivel }
+) {
+    return (
         <nav className="video">
-            <a href={`${link}`}></a>
-            <img src={`./Assets/Imgs/${imagem}`} alt="" />
+            <a href={`${link}`}>
+                <img src={`./Assets/Imgs/${imagem}`} alt="" />
+            </a>
+
             <div className="card-text">
                 <h3>{tempo}</h3>
             </div>
@@ -23,7 +25,7 @@ export default function Video({
 
             <div className="nivelamento">
                 <i className="fa-solid fa-chart-simple" />
-                <h4>{nivel}</h4> 
+                <h4>{nivel}</h4>
             </div>
         </nav>
     )
