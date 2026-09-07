@@ -1,52 +1,23 @@
 import './tutoriais.scss';
 import Menu from '../../Components/menu';
+import HeroSection from '../../Components/hero';
 import CardInfo from '../../Components/cardInfo';
 import Video from '../../Components/videos';
+import Rodape from '../../Components/rodape';
 
 export default function Tutoriais() {
     return (
         <div className="tutoriais">
             <Menu />
 
-            <section className="hero-section">
-
-                <div className="hero-info">
-                    <div className="heroText">
-                        <i class="fa-solid fa-play" />
-                        <h3>Tutoriais</h3>
-                    </div>
-
-                    <h1>Aprenda IA <br />
-
-                        <span>passo a passo</span>
-
-                    </h1>
-
-                    <p>Aqui você encontra tutoriais completos, em vídeo e texto, para dominar as principais ferramentas de Inteligência Artificial e aplicar ao seu dia a dia</p>
-
-                    <div className="informations">
-                        <CardInfo
-                            icon='circle-play'
-                            content='Vídeos Explicativos'
-                        />
-
-                        <CardInfo
-                            icon='file'
-                            content='Passo a passo detalhado'
-                        />
-
-                        <CardInfo
-                            icon='bolt'
-                            content='Do básico ao avançado'
-                        />
-                    </div>
-                </div>
-
-                <img src="./Assets/Imgs/RobotTut.png" alt="" className='Info-Tut' />
-
-            </section>
-
-            <hr className='linha' />
+            <HeroSection
+                indice="Tutoriais"
+                icone="play"
+                text="Aprenda IA "
+                span="passo a passo"
+                desc="Aqui você encontra tutoriais completos para dominar as principais ferramentas de IA e utilizar no seu dia a dia."
+                imagem='RobotTuts.png'
+            />
 
             <section className="videos" id='sobre'>
                 <div className="tuts">
@@ -62,7 +33,7 @@ export default function Tutoriais() {
 
                         <div className="destaque">
                             <i class='fa-solid fa-fire' />
-                            <p>MAIS ASSISTIDO</p>
+                            <p>MAIS RECOMENDADO</p>
                         </div>
 
                         <div className="info">
@@ -86,17 +57,50 @@ export default function Tutoriais() {
                 </div>
             </section>
 
+            <div className="text-inf">
+                <i class="fa-brands fa-youtube" />
+                <h3>Tutoriais Interessantes</h3>
+            </div>
+
             <section className="videos">
                 <Video
                     link="https://www.youtube.com/watch?v=oFGXr2pgKLY&t=9s"
                     imagem="Capa-Video-Basico.png"
                     tempo="8:18"
-                    titulo="
-Engenharia De Prompt: 7 Passos Para O Prompt Perfeito | ChatGPT"
-                    desc="Entenda como criar um prompt bom no ChatGPT através da Engenharia de Prompt."
+                    titulo="Engenharia De Prompt: 7 Passos Para O Prompt Perfeito"
+                    desc="Entenda como criar um bom prompt no ChatGPT através da Engenharia de Prompt."
                     nivel="Básico"
                 />
+
+                <Video
+                    link="https://www.youtube.com/watch?v=aQqyi3E1AVc"
+                    imagem="Capa-Video-MidJourney.png"
+                    tempo="15:10"
+                    titulo="Midjourney - Como Criar Imagens com IA [Inteligência Artificial]"
+                    desc="Aprenda a criar imagens incríveis com Inteligência Artificial de forma simples usando o Midjourney."
+                    nivel="Básico"
+                />
+
+                <Video
+                    link="https://www.youtube.com/watch?v=3Ic0XCtvoY8"
+                    imagem="Capa-Video-Cowork.png"
+                    tempo="15:59"
+                    titulo="Como automatizar QUALQUER tarefa com o Claude Cowork"
+                    desc="Aprenda a automatizar tarefas de forma prática e eficiente usando o Claude Cowork."
+                    nivel="Intermediário"
+                />
+
+                <Video
+                    link="https://www.youtube.com/watch?v=LB4IJVrYBZ8"
+                    imagem="Capa-Video-Dados.png"
+                    tempo="13:15"
+                    titulo="Masterizando a Análise de Dados com ChatGPT (em apenas 10 minutos)"
+                    desc="Aprenda a analisar dados de forma rápida e eficiente usando os recursos do ChatGPT."
+                    nivel="Intermediário"
+                />
             </section>
+
+            <Rodape />
         </div>
     );
 }

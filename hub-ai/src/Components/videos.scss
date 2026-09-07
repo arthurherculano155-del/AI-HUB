@@ -1,8 +1,12 @@
 .video {
     color: white;
-    width: 25vw;
-    height: 400px;
+    transition: .2s ease-out;
+    width: 22vw;
+    height: auto;
     border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
     background:
         radial-gradient(circle at 85% 50%,
             rgba(0, 80, 255, 0.35),
@@ -13,18 +17,22 @@
             #001f66 70%,
             #06164d 100%);
 
-    img {
-        width: 100%;
-        border-radius: 20px;
+    .img {
         position: relative;
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
     }
 
     .card-text {
+        text-align: center;
         width: 4vw;
-        z-index: 800;
-        top: 118.5vh;
-        left: 20vw;
-        position: absolute;
+        float: right;
+        position: relative;
+        margin-top: -5.7vh;
+        margin-right: .5vw;
         padding: 5px 15px;
         border-radius: 1000px;
         background: linear-gradient(90deg,
@@ -33,32 +41,43 @@
                 rgb(162, 130, 238));
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
     .texts {
         h2 {
             font-size: 20px;
-            margin: 20px 0;
+            margin: 10px 0;
         }
 
-        p{
+        p {
             font-size: 16px;
             color: rgba(255, 255, 255, 0.5);
             line-height: 30px;
         }
     }
 
-    .nivelamento{
+    .nivelamento {
+        align-items: center;
         display: flex;
-        margin-top: 30px;
-        width: 30%;
-        margin: 10px 10px;
+        justify-content: center;
+        width: 50%;
         border-radius: 1000px;
-        background: 
-         linear-gradient(90deg,
+        background:
+            linear-gradient(90deg,
                 rgb(43, 46, 226),
                 darkviolet,
-                rgb(162, 130, 238));;
+                rgb(162, 130, 238));
+        ;
         padding: 5px 10px;
         gap: 10px;
         font-size: 15px;
+        margin-top: 20px;
+    }
+
+    &:hover{
+        transform: scale(1.04) translateY(-8px);
     }
 }

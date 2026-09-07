@@ -1,0 +1,47 @@
+html{
+    font-size: 10px;
+}
+
+.informacao {
+    display: flex;
+    background: linear-gradient(135deg, 
+    rgba(60, 0, 139, 0.2), 
+    rgba(36, 0, 77, 0.2));
+    width: 29vw;
+    height: 30vh;
+    border-radius: 15px;
+    border: 1.5px solid rgb(72, 0, 139);
+    padding: 2rem 2.5rem;
+    gap: 2rem;
+    color: white;
+    align-items: center;
+    transition: .2s;
+
+    .iconelegal{
+        i{
+            font-size: 4rem;
+            padding: 1.5rem 3.5rem;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg,
+            rgb(112, 0, 204),
+            rgb(71, 0, 153));
+            border-radius: 15px;
+        }
+    }
+
+    .infoIAs{
+        h2{
+            font-size: 2.5rem;
+        }
+
+        p{
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.6rem;
+        }
+    }
+
+    &:hover{
+        transform: scale(1.05) translateY(-8px);
+    }
+}

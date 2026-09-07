@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "MontSerrat", sans-serif;
+    background:
+        radial-gradient(circle at 85% 50%,
+            rgba(45, 20, 120, 0.35),
+            transparent 55%),
+        linear-gradient(110deg,
+            #000000 0%,
+            #070014 35%,
+            #150035 70%,
+            #090b30 100%);
+}
+
+.infor {
+    display: flex;
+    width: 40vw;
+    align-items: center;
+    scroll-margin-top: 100px;
+    color: white;
+    font-size: 2.5rem;
+    gap: 2rem;
+    margin: 2rem 3rem;
+
+    .info{
+        p{
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    i {
+        padding: 1.3rem 3.5rem;
+        display: flex;
+        border: 2px solid rgb(0, 153, 255);
+
+        background: linear-gradient(135deg,
+            rgba(0, 81, 255, 0.7), 
+            rgba(179, 0, 255, 0.7));
+
+        justify-content: center;
+        border-radius: 20px;
+
+
+        font-size: 4.5rem;
+    }
+}
+
+.ferramentas {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 5rem;
+    flex-wrap: wrap;
+}

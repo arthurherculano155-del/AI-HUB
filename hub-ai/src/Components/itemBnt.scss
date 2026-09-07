@@ -1,0 +1,118 @@
+.item-legal {
+    background: linear-gradient(90deg,
+            rgba(34, 0, 66, 0.2),
+            rgba(83, 0, 139, 0.2));
+    border-radius: 15px;
+    border: 1px solid blueviolet;
+    width: 35vw;
+    align-items: center;
+    padding: 3rem;
+    display: flex;
+    gap: 2rem;
+
+    transition: .3s ease;
+
+    h4 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-weight: normal;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1.6rem;
+    }
+
+    i {
+        padding: 1rem 3rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        background: darkviolet;
+        font-size: 4rem;
+
+        transition: .3s ease;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        border-color: rgb(190, 80, 255);
+        box-shadow: 0 8px 25px rgba(148, 0, 211, 0.25);
+
+        i {
+            background: rgb(170, 0, 230);
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+.item-legal.azul {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 34, 66, 0.2),
+        rgba(0, 83, 139, 0.2)
+    );
+
+    border: 1px solid rgb(0, 132, 255);
+
+    i {
+        background: rgb(0, 89, 190);
+    }
+
+    &:hover {
+        border-color: rgb(50, 160, 255);
+        box-shadow: 0 8px 25px rgba(0, 132, 255, 0.25);
+
+        i {
+            background: rgb(0, 115, 230);
+        }
+    }
+}
+
+
+.item-legal.verde {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 66, 45, 0.2),
+        rgba(0, 139, 95, 0.2)
+    );
+
+    border: 1px solid rgb(0, 190, 120);
+
+    i {
+        background: rgb(0, 145, 92);
+    }
+
+    &:hover {
+        border-color: rgb(0, 230, 145);
+        box-shadow: 0 8px 25px rgba(0, 190, 120, 0.25);
+
+        i {
+            background: rgb(0, 180, 115);
+        }
+    }
+}
+
+
+.item-legal.rosa {
+    background: linear-gradient(
+        90deg,
+        rgba(66, 0, 45, 0.2),
+        rgba(139, 0, 95, 0.2)
+    );
+
+    border: 1px solid rgb(255, 0, 153);
+
+    i {
+        background: rgb(190, 0, 114);
+    }
+
+    &:hover {
+        border-color: rgb(255, 60, 175);
+        box-shadow: 0 8px 25px rgba(255, 0, 153, 0.25);
+
+        i {
+            background: rgb(225, 0, 135);
+        }
+    }
+}

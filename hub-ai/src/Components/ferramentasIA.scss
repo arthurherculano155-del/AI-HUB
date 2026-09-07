@@ -1,0 +1,74 @@
+html {
+    font-size: 10px;
+}
+
+.ferramenta {
+    display: flex;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 139, 0.2),
+            rgba(0, 0, 77, 0.2));
+    width: 27vw;
+    border-radius: 15px;
+    border: 1.5px solid darkblue;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    color: white;
+    transition: .3s ease-out;
+
+    .img {
+        img {
+            width: 80px;
+            border-radius: 20px;
+        }
+    }
+
+    .infoIA {
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.4rem;
+        }
+
+        .tipo {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 2vh;
+            font-size: 1.3rem;
+
+            h3 {
+                padding: .5rem 1rem;
+                font-size: 1.4rem;
+                border-radius: 10000px;
+                color: aqua;
+                background: rgba(0, 167, 167, 0.3);
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            i {
+                padding: .9rem 1.5rem;
+                display: flex;
+                justify-content: center;
+                border-radius: 1000px;
+                background: rgb(0, 0, 100);
+            }
+        }
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 15px blue;
+        border: 1px solid blue;
+        background: linear-gradient(135deg,
+                rgba(0, 0, 223, 0.3),
+                rgba(0, 0, 206, 0.3));
+    }
+}

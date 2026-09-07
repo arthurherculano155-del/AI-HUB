@@ -1,0 +1,51 @@
+.item-possibilidade {
+
+        cursor: default;
+
+
+    li {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        padding: 8px;
+        border-radius: 15px;
+        border: 1px solid blue;
+        background: rgba(0, 0, 139, 0.2);
+        align-items: center;
+        transition: .2s ease-out;
+
+        &:hover{
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        i {
+            padding: 10px 30px;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            border-radius: 10px;
+            background: linear-gradient(110deg, rgb(12, 0, 173), rgb(0, 11, 105));
+        }
+
+        h2{
+            font-size: 17px;
+        }
+
+        h3{
+            font-size: 10px;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 5px;
+        }
+    }
+}
+
+.item-possibilidade.roxo{
+    li{
+        border: 1px solid darkviolet;
+        background: rgba(83, 0, 139, 0.2);
+    }
+    i{
+        background: linear-gradient(110deg, rgb(118, 0, 173), rgb(72, 0, 105));
+    }
+}

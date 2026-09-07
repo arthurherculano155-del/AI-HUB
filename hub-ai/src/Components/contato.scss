@@ -1,0 +1,140 @@
+html {
+    font-size: 10px;
+}
+
+.contato {
+    display: flex;
+    background: linear-gradient(
+        135deg,
+        rgba(60, 0, 139, 0.2),
+        rgba(36, 0, 77, 0.2)
+    );
+
+    width: 29vw;
+    height: 30vh;
+
+    border-radius: 15px;
+    border: 1.5px solid rgb(72, 0, 139);
+
+    padding: .5rem 1rem;
+    gap: 2rem;
+
+    color: white;
+    align-items: center;
+
+    transition: .2s;
+
+    .img {
+        i {
+            font-size: 4rem;
+            padding: 1.5rem 3.5rem;
+
+            display: flex;
+            justify-content: center;
+
+            background: linear-gradient(
+                90deg,
+                rgb(112, 0, 204),
+                rgb(71, 0, 153)
+            );
+
+            border-radius: 15px;
+        }
+    }
+
+    .infoContato {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a,
+        button {
+            text-decoration: none;
+            color: white;
+
+            background: none;
+            border: none;
+            padding: 0;
+
+            cursor: pointer;
+
+            i {
+                padding: 1rem 2rem;
+
+                font-size: 2rem;
+
+                background: rgba(179, 0, 255, 0.1);
+
+                border: 1px solid darkviolet;
+                border-radius: 1000px;
+
+                display: flex;
+                justify-content: center;
+
+                transition: .2s;
+            }
+
+            &:hover {
+                i {
+                    transform: scale(1.08);
+                    background: rgba(179, 0, 255, 0.2);
+                }
+            }
+
+            &:active {
+                i {
+                    transform: scale(.95);
+                }
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.4rem;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05) translateY(-8px);
+    }
+}
+
+.contato.azul {
+    border: 1.5px solid rgb(0, 14, 139);
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 2, 139, 0.2),
+        rgba(1, 0, 77, 0.2)
+    );
+
+    .img {
+        i {
+            background: linear-gradient(
+                90deg,
+                rgb(0, 3, 204),
+                rgb(15, 0, 153)
+            );
+        }
+    }
+
+    .infoContato {
+        a,
+        button {
+            i {
+                border: 1px solid rgb(0, 21, 211);
+                background: rgba(38, 0, 255, 0.1);
+            }
+
+            &:hover {
+                i {
+                    background: rgba(38, 0, 255, 0.2);
+                }
+            }
+        }
+    }
+}

@@ -220,7 +220,7 @@ export default function Modal({
           className="modal-fechar"
           onClick={fechar}
         >
-          ×
+          X
         </button>
 
 

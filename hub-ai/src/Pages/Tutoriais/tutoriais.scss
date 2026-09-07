@@ -23,64 +23,8 @@ body {
             #090b30 100%);
 }
 
-.tutoriais {
-    .hero-section {
-        display: flex;
-        justify-content: space-between;
-
-        .Info-Tut {
-            width: 680px;
-            border-radius: 20px;
-            margin: -10px 20px;
-        }
-
-        .hero-info {
-            margin: 1rem 4rem;
-
-            p {
-                font-size: 1.6rem;
-                color: rgba(255, 255, 255, 0.726);
-                margin-top: 10px;
-            }
-
-            h1 {
-                font-size: 5.5rem;
-
-                span {
-                    background: linear-gradient(90deg, rgb(43, 46, 226), darkviolet, rgb(162, 130, 238));
-                    color: transparent;
-                    background-clip: text;
-                }
-            }
-
-            .heroText {
-                display: flex;
-                width: 150px;
-                gap: 1rem;
-                align-items: center;
-                font-size: 1.5rem;
-                padding: 5px 20px;
-                background: linear-gradient(130deg, rgba(72, 1, 94, 0.979), rgba(104, 0, 148, 0.753));
-                border-radius: 1000px;
-                border: 1px solid violet;
-            }
-        }
-    }
-
-    .informations {
-        margin-top: 15px;
-        display: flex;
-        gap: 2rem;
-    }
-}
-
-.linha {
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.videos{
-    scroll-margin-top: 90px;
+.videos {
+    scroll-margin-top: 80px;
 }
 
 .videos .tuts {
@@ -91,11 +35,12 @@ body {
 
     .vid {
         font-size: 1.8rem;
+        margin: 20px 0;
+        margin-right: 930px;
         color: white;
         display: flex;
         align-items: center;
         gap: 2rem;
-        margin: 1.5rem;
 
         i {
             padding: 1.5rem;
@@ -107,7 +52,7 @@ body {
     }
 
     .video-destaque {
-        margin: 30px auto;
+        margin: 10px auto;
         position: relative;
         display: flex;
         width: 90vw;
@@ -129,7 +74,7 @@ body {
             font-size: 1.8rem;
             align-items: center;
             position: absolute;
-            left: 560px;
+            left: 41vw;
             top: 10px;
             color: white;
             font-weight: bold;
@@ -148,14 +93,14 @@ body {
                 margin: 0 20px;
             }
 
-            p{
+            p {
                 color: rgba(255, 255, 255, 0.8);
                 font-size: 1.8rem;
                 margin: 10px 20px;
             }
         }
 
-        .cardss{
+        .cardss {
             margin: 10px 20px;
             display: flex;
             margin-top: 10px;
@@ -163,4 +108,28 @@ body {
         }
     }
 
+}
+
+.text-inf {
+    display: flex;
+    font-size: 2.5rem;
+    gap: 1rem;
+    margin: 0 30px;
+    align-items: center;
+
+    i {
+        color: red;
+        font-size: 7rem;
+        border-radius: 100px;
+    }
+
+    h3 {
+        color: white;
+    }
+}
+
+.videos {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0;
 }

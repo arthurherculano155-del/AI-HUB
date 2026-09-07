@@ -1,0 +1,283 @@
+.ferramentas-utils {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.ferramenta-card {
+    position: relative;
+    min-height: 205px;
+    padding: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: .8;
+        z-index: -1;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+
+        .ferramenta-seta {
+            transform: translateX(4px);
+        }
+
+        .ferramenta-icone {
+            transform: scale(1.07);
+        }
+    }
+}
+
+.ferramenta-card-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.ferramenta-icone {
+    min-width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    transition: .3s;
+
+    i {
+        color: white;
+    }
+}
+
+.ferramenta-info {
+    flex: 1;
+
+    h3 {
+        margin: 0 0 .8rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    p {
+        margin-top: 25px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        line-height: 1.55;
+    }
+}
+
+.ferramenta-seta {
+    min-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+
+    i {
+        color: white;
+        font-size: 1.4rem;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+}
+
+.ferramenta-detalhe {
+    width: fit-content;
+    margin-top: 1.5rem;
+    padding: .65rem 1.2rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-size: .95rem;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    i {
+        font-size: 1rem;
+    }
+}
+
+
+// AZUL
+.ferramenta-card.azul {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(0, 119, 255, .3), transparent 40%),
+        linear-gradient(135deg, rgba(0, 39, 105, .95), rgba(0, 17, 55, .95));
+
+    border-color: #008cff;
+
+    box-shadow: inset 0 0 40px rgba(0, 132, 255, .1);
+
+    .ferramenta-icone {
+        background: linear-gradient(135deg, #00aaff, #005cff);
+        box-shadow: 0 0 30px rgba(0, 132, 255, .6);
+    }
+
+    .ferramenta-detalhe {
+        background: rgba(0, 102, 255, .18);
+    }
+}
+
+
+// ROSA
+.ferramenta-card.rosa {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 0, 149, .25), transparent 40%),
+        linear-gradient(135deg, rgba(90, 0, 70, .95), rgba(40, 0, 40, .95));
+
+    border-color: #ff20a8;
+
+    box-shadow: inset 0 0 40px rgba(255, 0, 149, .1);
+
+    .ferramenta-icone {
+        background: linear-gradient(135deg, #ff3cb4, #c90076);
+        box-shadow: 0 0 30px rgba(255, 0, 149, .55);
+    }
+
+    .ferramenta-detalhe {
+        background: rgba(255, 0, 149, .15);
+    }
+}
+
+
+// VERDE
+.ferramenta-card.verde {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 255, 157, .22), transparent 40%),
+        linear-gradient(135deg, rgba(0, 80, 57, .95), rgba(0, 35, 28, .95));
+
+    border-color: #00e596;
+
+    box-shadow: inset 0 0 40px rgba(0, 255, 157, .08);
+
+    .ferramenta-icone {
+        background: linear-gradient(135deg, #00e896, #008b61);
+        box-shadow: 0 0 30px rgba(0, 255, 157, .5);
+    }
+
+    .ferramenta-detalhe {
+        background: rgba(0, 210, 132, .14);
+    }
+}
+
+
+// LARANJA
+.ferramenta-card.laranja {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 166, 0, .22), transparent 40%),
+        linear-gradient(135deg, rgba(90, 45, 0, .95), rgba(45, 22, 0, .95));
+
+    border-color: #ffab00;
+
+    box-shadow: inset 0 0 40px rgba(255, 166, 0, .08);
+
+    .ferramenta-icone {
+        background: linear-gradient(135deg, #ffb900, #d97a00);
+        box-shadow: 0 0 30px rgba(255, 174, 0, .5);
+    }
+
+    .ferramenta-detalhe {
+        background: rgba(255, 166, 0, .14);
+        color: #ffd34d;
+    }
+}
+
+
+// ROXO
+.ferramenta-card.roxo {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(103, 64, 255, .28), transparent 40%),
+        linear-gradient(135deg, rgba(50, 20, 120, .95), rgba(25, 10, 65, .95));
+
+    border-color: #744cff;
+
+    box-shadow: inset 0 0 40px rgba(104, 64, 255, .1);
+
+    .ferramenta-icone {
+        background: linear-gradient(135deg, #764bff, #3a14db);
+        box-shadow: 0 0 30px rgba(105, 69, 255, .55);
+    }
+
+    .ferramenta-detalhe {
+        background: rgba(91, 56, 255, .15);
+    }
+}
+
+
+// VERMELHO / PINK
+.ferramenta-card.vermelho {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 0, 95, .24), transparent 40%),
+        linear-gradient(135deg, rgba(90, 0, 50, .95), rgba(48, 0, 35, .95));
+
+    border-color: #ff2779;
+
+    box-shadow: inset 0 0 40px rgba(255, 0, 95, .1);
+
+    .ferramenta-icone {
+        background: linear-gradient(135deg, #ff2d78, #c50054);
+        box-shadow: 0 0 30px rgba(255, 0, 95, .55);
+    }
+
+    .ferramenta-detalhe {
+        background: rgba(255, 0, 95, .15);
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .ferramentas-utils {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .ferramentas-utils {
+        grid-template-columns: 1fr;
+    }
+
+    .ferramenta-card {
+        padding: 1.5rem;
+    }
+
+    .ferramenta-icone {
+        min-width: 65px;
+        height: 65px;
+        font-size: 2.2rem;
+    }
+
+    .ferramenta-info {
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .ferramenta-seta {
+        min-width: 42px;
+        height: 42px;
+    }
+}

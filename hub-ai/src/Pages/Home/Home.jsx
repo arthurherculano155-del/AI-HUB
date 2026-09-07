@@ -6,6 +6,8 @@ import Card from '../../Components/card.jsx';
 import Menu from '../../Components/menu.jsx';
 
 import './Home.scss';
+import Rodape from '../../Components/rodape.jsx';
+import HeroSection from '../../Components/hero.jsx';
 
 
 function App() {
@@ -21,61 +23,18 @@ function App() {
 
       <Menu />
 
-
-      <section className="hero-section" id="inicio">
-
-        <nav className="hero-nav">
-
-          <div className="hero-text">
-
-            <h1 className="hero-info">
-              Use IA de forma<br />
-
-              <span className="hero-span">
-                mais inteligente.
-              </span>
-
-            </h1>
-
-            <p>
-              Aprenda a usar a inteligência artificial para trabalhar
-              melhor, estudar com mais eficiência e resolver problemas
-              do dia a dia.
-            </p>
-
-          </div>
+      <HeroSection
+        indice="Início"
+        icone="rocket"
+        text="Use a IA de forma "
+        span="mais inteligente"
+        desc="Aprenda a utilizar a inteligência artificial para trabalhar melhor, estudar com mais eficiência e resolver problemas do dia a dia."
+        imagem='RobotStart.png'
+      /> 
 
 
-          <div className="hero-bnts">
 
-            <button className="bnt">
-              <i className="fa-solid fa-rocket" />
-              <p>Explorar Conteúdos</p>
-            </button>
-
-            <button
-              className="bnt"
-              id="transparent-bnt"
-            >
-              <i className="fa-solid fa-play" />
-              <p>Ver Como Funciona</p>
-            </button>
-
-          </div>
-
-        </nav>
-
-
-        <img
-          src="./Assets/Imgs/Robot-AI.png"
-          alt=""
-          className="robot"
-        />
-
-      </section>
-
-
-      <hr className="hr" />
+      
 
 
       <section
@@ -174,83 +133,7 @@ function App() {
       )}
 
 
-      <footer className="main-footer">
-
-        <div className="info-footer">
-
-          <div className="footer-info">
-
-            <img
-              src="./Assets/Imgs/CerebroFavIcon.png"
-              alt=""
-            />
-
-            <div className="text">
-
-              <h1>
-                <span>IA</span> na Prática
-              </h1>
-
-              <p>
-                Inteligência que transforma
-              </p>
-
-            </div>
-
-          </div>
-
-          <p className="bottom-info">
-            Mais conhecimento, mais ideias,<br />
-            mais possibilidades.
-          </p>
-
-        </div>
-
-
-        <div className="redes">
-
-        </div>
-
-        <div className="links-rapidos">
-          <h3>Links Rápidos</h3>
-          <ul>
-            <li>
-              <a href="">Início</a>
-            </li>
-            <li>
-              <a href="">Sobre</a>
-            </li>
-            <li>
-              <a href="">Tutoriais</a>
-            </li>
-            <li>
-              <a href="">Ferramentas</a>
-            </li>
-            <li>
-              <a href="">Boas Práticas</a>
-            </li>
-            <li>
-              <a href="">Contato</a>
-            </li>
-          </ul>
-        </div>
-
-
-        <div className="footer-insc">
-
-          <h2>
-            A inteligência artificial{' '}
-            <span>está ao seu alcance</span>
-          </h2>
-
-          <button>
-            <i className="fa-solid fa-brain" />
-            <p>Comece Agora</p>
-          </button>
-
-        </div>
-
-      </footer>
+      <Rodape />
 
     </div>
   );

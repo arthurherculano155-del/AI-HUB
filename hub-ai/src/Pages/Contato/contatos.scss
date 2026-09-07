@@ -23,29 +23,9 @@ body {
             #090b30 100%);
 }
 
-
-
-.info-section{
-    scroll-margin-top: 90px;
-
-    h2{
-        color: white;
-        text-align: center;
-        font-size: 2.5rem;
-        margin-top: 10px;
-    }
-
-    .cards{
-        padding: 3rem 0;
-        display: flex;
-        margin: 0 3rem;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: auto;
-        gap: 3rem;
-    }
-}
-
-.bottom-info{
-    margin: 1rem 8.2rem;
+.contatosss{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: 3rem;
 }
