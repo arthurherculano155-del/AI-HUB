@@ -19,12 +19,16 @@ export default function Tutoriais() {
                 imagem='RobotTuts.png'
             />
 
+            <div className="infor" id='sobre'>
+                <i className="fa-solid fa-play" />
+                <div className="info">
+                    <h2>Vídeos em Destaque</h2>
+                    <p>Confira conteúdos selecionados para aprender, explorar ideias e ver a IA funcionando na prática.</p>
+                </div>
+            </div>
+
             <section className="videos" id='sobre'>
                 <div className="tuts">
-                    <div className="vid">
-                        <i class="fa-solid fa-play" />
-                        <h2>Vídeos em Destaque</h2>
-                    </div>
 
                     <div className="video-destaque">
                         <a href="https://www.youtube.com/watch?v=cswHBeqNGt0" target='_blank'>

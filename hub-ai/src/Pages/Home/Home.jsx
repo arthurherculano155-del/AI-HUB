@@ -33,7 +33,13 @@ function App() {
       /> 
 
 
-
+            <div className="infor" id='sobre'>
+                <i className="fa-solid fa-house" />
+                <div className="info">
+                    <h2>Por onde começar?</h2>
+                    <p>Escolha um caminho e descubra como a IA pode ajudar você na prática.</p>
+                </div>
+            </div>
       
 
 
@@ -41,10 +47,6 @@ function App() {
         className="info-section"
         id="sobre"
       >
-
-        <h2>
-          Por onde você quer começar?
-        </h2>
 
 
         <nav className="cards">
