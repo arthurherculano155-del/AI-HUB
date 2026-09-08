@@ -135,7 +135,7 @@ html {
         scrollbar-width: 50px;
         scrollbar-color: darkviolet violet;
         width: 75vw;
-        background: linear-gradient(135deg, rgb(55, 0, 78), rgb(0, 0, 71));
+        background: linear-gradient(135deg, rgb(63, 0, 90), rgb(0, 0, 73));
         padding: 1rem;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
@@ -232,6 +232,7 @@ html {
     .explore-text {
         display: flex;
         justify-content: space-between;
+
         h4 {
             font-size: 1.3rem;
             color: rgba(255, 255, 255, .7);
@@ -248,7 +249,7 @@ html {
             }
         }
 
-        p{
+        p {
             color: rgba(255, 255, 255, 0.8);
             font-size: 1.4rem;
         }
@@ -286,7 +287,7 @@ html {
         }
     }
 
-    .ferramentas-ias{
+    .ferramentas-ias {
         margin-top: 30px;
         display: flex;
         justify-content: center;

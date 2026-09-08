@@ -104,8 +104,8 @@
 
     .possibilidades {
 
-        scrollbar-width: 20px;
-        scrollbar-color: rgb(99, 54, 202) rgba(255, 255, 255, 0.05);
+        scrollbar-width: 50px;
+        scrollbar-color: darkviolet violet;
 
 
         overflow-y: auto;
@@ -126,19 +126,17 @@
 
         color: white;
 
-        background: linear-gradient(135deg,
-                rgb(0, 0, 43),
-                rgb(16, 0, 37));
+        background: linear-gradient(135deg, rgb(63, 0, 90), rgb(0, 0, 73));
 
-        border: 2px solid rgb(0, 174, 255);
+        border: 2px solid rgb(146, 0, 209);
+        box-shadow: 0px 0px 30px rgb(100, 0, 143);
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
-        box-shadow: 0px 0px 20px aqua;
 
         padding: 35px 30px;
 
         .img {
-            button{
+            button {
                 float: right;
                 text-align: center;
                 align-items: center;
@@ -154,12 +152,12 @@
                 transition: .2s ease-in;
                 border-radius: 1000px;
 
-                &:hover{
+                &:hover {
                     transform: rotate(180deg) scale(1.05);
                     background: rgba(0, 0, 0, 0.5);
                     border: 2px solid rgba(128, 128, 128, 0.5);
                 }
-            
+
             }
 
             img {
