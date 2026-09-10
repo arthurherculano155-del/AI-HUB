@@ -1,6 +1,9 @@
 import './ferramentasutils.scss';
+import { useState } from 'react';
+import TemplatesProntos from './templates.jsx';
 
 export default function FerramentaUtils() {
+    let [template, setTemplate] = useState(false);
 
     const cards = [
         {
@@ -54,47 +57,60 @@ export default function FerramentaUtils() {
     ];
 
     return (
-        <div className="ferramentas-utils">
+        <>
+            <div className="ferramentas-utils">
 
-            {cards.map((card, index) => (
-                <div
-                    className={`ferramenta-card ${card.cor}`}
-                    key={index}
-                >
+                {cards.map((card, index) => (
+                    <div
+                        className={`ferramenta-card ${card.cor}`}
+                        key={index}
+                    >
 
-                    <div className="ferramenta-card-conteudo">
+                        <div className="ferramenta-card-conteudo">
 
-                        <div className="ferramenta-icone">
-                            <i className={card.icone}></i>
+                            <div className="ferramenta-icone">
+                                <i className={card.icone}></i>
+                            </div>
+
+                            <div className="ferramenta-info">
+
+                                <h3>{card.titulo}</h3>
+
+                                <p>
+                                    {card.descricao}
+                                </p>
+
+                            </div>
+
+                            <button
+                                onClick={
+
+                                    () => {
+                                        if (index === 0) {
+                                            setTemplate(true)
+                                        }
+                                    }}
+                                className="ferramenta-seta"
+                                aria-label={`Abrir ${card.titulo}`}
+                            >
+                                <i className="fa-solid fa-arrow-right"></i>
+                            </button>
+
                         </div>
 
-                        <div className="ferramenta-info">
-
-                            <h3>{card.titulo}</h3>
-
-                            <p>
-                                {card.descricao}
-                            </p>
-
+                        <div className="ferramenta-detalhe">
+                            <i className={card.iconeDetalhe}></i>
+                            <span>{card.detalhe}</span>
                         </div>
 
-                        <button
-                            className="ferramenta-seta"
-                            aria-label={`Abrir ${card.titulo}`}
-                        >
-                            <i className="fa-solid fa-arrow-right"></i>
-                        </button>
-
                     </div>
+                ))}
 
-                    <div className="ferramenta-detalhe">
-                        <i className={card.iconeDetalhe}></i>
-                        <span>{card.detalhe}</span>
-                    </div>
+            </div>
 
-                </div>
-            ))}
-
-        </div>
+            {template && (
+                <TemplatesProntos />
+            )}
+        </>
     );
 }
