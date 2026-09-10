@@ -1,9 +1,40 @@
 import './ferramentasutils.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TemplatesProntos from './templates.jsx';
 
 export default function FerramentaUtils() {
-    let [template, setTemplate] = useState(false);
+    const [template, setTemplate] = useState(false);
+
+    useEffect(() => {
+        const html = document.documentElement;
+        const body = document.body;
+        const root = document.getElementById('root');
+
+        if (template) {
+            html.classList.add('modal-aberto');
+            body.classList.add('modal-aberto');
+
+            if (root) {
+                root.classList.add('modal-aberto');
+            }
+        } else {
+            html.classList.remove('modal-aberto');
+            body.classList.remove('modal-aberto');
+
+            if (root) {
+                root.classList.remove('modal-aberto');
+            }
+        }
+
+        return () => {
+            html.classList.remove('modal-aberto');
+            body.classList.remove('modal-aberto');
+
+            if (root) {
+                root.classList.remove('modal-aberto');
+            }
+        };
+    }, [template]);
 
     const cards = [
         {
@@ -56,6 +87,12 @@ export default function FerramentaUtils() {
         }
     ];
 
+    function abrirFerramenta(index) {
+        if (index === 0) {
+            setTemplate(true);
+        }
+    }
+
     return (
         <>
             <div className="ferramentas-utils">
@@ -73,24 +110,13 @@ export default function FerramentaUtils() {
                             </div>
 
                             <div className="ferramenta-info">
-
                                 <h3>{card.titulo}</h3>
-
-                                <p>
-                                    {card.descricao}
-                                </p>
-
+                                <p>{card.descricao}</p>
                             </div>
 
                             <button
-                                onClick={
-
-                                    () => {
-                                        if (index === 0) {
-                                            setTemplate(true)
-                                        }
-                                    }}
                                 className="ferramenta-seta"
+                                onClick={() => abrirFerramenta(index)}
                                 aria-label={`Abrir ${card.titulo}`}
                             >
                                 <i className="fa-solid fa-arrow-right"></i>
@@ -109,7 +135,9 @@ export default function FerramentaUtils() {
             </div>
 
             {template && (
-                <TemplatesProntos />
+                <TemplatesProntos
+                    fechar={() => setTemplate(false)}
+                />
             )}
         </>
     );

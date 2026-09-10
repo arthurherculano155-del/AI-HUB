@@ -1,3 +1,9 @@
+html.modal-aberto,
+body.modal-aberto,
+#root.modal-aberto {
+    overflow: hidden !important;
+}
+
 .ferramentas-utils {
     width: 100%;
     display: grid;

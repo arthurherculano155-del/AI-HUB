@@ -47,7 +47,7 @@ export default function Rodape() {
                         <Link to='/'>Início</Link>
                     </li>
                     <li>
-                        <a href="">Sobre</a>
+                        <a href="#sobre">Sobre</a>
                     </li>
                     <li>
                         <Link to='/tutoriais'>Tutoriais</Link>
@@ -59,7 +59,7 @@ export default function Rodape() {
                         <Link to="/praticas">Boas Práticas</Link>
                     </li>
                     <li>
-                        <a href="">Contato</a>
+                        <Link to='/contato'>Contato</Link>
                     </li>
                 </ul>
             </div>
