@@ -102,6 +102,7 @@ export default function TemplatesProntos() {
         }
     ]
     return (
+        <div className="fundo">
         <div className="templates-container">
             {templates.map((template, index) => (
                 <div className="template" key={index}>
@@ -126,9 +127,13 @@ export default function TemplatesProntos() {
                             {template.texto}
                         </p>
                     </div>
-
+                    
                 </div>
+                
             ))}
+            
         </div>
+        </div>
+        
     );
 }
