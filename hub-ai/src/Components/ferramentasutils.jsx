@@ -1,16 +1,34 @@
 import './ferramentasutils.scss';
 import { useEffect, useState } from 'react';
 import TemplatesProntos from './templates.jsx';
+import Desafios from './desafios.jsx';
+import RealSituations from './realSituations.jsx';
+import BeforeAfterIA from './BeforeAfterIA.jsx';
+import ExtraExplorations from './extraExplorations.jsx';
+import MythsAndFacts from './mythsAndFacts.jsx';
 
 export default function FerramentaUtils() {
     const [template, setTemplate] = useState(false);
+    const [desafio, setDesafio] = useState(false);
+    const [realSituations, setRealSituations] = useState(false);
+    const [beforeAfter, setBeforeAfter] = useState(false);
+    const [extraExplorations, setExtraExplorations] = useState(false);
+    const [mythsAndFacts, setMythsAndFacts] = useState(false);
 
     useEffect(() => {
         const html = document.documentElement;
         const body = document.body;
         const root = document.getElementById('root');
 
-        if (template) {
+        const modalAberto =
+            template ||
+            desafio ||
+            realSituations ||
+            beforeAfter ||
+            extraExplorations ||
+            mythsAndFacts;
+
+        if (modalAberto) {
             html.classList.add('modal-aberto');
             body.classList.add('modal-aberto');
 
@@ -34,7 +52,14 @@ export default function FerramentaUtils() {
                 root.classList.remove('modal-aberto');
             }
         };
-    }, [template]);
+    }, [
+        template,
+        desafio,
+        realSituations,
+        beforeAfter,
+        extraExplorations,
+        mythsAndFacts
+    ]);
 
     const cards = [
         {
@@ -91,6 +116,26 @@ export default function FerramentaUtils() {
         if (index === 0) {
             setTemplate(true);
         }
+
+        if (index === 1) {
+            setDesafio(true);
+        }
+
+        if (index === 2) {
+            setRealSituations(true);
+        }
+
+        if (index === 3) {
+            setBeforeAfter(true);
+        }
+
+        if (index === 4) {
+            setExtraExplorations(true);
+        }
+
+        if (index === 5) {
+            setMythsAndFacts(true);
+        }
     }
 
     return (
@@ -137,6 +182,36 @@ export default function FerramentaUtils() {
             {template && (
                 <TemplatesProntos
                     fechar={() => setTemplate(false)}
+                />
+            )}
+
+            {desafio && (
+                <Desafios
+                    fechar={() => setDesafio(false)}
+                />
+            )}
+
+            {realSituations && (
+                <RealSituations
+                    fechar={() => setRealSituations(false)}
+                />
+            )}
+
+            {beforeAfter && (
+                <BeforeAfterIA
+                    fechar={() => setBeforeAfter(false)}
+                />
+            )}
+
+            {extraExplorations && (
+                <ExtraExplorations
+                    fechar={() => setExtraExplorations(false)}
+                />
+            )}
+
+            {mythsAndFacts && (
+                <MythsAndFacts
+                    fechar={() => setMythsAndFacts(false)}
                 />
             )}
         </>

@@ -1,0 +1,832 @@
+.myths-facts-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    box-sizing: border-box;
+
+    background: rgba(18, 0, 10, 0.8);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    overflow: hidden;
+
+    z-index: 99999;
+}
+
+.myths-facts-modal {
+    position: relative;
+
+    width: min(1050px, 88vw);
+    height: 86vh;
+
+    padding: 2.7rem;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 22, 107, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(167, 16, 94, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #16030d,
+            #250516,
+            #100208
+        );
+
+    border: 1px solid rgba(255, 25, 112, 0.45);
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        0 0 45px rgba(255, 25, 112, 0.1);
+
+    animation: abrirMythsFacts 0.3s ease;
+}
+
+.myths-facts-modal::-webkit-scrollbar {
+    width: 7px;
+}
+
+.myths-facts-modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.myths-facts-modal::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        #f41468,
+        #a50b59
+    );
+
+    border-radius: 50px;
+}
+
+.myths-facts-fechar {
+    all: unset;
+
+    position: absolute;
+
+    top: 1.3rem;
+    right: 1.3rem;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.25s ease;
+
+    &:hover {
+        transform: rotate(90deg);
+
+        background: rgba(244, 20, 104, 0.18);
+
+        border-color: #f41468;
+    }
+}
+
+.myths-facts-header {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding-right: 4rem;
+
+    margin-bottom: 2rem;
+
+    > div:last-child > span {
+        color: #ff4488;
+
+        font-size: 0.72rem;
+        font-weight: 700;
+
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        margin: 0.4rem 0 0;
+
+        font-size: clamp(2rem, 4vw, 3.4rem);
+
+        strong {
+            font-weight: inherit;
+
+            background: linear-gradient(
+                90deg,
+                #ff2675,
+                #ff5ea0
+            );
+
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+    }
+
+    p {
+        max-width: 700px;
+
+        margin: 0.7rem 0 0;
+
+        color: rgba(255, 255, 255, 0.55);
+
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+.myths-facts-main-icon {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #ff3c82;
+
+    font-size: 2rem;
+
+    background: rgba(244, 20, 104, 0.12);
+
+    border: 1px solid rgba(255, 49, 124, 0.32);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 30px rgba(255, 30, 110, 0.13);
+}
+
+.myths-facts-progress-area {
+    margin-bottom: 1.5rem;
+}
+
+.myths-facts-progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 0.7rem;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.myths-facts-progress {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 50px;
+}
+
+.myths-facts-progress-bar {
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #d80d5b,
+        #ff2675,
+        #ff66a4
+    );
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 0 15px rgba(255, 38, 117, 0.35);
+
+    transition: width 0.4s ease;
+}
+
+.myths-facts-question {
+    padding: 2rem;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    h2 {
+        max-width: 800px;
+
+        margin: 1.5rem 0 0.7rem;
+
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        line-height: 1.4;
+    }
+
+    > p {
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.5);
+
+        font-size: 0.9rem;
+    }
+}
+
+.myths-facts-question-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > span {
+        padding: 0.4rem 0.8rem;
+
+        color: #ff79aa;
+
+        font-size: 0.72rem;
+        font-weight: 600;
+
+        background: rgba(244, 20, 104, 0.08);
+
+        border: 1px solid rgba(244, 20, 104, 0.2);
+
+        border-radius: 50px;
+    }
+}
+
+.myths-facts-question-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ff3d82;
+
+    font-size: 1.3rem;
+
+    background: rgba(244, 20, 104, 0.1);
+
+    border: 1px solid rgba(244, 20, 104, 0.22);
+
+    border-radius: 15px;
+}
+
+.myths-facts-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1rem;
+
+    margin-top: 1.2rem;
+}
+
+.myths-facts-option {
+    min-height: 110px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1.2rem;
+
+    color: white;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    > div {
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+
+        border-radius: 13px;
+
+        font-size: 1.1rem;
+    }
+
+    > span {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    &:disabled {
+        cursor: default;
+    }
+
+    &.verdade {
+        > div {
+            color: #37e79d;
+
+            background: rgba(55, 231, 157, 0.08);
+
+            border: 1px solid rgba(55, 231, 157, 0.2);
+        }
+
+        &:not(:disabled):hover {
+            transform: translateY(-4px);
+
+            background: rgba(55, 231, 157, 0.06);
+
+            border-color: rgba(55, 231, 157, 0.5);
+        }
+    }
+
+    &.mito {
+        > div {
+            color: #ff477d;
+
+            background: rgba(255, 71, 125, 0.08);
+
+            border: 1px solid rgba(255, 71, 125, 0.2);
+        }
+
+        &:not(:disabled):hover {
+            transform: translateY(-4px);
+
+            background: rgba(255, 71, 125, 0.06);
+
+            border-color: rgba(255, 71, 125, 0.5);
+        }
+    }
+
+    &.correta {
+        background: rgba(32, 213, 139, 0.1);
+
+        border-color: #26d98f;
+
+        box-shadow:
+            0 0 25px rgba(38, 217, 143, 0.1);
+    }
+
+    &.errada {
+        background: rgba(255, 54, 105, 0.1);
+
+        border-color: #ff3669;
+
+        box-shadow:
+            0 0 25px rgba(255, 54, 105, 0.1);
+    }
+}
+
+.myths-facts-feedback {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    margin-top: 1.2rem;
+
+    padding: 1.3rem;
+
+    border-radius: 16px;
+
+    animation: aparecerFeedback 0.3s ease;
+
+    &.acertou {
+        background: rgba(37, 217, 143, 0.07);
+
+        border: 1px solid rgba(37, 217, 143, 0.25);
+
+        .myths-facts-feedback-icon {
+            color: #37e79d;
+        }
+
+        .myths-facts-feedback-content > span {
+            color: #37e79d;
+        }
+    }
+
+    &.errou {
+        background: rgba(255, 54, 105, 0.07);
+
+        border: 1px solid rgba(255, 54, 105, 0.25);
+
+        .myths-facts-feedback-icon {
+            color: #ff477d;
+        }
+
+        .myths-facts-feedback-content > span {
+            color: #ff668f;
+        }
+    }
+}
+
+.myths-facts-feedback-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 1.5rem;
+}
+
+.myths-facts-feedback-content {
+    > span {
+        font-size: 0.75rem;
+        font-weight: 700;
+
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+    }
+
+    h3 {
+        margin: 0.3rem 0 0.4rem;
+
+        font-size: 1rem;
+    }
+
+    p {
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.6);
+
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+}
+
+.myths-facts-next-area {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 1.2rem;
+}
+
+.myths-facts-next {
+    all: unset;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    padding: 0.85rem 1.4rem;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    background: linear-gradient(
+        90deg,
+        #d90d5b,
+        #f51c70
+    );
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(244, 20, 104, 0.2);
+
+    transition: 0.25s ease;
+
+    i {
+        transition: 0.25s ease;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 12px 30px rgba(244, 20, 104, 0.3);
+
+        i {
+            transform: translateX(4px);
+        }
+    }
+}
+
+.myths-facts-result {
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 2rem;
+
+    box-sizing: border-box;
+
+    > span {
+        margin-top: 1.3rem;
+
+        color: #ff4e8d;
+
+        font-size: 0.72rem;
+        font-weight: 700;
+
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        margin: 0.5rem 0;
+
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+}
+
+.myths-facts-result-icon {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    font-size: 2.5rem;
+
+    background: linear-gradient(
+        135deg,
+        #ff1768,
+        #a30b59
+    );
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px rgba(255, 23, 104, 0.25);
+}
+
+.myths-facts-result-message {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 1rem;
+}
+
+.myths-facts-score {
+    display: flex;
+    align-items: baseline;
+
+    margin-top: 2rem;
+
+    strong {
+        color: #ff387f;
+
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    span {
+        color: rgba(255, 255, 255, 0.45);
+
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
+
+.myths-facts-score-label {
+    margin: 0.5rem 0 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.85rem;
+}
+
+.myths-facts-result-actions {
+    display: flex;
+
+    gap: 0.8rem;
+
+    margin-top: 2rem;
+}
+
+.myths-facts-restart,
+.myths-facts-close-result {
+    all: unset;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    min-width: 150px;
+
+    padding: 0.85rem 1.2rem;
+
+    box-sizing: border-box;
+
+    border-radius: 11px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.myths-facts-restart {
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #d90d5b,
+        #f51c70
+    );
+
+    &:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 10px 25px rgba(244, 20, 104, 0.25);
+    }
+}
+
+.myths-facts-close-result {
+    color: rgba(255, 255, 255, 0.75);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:hover {
+        color: white;
+
+        background: rgba(255, 255, 255, 0.08);
+    }
+}
+
+@keyframes abrirMythsFacts {
+    from {
+        opacity: 0;
+
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+@keyframes aparecerFeedback {
+    from {
+        opacity: 0;
+
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 750px) {
+    .myths-facts-overlay {
+        padding: 1rem;
+    }
+
+    .myths-facts-modal {
+        width: 94vw;
+        height: 90vh;
+
+        padding: 1.7rem;
+    }
+
+    .myths-facts-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .myths-facts-overlay {
+        padding: 0.6rem;
+    }
+
+    .myths-facts-modal {
+        width: 96vw;
+        height: 92vh;
+
+        padding: 1.3rem;
+
+        border-radius: 20px;
+    }
+
+    .myths-facts-header {
+        align-items: flex-start;
+
+        gap: 1rem;
+
+        padding-right: 2.7rem;
+    }
+
+    .myths-facts-main-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 1.4rem;
+
+        border-radius: 16px;
+    }
+
+    .myths-facts-question {
+        padding: 1.4rem;
+    }
+
+    .myths-facts-result-actions {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .myths-facts-restart,
+    .myths-facts-close-result {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .myths-facts-header {
+        flex-direction: column;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .myths-facts-score {
+        strong {
+            font-size: 4rem;
+        }
+    }
+}
