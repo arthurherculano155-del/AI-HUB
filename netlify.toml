@@ -1,0 +1,4 @@
+[build]
+  base = "hub-ai"
+  command = "npm run build"
+  publish = "build"
