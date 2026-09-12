@@ -1,51 +1,173 @@
 .item-possibilidade {
-
-        cursor: default;
-
+    width: 100%;
+    cursor: default;
 
     li {
-        display: flex;
         width: 100%;
-        gap: 20px;
-        padding: 8px;
+        min-width: 0;
+
+        display: flex;
+        align-items: center;
+
+        gap: 2rem;
+
+        padding: 1rem;
+
         border-radius: 15px;
         border: 1px solid blue;
+
         background: rgba(0, 0, 139, 0.2);
-        align-items: center;
+
         transition: .2s ease-out;
 
-        &:hover{
-            transform: scale(1.05) translateY(-8px);
+        &:hover {
+            transform: scale(1.03) translateY(-6px);
         }
 
         i {
-            padding: 10px 30px;
+            width: 80px;
+            height: 60px;
+
+            flex-shrink: 0;
+
             display: flex;
+            align-items: center;
             justify-content: center;
-            font-size: 30px;
+
+            font-size: 3rem;
+
             border-radius: 10px;
-            background: linear-gradient(110deg, rgb(12, 0, 173), rgb(0, 11, 105));
+
+            background: linear-gradient(
+                110deg,
+                rgb(12, 0, 173),
+                rgb(0, 11, 105)
+            );
         }
 
-        h2{
-            font-size: 17px;
+        div {
+            flex: 1;
+            min-width: 0;
         }
 
-        h3{
-            font-size: 10px;
+        h2 {
+            font-size: 1.7rem;
+            line-height: 1.3;
+        }
+
+        h3 {
+            margin-top: .5rem;
+
+            font-size: 1.1rem;
+            line-height: 1.5;
+
             font-weight: normal;
+
             color: rgba(255, 255, 255, 0.8);
-            margin-top: 5px;
         }
     }
 }
 
-.item-possibilidade.roxo{
-    li{
+.item-possibilidade.roxo {
+    li {
         border: 1px solid darkviolet;
+
         background: rgba(83, 0, 139, 0.2);
     }
-    i{
-        background: linear-gradient(110deg, rgb(118, 0, 173), rgb(72, 0, 105));
+
+    i {
+        background: linear-gradient(
+            110deg,
+            rgb(118, 0, 173),
+            rgb(72, 0, 105)
+        );
+    }
+}
+
+@media (max-width: 768px) {
+    .item-possibilidade {
+        li {
+            gap: 1.5rem;
+
+            padding: 1rem;
+
+            i {
+                width: 70px;
+                height: 55px;
+
+                font-size: 2.6rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .item-possibilidade {
+        width: 100%;
+
+        li {
+            width: 100%;
+
+            gap: 1.2rem;
+
+            padding: 1rem;
+
+            border-radius: 12px;
+
+            i {
+                width: 55px;
+                height: 50px;
+
+                font-size: 2.2rem;
+
+                border-radius: 8px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .item-possibilidade {
+        li {
+            gap: 1rem;
+
+            padding: .8rem;
+
+            i {
+                width: 48px;
+                height: 45px;
+
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: .95rem;
+            }
+        }
     }
 }

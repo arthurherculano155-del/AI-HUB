@@ -1,17 +1,64 @@
-
-
 .Notfound {
-    background-color: white;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
+    overflow: hidden;
+
+    background-color: white;
+
     img {
-        width: 75vw;
-        height: 100vh;
+        width: min(75vw, 1200px);
+        height: auto;
+
+        max-height: 100vh;
+
+        object-fit: contain;
+
         animation: aparecer 1s ease-out;
+    }
+}
+
+@media (max-width: 1024px) {
+    .Notfound {
+        img {
+            width: 85vw;
+            max-height: 90vh;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .Notfound {
+        padding: 2rem;
+
+        img {
+            width: 90vw;
+            max-height: 85vh;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Notfound {
+        padding: 1rem;
+
+        img {
+            width: 95vw;
+            max-height: 80vh;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .Notfound {
+        img {
+            width: 98vw;
+            max-height: 78vh;
+        }
     }
 }
 

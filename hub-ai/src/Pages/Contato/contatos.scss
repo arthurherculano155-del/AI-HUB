@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     border: 0;
 }
 
@@ -12,21 +13,76 @@ html {
 body {
     overflow-x: hidden;
     font-family: "MontSerrat", sans-serif;
-        background:
-        radial-gradient(circle at 85% 50%,
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
             rgba(45, 20, 120, 0.35),
-            transparent 55%),
-        linear-gradient(110deg,
+            transparent 55%
+        ),
+        linear-gradient(
+            110deg,
             #000000 0%,
             #070014 35%,
             #150035 70%,
-            #090b30 100%);
+            #090b30 100%
+        );
 }
 
-.contatosss{
+.contatosss {
+    width: 92%;
+    max-width: 1600px;
+
+    margin: 3rem auto;
+
     display: flex;
     justify-content: center;
-    gap: 5rem;
-    margin: 3rem;
+    align-items: stretch;
     flex-wrap: wrap;
+
+    gap: 5rem;
+}
+
+@media (max-width: 1200px) {
+    .contatosss {
+        width: 94%;
+        gap: 3.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .contatosss {
+        width: 94%;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contatosss {
+        width: 92%;
+
+        margin: 2.5rem auto;
+
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contatosss {
+        width: 94%;
+
+        margin: 2rem auto;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .contatosss {
+        width: 96%;
+        gap: 1.2rem;
+    }
 }

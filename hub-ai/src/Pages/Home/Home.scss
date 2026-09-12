@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     border: 0;
 }
 
@@ -12,45 +13,165 @@ html {
 body {
     overflow-x: hidden;
     font-family: "MontSerrat", sans-serif;
-        background:
-        radial-gradient(circle at 85% 50%,
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
             rgba(45, 20, 120, 0.35),
-            transparent 55%),
-        linear-gradient(110deg,
+            transparent 55%
+        ),
+        linear-gradient(
+            110deg,
             #000000 0%,
             #070014 35%,
             #150035 70%,
-            #090b30 100%);
+            #090b30 100%
+        );
 }
 
-
-
-.info-section{
+.info-section {
+    width: 100%;
     scroll-margin-top: 90px;
 
-    h2{
+    h2 {
+        width: 90%;
+        max-width: 1400px;
+
+        margin: 2rem auto 0;
+
         color: white;
+
         text-align: center;
+
         font-size: 2.5rem;
-        margin-top: 10px;
+        line-height: 1.3;
     }
 
-    .cards{
+    .cards {
+        width: 92%;
+        max-width: 1600px;
+
+        margin: 0 auto;
         padding: 3rem 0;
+
         display: flex;
-        margin: 0 3rem;
+        justify-content: center;
+        align-items: stretch;
+
         flex-wrap: wrap;
-        justify-content: space-around;
-        margin: auto;
+
         gap: 3rem;
     }
 }
 
-.bottom-info{
-    margin: 1rem 8.2rem;
+.bottom-info {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 1rem auto 3rem;
 }
 
-@media (max-width: 480px){
-    .cards{
+@media (max-width: 1200px) {
+    .info-section {
+        .cards {
+            width: 94%;
+            gap: 2.5rem;
+        }
+    }
+
+    .bottom-info {
+        width: 92%;
+    }
+}
+
+@media (max-width: 900px) {
+    .info-section {
+        h2 {
+            width: 92%;
+            font-size: 2.3rem;
+        }
+
+        .cards {
+            width: 94%;
+            gap: 2rem;
+        }
+    }
+
+    .bottom-info {
+        width: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        h2 {
+            width: 92%;
+
+            margin-top: 1.5rem;
+
+            font-size: 2.1rem;
+        }
+
+        .cards {
+            width: 92%;
+
+            padding: 2.5rem 0;
+
+            gap: 2rem;
+        }
+    }
+
+    .bottom-info {
+        width: 92%;
+
+        margin: 1rem auto 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-section {
+        h2 {
+            width: 94%;
+
+            margin-top: 1.5rem;
+
+            font-size: 1.9rem;
+            line-height: 1.4;
+        }
+
+        .cards {
+            width: 94%;
+
+            padding: 2rem 0;
+
+            flex-direction: column;
+            align-items: center;
+
+            gap: 1.5rem;
+        }
+    }
+
+    .bottom-info {
+        width: 94%;
+
+        margin: 1rem auto 2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .info-section {
+        h2 {
+            width: 96%;
+            font-size: 1.7rem;
+        }
+
+        .cards {
+            width: 96%;
+            gap: 1.2rem;
+        }
+    }
+
+    .bottom-info {
+        width: 96%;
     }
 }

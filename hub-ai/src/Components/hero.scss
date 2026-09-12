@@ -11,7 +11,11 @@ html {
     align-items: center;
     font-size: 1.5rem;
     padding: 5px 20px;
-    background: linear-gradient(130deg, rgba(72, 1, 94, 0.979), rgba(104, 0, 148, 0.753));
+    background: linear-gradient(
+        130deg,
+        rgba(72, 1, 94, 0.979),
+        rgba(104, 0, 148, 0.753)
+    );
     border-radius: 1000px;
     color: white;
     position: relative;
@@ -30,91 +34,95 @@ html {
 
     .robot {
         width: 45vw;
-        height: 300px;
+        height: 330px;
         object-fit: cover;
         filter: blur(0);
         border-radius: 20px;
         margin: 0 3rem;
-
-        height: 330px;
     }
 
-    .robot::after {
-        content: "";
-        position: absolute;
-        inset: -20px;
-        pointer-events: none;
+    .hero-nav {
+        .hero-text {
+            font-size: 1.6rem;
+            margin: 3rem 5rem;
 
-        background: radial-gradient(ellipse at center,
-                transparent 50%,
-                rgba(0, 0, 0, 0.5) 100%);
+            h1 {
+                font-size: 5.5rem;
+            }
 
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-    }
+            p {
+                margin: 1rem 0;
+                line-height: 25px;
+                color: rgba(255, 255, 255, 0.829);
+            }
 
-    .hero-nav .hero-text {
-        h1 {
-            font-size: 5.5rem;
-        }
+            .hero-span {
+                color: transparent;
 
-        p {
-            margin: 1rem 0rem;
-            line-height: 25px;
-            color: rgba(255, 255, 255, 0.829);
-        }
+                background: linear-gradient(
+                    90deg,
+                    rgb(43, 46, 226),
+                    darkviolet,
+                    rgb(162, 130, 238)
+                );
 
-        font-size: 1.6rem;
-        margin: 3rem 5rem;
-
-        .hero-span {
-            color: transparent;
-            background: linear-gradient(90deg, rgb(43, 46, 226), darkviolet, rgb(162, 130, 238));
-
-            -webkit-background-clip: text;
-            background-clip: text;
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
         }
     }
 
     .hero-bnts {
         display: flex;
-        margin: 0rem 4.7rem;
+        margin: 0 4.7rem;
         gap: 2.5rem;
-
 
         .bnt {
             width: 20rem;
             padding: 1.5rem;
+
             font-size: 1.3rem;
+            font-weight: 700;
+
             color: white;
-            background: linear-gradient(135deg,
-                    rgb(37, 99, 235),
-                    rgb(124, 58, 237),
-                    rgb(192, 38, 211));
+
+            background: linear-gradient(
+                135deg,
+                rgb(37, 99, 235),
+                rgb(124, 58, 237),
+                rgb(192, 38, 211)
+            );
+
             border: none;
-            cursor: pointer;
             border-radius: 10px;
+
+            cursor: pointer;
+
             transition: .2s;
+
             display: flex;
             align-items: center;
+
             gap: 1rem;
-            font-weight: 700;
 
             i {
                 font-size: 2rem;
             }
-        }
 
-        .bnt:hover {
-            transform: scale(1.05);
-        }
+            &:hover {
+                transform: scale(1.05);
+            }
 
-        .bnt:active {
-            transform: scale(.95);
-            background: linear-gradient(135deg,
+            &:active {
+                transform: scale(.95);
+
+                background: linear-gradient(
+                    135deg,
                     rgba(37, 100, 235, .8),
                     rgba(124, 58, 237, .8),
-                    rgba(191, 38, 211, .8));
+                    rgba(191, 38, 211, .8)
+                );
+            }
         }
 
         #transparent-bnt {
@@ -131,108 +139,184 @@ html {
 
 .fundo {
     .modelito {
-        overflow-y: scroll;
-        height: 90vh;
-        scrollbar-width: 50px;
-        scrollbar-color: darkviolet violet;
         width: 80vw;
-        background: linear-gradient(135deg, rgb(63, 0, 90), rgb(0, 0, 73));
-        padding: 1rem;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        max-width: 1200px;
+        height: 90vh;
+
+        padding: 2rem;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        scrollbar-color: darkviolet violet;
+
+        background: linear-gradient(
+            135deg,
+            rgb(63, 0, 90),
+            rgb(0, 0, 73)
+        );
+
         border: 2px solid rgb(146, 0, 209);
-        box-shadow: 0px 0px 30px rgb(100, 0, 143);
+        border-radius: 15px;
+
+        box-shadow: 0 0 30px rgb(100, 0, 143);
+
         color: white;
+
         position: fixed;
         top: 50%;
         left: 50%;
+
         transform: translate(-50%, -50%);
 
         .info-bnts {
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-end;
+
             button {
-                position: fixed;
-                right: 1vw;
-                text-align: center;
-                align-items: center;
-                font-weight: bold;
-                cursor: pointer;
-                border: 2px solid rgba(128, 128, 128, 0.2);
-                font-size: 1.6rem;
+                position: sticky;
+                top: 0;
+
+                margin-left: auto;
+
                 display: flex;
-                background: rgba(0, 0, 0, 0.2);
-                color: white;
-                padding: .5rem 1rem;
+                align-items: center;
                 justify-content: center;
-                transition: .2s ease-in;
+
+                padding: .5rem 1rem;
+
+                font-size: 1.6rem;
+                font-weight: bold;
+
+                cursor: pointer;
+
+                color: white;
+
+                background: rgba(0, 0, 0, 0.2);
+
+                border: 2px solid rgba(128, 128, 128, 0.2);
                 border-radius: 1000px;
+
+                z-index: 10;
+
+                transition: .2s ease-in;
 
                 &:hover {
                     transform: rotate(180deg) scale(1.05);
+
                     background: rgba(0, 0, 0, 0.5);
-                    border: 2px solid rgba(128, 128, 128, 0.5);
+
+                    border-color: rgba(128, 128, 128, 0.5);
                 }
             }
         }
 
         h2 {
+            margin: 1rem 0;
+
             text-align: center;
+
             font-size: 4rem;
 
             span {
                 color: transparent;
-                background: linear-gradient(90deg, rgb(0, 206, 233), darkviolet);
+
+                background: linear-gradient(
+                    90deg,
+                    rgb(0, 206, 233),
+                    darkviolet
+                );
+
+                -webkit-background-clip: text;
                 background-clip: text;
             }
         }
 
         p {
+            max-width: 900px;
+
+            margin: 0 auto;
+
             color: rgba(255, 255, 255, 0.6);
+
             text-align: center;
+
             font-size: 1.5rem;
+            line-height: 1.6;
         }
 
         img {
-            border-radius: 25px;
-            position: relative;
-            left: 50%;
-            transform: translate(-50%, 10%);
+            display: block;
+
             width: 95%;
-            margin: 0 0 10px;
-            border: 1px solid darkviolet;
             height: 300px;
+
+            margin: 2rem auto 1rem;
+
+            object-fit: cover;
+
+            border: 1px solid darkviolet;
+            border-radius: 25px;
         }
     }
 }
 
 .items-legais {
     margin-top: 40px;
-    gap: 3rem;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    gap: 3rem;
 }
 
 .explorarMais {
-    scrollbar-width: 50px;
-    scrollbar-color: darkviolet violet;
-    box-shadow: 0px 0px 20px darkviolet;
     width: 80vw;
+    max-width: 1200px;
     height: 90vh;
-    overflow-y: scroll;
-    background: linear-gradient(135deg, rgb(63, 0, 90), rgb(0, 0, 73));
+
+    padding: 2rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-color: darkviolet violet;
+
+    box-shadow: 0 0 20px darkviolet;
+
+    background: linear-gradient(
+        135deg,
+        rgb(63, 0, 90),
+        rgb(0, 0, 73)
+    );
+
     border: 2px solid darkviolet;
+    border-radius: 20px;
+
     position: fixed;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
+
     color: white;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 1rem;
 
     .explore-text {
+        width: 100%;
+
         display: flex;
+        align-items: center;
         justify-content: space-between;
+
+        gap: 3rem;
+
+        > div {
+            flex: 1;
+            min-width: 0;
+        }
 
         h4 {
             font-size: 1.3rem;
@@ -240,101 +324,419 @@ html {
         }
 
         h2 {
+            margin: 1rem 0;
+
             font-size: 4rem;
-            margin: 10px 0px;
+            line-height: 1.2;
 
             span {
                 color: transparent;
-                background: linear-gradient(90deg, rgb(175, 0, 250), rgb(0, 0, 252));
+
+                background: linear-gradient(
+                    90deg,
+                    rgb(175, 0, 250),
+                    rgb(0, 0, 252)
+                );
+
+                -webkit-background-clip: text;
                 background-clip: text;
             }
         }
 
         p {
             color: rgba(255, 255, 255, 0.8);
+
             font-size: 1.4rem;
+            line-height: 1.6;
         }
 
         img {
-            width: 80%;
+            width: 45%;
+            max-width: 500px;
             height: 220px;
-            border-radius: 15px;
+
+            flex-shrink: 0;
+
+            object-fit: cover;
+
+            margin: 0;
+
             border: 1px solid darkviolet;
-            margin: 0 1rem;
+            border-radius: 15px;
         }
     }
 
-    button {
-        position: fixed;
-        right: 1vw;
-        text-align: center;
-        align-items: center;
-        font-weight: bold;
-        cursor: pointer;
-        border: 2px solid rgba(128, 128, 128, 0.2);
-        font-size: 1.6rem;
+    > button {
+        position: sticky;
+        top: 0;
+
+        margin-left: auto;
+
         display: flex;
-        background: rgba(0, 0, 0, 0.2);
-        color: white;
-        padding: .5rem 1rem;
+        align-items: center;
         justify-content: center;
-        transition: .2s ease-in;
+
+        padding: .5rem 1rem;
+
+        font-size: 1.6rem;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        color: white;
+
+        background: rgba(0, 0, 0, 0.2);
+
+        border: 2px solid rgba(128, 128, 128, 0.2);
         border-radius: 1000px;
+
+        z-index: 10;
+
+        transition: .2s ease-in;
 
         &:hover {
             transform: rotate(180deg) scale(1.05);
+
             background: rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(128, 128, 128, 0.5);
+
+            border-color: rgba(128, 128, 128, 0.5);
         }
     }
 
     .ferramentas-ias {
-        margin-top: 30px;
+        width: 100%;
+
+        margin-top: 3rem;
+
         display: flex;
         justify-content: center;
-        gap: 2rem 10rem;
         flex-wrap: wrap;
+
+        gap: 2rem;
     }
 }
 
-@media(max-width: 480px) {
+@media (max-width: 768px) {
+
+    .hero-section {
+        gap: 1.5rem;
+
+        .hero-nav {
+            .hero-text {
+                margin: 3rem;
+
+                h1 {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        .robot {
+            width: 45vw;
+
+            margin: 0 2rem;
+        }
+
+        .hero-bnts {
+            margin: 0 3rem;
+
+            gap: 1.5rem;
+
+            .bnt {
+                width: 18rem;
+            }
+        }
+    }
+
+    .fundo {
+        .modelito {
+            width: 92vw;
+            height: 88vh;
+
+            padding: 1.5rem;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            img {
+                width: 100%;
+                height: 240px;
+
+                border-radius: 18px;
+            }
+        }
+    }
+
+    .explorarMais {
+        width: 92vw;
+        height: 88vh;
+
+        padding: 1.5rem;
+
+        .explore-text {
+            gap: 2rem;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            img {
+                width: 45%;
+                height: 200px;
+            }
+        }
+
+        .ferramentas-ias {
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
     .heroText {
-        width: 80vw;
+        width: 90%;
+
+        margin: 8rem auto 0;
+
+        top: 1rem;
+
+        padding: 1rem 1.5rem;
+
         justify-content: center;
-        gap: 2rem;
+
+        gap: 1rem;
 
         i {
-            font-size: 40px;
+            font-size: 2.5rem;
         }
 
         h3 {
-            font-size: 30px;
+            font-size: 1.8rem;
         }
     }
 
     .hero-section {
+        width: 100%;
+
+        padding: 2rem 0;
+
         flex-direction: column;
 
-        h1 {
-            text-align: center;
-        }
+        gap: 2rem;
 
-        .hero-bnts{
-            flex-direction: column;
-            
-            .bnt{
-                width: 80vw;
-                margin: 0 auto;
+        .hero-nav {
+            width: 100%;
 
-               justify-content: center;
+            .hero-text {
+                width: 90%;
+
+                margin: 2rem auto;
+
+                text-align: center;
+
+                h1 {
+                    font-size: 3.5rem;
+                    line-height: 1.2;
+                }
+
+                p {
+                    margin-top: 1.5rem;
+
+                    font-size: 1.4rem;
+                    line-height: 1.6;
+                }
             }
         }
 
+        .hero-bnts {
+            width: 90%;
+
+            margin: 0 auto;
+
+            flex-direction: column;
+
+            gap: 1.5rem;
+
+            .bnt {
+                width: 100%;
+
+                margin: 0 auto;
+
+                justify-content: center;
+
+                padding: 1.5rem;
+            }
+        }
 
         .robot {
-            width: 90vw;
+            width: 90%;
             height: auto;
-            margin: 10px auto;
+
+            margin: 1rem auto;
+
+            display: block;
+        }
+    }
+
+    .fundo {
+        .modelito {
+            width: 94vw;
+            height: 88vh;
+
+            padding: 1.2rem;
+
+            border-radius: 15px;
+
+            .info-bnts {
+                button {
+                    padding: .5rem .9rem;
+
+                    font-size: 1.4rem;
+                }
+            }
+
+            h2 {
+                margin-top: 1rem;
+
+                font-size: 2.4rem;
+                line-height: 1.25;
+            }
+
+            p {
+                font-size: 1.3rem;
+                line-height: 1.5;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+
+                aspect-ratio: 16 / 9;
+
+                margin: 1.5rem auto 1rem;
+
+                object-fit: cover;
+
+                border-radius: 15px;
+            }
+        }
+    }
+
+    .items-legais {
+        margin-top: 2.5rem;
+
+        gap: 1.5rem;
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .explorarMais {
+        width: 94vw;
+        height: 88vh;
+
+        padding: 1.2rem;
+
+        border-radius: 15px;
+
+        > button {
+            padding: .5rem .9rem;
+
+            font-size: 1.4rem;
+        }
+
+        .explore-text {
+            width: 100%;
+
+            flex-direction: column;
+            align-items: stretch;
+
+            gap: 1.5rem;
+
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2.4rem;
+                line-height: 1.25;
+            }
+
+            p {
+                font-size: 1.3rem;
+                line-height: 1.5;
+            }
+
+            img {
+                width: 100%;
+                max-width: none;
+                height: auto;
+
+                aspect-ratio: 16 / 9;
+
+                margin: 0;
+
+                object-fit: cover;
+
+                border-radius: 15px;
+            }
+        }
+
+        .ferramentas-ias {
+            width: 100%;
+
+            margin-top: 2rem;
+
+            flex-direction: column;
+            align-items: stretch;
+
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+
+    .hero-section {
+        .hero-nav {
+            .hero-text {
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .fundo {
+        .modelito {
+            width: 96vw;
+
+            h2 {
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .explorarMais {
+        width: 96vw;
+
+        .explore-text {
+            h2 {
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
         }
     }
 }

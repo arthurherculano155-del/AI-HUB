@@ -29,14 +29,9 @@ body {
         );
 }
 
-
-/* =========================
-   INFORMAÇÃO
-========================= */
-
 .infor {
-    width: 90%;
-    max-width: 1200px;
+    width: 92%;
+    max-width: 1400px;
 
     margin: 5rem auto 3rem;
     padding: 2.5rem 3rem;
@@ -50,7 +45,6 @@ body {
     color: white;
 
     border-radius: 18px;
-
     border: 1px solid rgba(124, 58, 237, 0.35);
 
     background:
@@ -92,7 +86,7 @@ body {
         h2 {
             margin-bottom: .7rem;
 
-            font-size: 2.7rem;
+            font-size: clamp(2rem, 2vw, 2.7rem);
             line-height: 1.2;
 
             color: white;
@@ -100,9 +94,9 @@ body {
 
         p {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
 
-            font-size: 1.5rem;
+            font-size: clamp(1.3rem, 1.2vw, 1.5rem);
             line-height: 1.6;
 
             color: rgba(255, 255, 255, 0.6);
@@ -110,14 +104,9 @@ body {
     }
 }
 
-
-/* =========================
-   ÁREA DOS VÍDEOS
-========================= */
-
 .videos {
-    width: 90%;
-    max-width: 1400px;
+    width: 92%;
+    max-width: 1500px;
 
     margin: 3rem auto;
 
@@ -131,11 +120,6 @@ body {
 
     scroll-margin-top: 100px;
 
-
-    /* =========================
-       VÍDEO PRINCIPAL
-    ========================= */
-
     .tuts {
         width: 100%;
 
@@ -148,12 +132,11 @@ body {
             position: relative;
 
             display: grid;
-            grid-template-columns: 48% 52%;
+            grid-template-columns: minmax(0, 48%) minmax(0, 52%);
 
             overflow: hidden;
 
             border-radius: 20px;
-
             border: 2px solid rgb(76, 0, 255);
 
             background:
@@ -170,9 +153,9 @@ body {
                     #10145c 100%
                 );
 
-
             > a {
                 width: 100%;
+                min-width: 0;
 
                 display: block;
 
@@ -185,7 +168,6 @@ body {
                     object-fit: cover;
                 }
             }
-
 
             .destaque {
                 position: absolute;
@@ -226,9 +208,9 @@ body {
                 }
             }
 
-
             .info {
                 width: 100%;
+                min-width: 0;
 
                 padding: 5rem 3rem 3rem;
 
@@ -241,20 +223,17 @@ body {
                 h2 {
                     margin-bottom: 1.5rem;
 
-                    font-size: clamp(2.2rem, 2vw, 3rem);
-
+                    font-size: clamp(2.2rem, 2.2vw, 3rem);
                     line-height: 1.3;
                 }
 
                 > p {
                     font-size: clamp(1.4rem, 1.3vw, 1.8rem);
-
                     line-height: 1.7;
 
                     color: rgba(255, 255, 255, 0.7);
                 }
             }
-
 
             .cardss {
                 display: flex;
@@ -269,29 +248,18 @@ body {
         }
     }
 
-
-    /* =========================
-       CARDS DE VÍDEOS
-    ========================= */
-
     > .video {
-        flex: 1 1 250px;
+        flex: 1 1 280px;
 
-        width: auto;
-
+        width: 100%;
         max-width: 350px;
-        min-width: 240px;
+        min-width: 250px;
     }
 }
 
-
-/* =========================
-   TUTORIAIS INTERESSANTES
-========================= */
-
 .text-inf {
-    width: 90%;
-    max-width: 1400px;
+    width: 92%;
+    max-width: 1500px;
 
     margin: 5rem auto 1rem;
 
@@ -312,27 +280,44 @@ body {
 
     h3 {
         font-size: 2.5rem;
+        line-height: 1.2;
     }
 }
 
-
-/* =========================
-   NOTEBOOK
-========================= */
-
-@media (max-width: 1024px) {
-
+@media (max-width: 1200px) {
     .infor {
-        width: 92%;
+        width: 94%;
     }
 
     .videos {
-        width: 92%;
+        width: 94%;
 
         .tuts {
-
             .video-destaque {
                 grid-template-columns: 45% 55%;
+
+                .info {
+                    padding: 5rem 2.5rem 2.5rem;
+                }
+            }
+        }
+
+        > .video {
+            flex: 1 1 30%;
+            max-width: 31%;
+        }
+    }
+
+    .text-inf {
+        width: 94%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .videos {
+        .tuts {
+            .video-destaque {
+                grid-template-columns: 44% 56%;
 
                 .info {
                     padding: 5rem 2rem 2rem;
@@ -341,65 +326,31 @@ body {
         }
 
         > .video {
-            flex: 1 1 40%;
-
-            max-width: 46%;
+            flex: 1 1 45%;
+            max-width: 47%;
         }
-    }
-
-    .text-inf {
-        width: 92%;
     }
 }
 
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 768px) {
-
+@media (max-width: 900px) {
     .infor {
-        width: 92%;
-
-        margin: 3.5rem auto 2rem;
         padding: 2rem;
 
-        grid-template-columns: 55px 1fr;
-
-        gap: 1.5rem;
+        grid-template-columns: 60px 1fr;
 
         > i {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
 
-            font-size: 2.2rem;
-        }
-
-        .info {
-
-            h2 {
-                font-size: 2.2rem;
-            }
-
-            p {
-                font-size: 1.4rem;
-            }
+            font-size: 2.4rem;
         }
     }
 
-
     .videos {
-        width: 92%;
-
-        gap: 1.5rem;
-
         .tuts {
-
             .video-destaque {
                 display: flex;
                 flex-direction: column;
-
 
                 > a {
                     width: 100%;
@@ -414,17 +365,59 @@ body {
                     }
                 }
 
+                .info {
+                    width: 100%;
 
+                    padding: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .infor {
+        width: 92%;
+
+        margin: 3.5rem auto 2rem;
+        padding: 1.8rem;
+
+        grid-template-columns: 55px 1fr;
+
+        gap: 1.5rem;
+
+        > i {
+            width: 55px;
+            height: 55px;
+
+            font-size: 2.2rem;
+        }
+
+        .info {
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .videos {
+        width: 92%;
+
+        gap: 1.8rem;
+
+        .tuts {
+            .video-destaque {
                 .destaque {
                     font-size: 1.3rem;
 
                     padding: .6rem 1.5rem;
                 }
 
-
                 .info {
-                    width: 100%;
-
                     padding: 2.5rem 2rem;
 
                     h2 {
@@ -436,22 +429,20 @@ body {
                     }
                 }
 
-
                 .cardss {
                     justify-content: flex-start;
                 }
             }
         }
 
-
         > .video {
             flex: 1 1 45%;
 
+            width: 100%;
             max-width: 48%;
             min-width: 0;
         }
     }
-
 
     .text-inf {
         width: 92%;
@@ -468,13 +459,18 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .videos {
+        > .video {
+            flex: none;
 
-/* =========================
-   MOBILE
-========================= */
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
 
 @media (max-width: 480px) {
-
     .infor {
         width: calc(100% - 2rem);
 
@@ -511,12 +507,9 @@ body {
 
                 font-size: 1.3rem;
                 line-height: 1.5;
-
-                color: rgba(255, 255, 255, 0.6);
             }
         }
     }
-
 
     .videos {
         width: calc(100% - 2rem);
@@ -529,18 +522,13 @@ body {
 
         gap: 2rem;
 
-
         .tuts {
             width: 100%;
 
             .video-destaque {
                 width: 100%;
 
-                display: flex;
-                flex-direction: column;
-
                 border-radius: 16px;
-
 
                 > a {
                     width: 100%;
@@ -549,14 +537,11 @@ body {
                         width: 100%;
                         height: auto;
 
-                        display: block;
-
                         aspect-ratio: 16 / 9;
 
                         object-fit: cover;
                     }
                 }
-
 
                 .destaque {
                     top: .8rem;
@@ -567,7 +552,6 @@ body {
 
                     padding: .5rem 1.2rem;
                 }
-
 
                 .info {
                     width: 100%;
@@ -587,7 +571,6 @@ body {
                     }
                 }
 
-
                 .cardss {
                     width: 100%;
 
@@ -604,17 +587,14 @@ body {
             }
         }
 
-
         > .video {
             width: 100%;
-
             max-width: 100%;
             min-width: 0;
 
             flex: none;
         }
     }
-
 
     .text-inf {
         width: calc(100% - 2rem);
@@ -629,6 +609,73 @@ body {
 
         h3 {
             font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .infor {
+        width: 96%;
+
+        padding: 1.2rem;
+
+        grid-template-columns: 45px 1fr;
+
+        gap: 1rem;
+
+        > i {
+            width: 45px;
+            height: 45px;
+
+            font-size: 1.8rem;
+        }
+
+        .info {
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .videos {
+        width: 96%;
+
+        .tuts {
+            .video-destaque {
+                .destaque {
+                    font-size: 1rem;
+
+                    padding: .5rem 1rem;
+                }
+
+                .info {
+                    padding: 1.5rem 1.2rem;
+
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    > p {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .text-inf {
+        width: 96%;
+
+        i {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
         }
     }
 }
