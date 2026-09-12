@@ -19,7 +19,11 @@ export default function Ferramenta({
 
                 <div className="tipo">
                     <h3>{tipoIA}</h3>
-                    <a href={`${link}`} target='_blank'>
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <i className='fa-solid fa-arrow-right' />
                     </a>
                 </div>

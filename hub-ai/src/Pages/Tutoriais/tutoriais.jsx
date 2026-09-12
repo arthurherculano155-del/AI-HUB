@@ -31,7 +31,9 @@ export default function Tutoriais() {
                 <div className="tuts">
 
                     <div className="video-destaque">
-                        <a href="https://www.youtube.com/watch?v=cswHBeqNGt0" target='_blank'>
+                        <a href="https://www.youtube.com/watch?v=cswHBeqNGt0" 
+                        target='_blank' 
+                        rel='noreferrer'>
                             <img src="./Assets/Imgs/Capa-Video-Guia.png" alt="" />
                         </a>
 

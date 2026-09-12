@@ -10,9 +10,13 @@ export default function Video({
 ) {
     return (
         <nav className="video">
-            <a href={`${link}`} target="_blank">
+            <a
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+            >
                 <div className="img">
-                <img src={`./Assets/Imgs/${imagem}`} alt="" />
+                    <img src={`./Assets/Imgs/${imagem}`} alt="" />
                 </div>
 
 
