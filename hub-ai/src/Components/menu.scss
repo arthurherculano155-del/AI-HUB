@@ -14,12 +14,10 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-    padding: 0 2rem;
+    padding: 0 3rem;
 
-    color: rgb(238, 238, 238);
-
+    color: white;
     background: black;
 
     border-bottom: 1px solid rgba(128, 128, 128, 0.5);
@@ -32,9 +30,11 @@
 
         gap: 1rem;
 
+        margin-right: auto;
+
         .icone {
-            width: 60px;
-            height: 60px;
+            width: 58px;
+            height: 58px;
 
             object-fit: contain;
         }
@@ -44,6 +44,7 @@
                 margin: 0;
 
                 font-size: 2.4rem;
+                line-height: 1.1;
 
                 white-space: nowrap;
 
@@ -53,13 +54,13 @@
             }
 
             .Info-Sub {
-                margin: .3rem 0 0;
+                margin: .4rem 0 0;
 
-                font-size: 1.2rem;
+                font-size: 1.25rem;
 
                 white-space: nowrap;
 
-                color: rgba(255, 255, 255, 0.56);
+                color: rgba(255, 255, 255, 0.55);
             }
         }
     }
@@ -67,46 +68,57 @@
     .abrirMenu {
         display: none;
 
+        width: 45px;
+        height: 45px;
+
         align-items: center;
         justify-content: center;
 
-        width: 48px;
-        height: 48px;
-
         flex-shrink: 0;
-
-        color: white;
 
         font-size: 2rem;
 
-        border: 2px solid rgba(128, 128, 128, 0.5);
-        border-radius: 50%;
+        color: white;
+
+        background: rgba(255, 255, 255, 0.05);
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 12px;
 
         cursor: pointer;
 
         transition: .2s ease;
 
         &:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.12);
         }
     }
 
     .menu-princ {
+        margin-left: auto;
+
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-
-        min-width: 0;
-
-        gap: clamp(2rem, 5vw, 10rem);
     }
 
     .Bnt-Links {
+        position: absolute;
+
+        top: 50%;
+        left: 53%;
+
+        width: max-content;
+
+        transform: translate(-50%, -50%);
+
         .Links {
             display: flex;
             align-items: center;
+            justify-content: center;
 
-            gap: clamp(1.2rem, 1.8vw, 2.5rem);
+            width: max-content;
+
+            gap: 3rem;
 
             margin: 0;
             padding: 0;
@@ -119,7 +131,7 @@
                 a {
                     color: white;
 
-                    font-size: 1.45rem;
+                    font-size: 1.55rem;
                     font-weight: 600;
 
                     white-space: nowrap;
@@ -129,7 +141,7 @@
                     transition: .2s ease;
 
                     &:hover {
-                        color: rgba(168, 85, 247, 0.8);
+                        color: rgb(168, 85, 247);
 
                         text-decoration: underline;
                     }
@@ -145,7 +157,7 @@
 
         flex-shrink: 0;
 
-        gap: 1rem;
+        gap: .8rem;
 
         margin: 0;
 
@@ -170,6 +182,10 @@
 
         transition: .2s ease;
 
+        i {
+            font-size: 1.6rem;
+        }
+
         p {
             margin: 0;
 
@@ -178,22 +194,18 @@
             white-space: nowrap;
         }
 
-        i {
-            font-size: 1.6rem;
-        }
-
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
         }
 
         &:active {
-            transform: scale(.95);
+            transform: scale(.96);
 
             background: linear-gradient(
                 135deg,
-                rgba(37, 100, 235, .8),
+                rgba(37, 99, 235, .8),
                 rgba(124, 58, 237, .8),
-                rgba(191, 38, 211, .8)
+                rgba(192, 38, 211, .8)
             );
         }
     }
@@ -222,14 +234,13 @@
     backdrop-filter: blur(8px);
 
     .possibilidades {
-        width: min(1000px, 75vw);
+        width: min(1000px, 80vw);
         max-height: 90vh;
 
         position: relative;
 
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(250px, .8fr);
-        align-items: start;
+        grid-template-columns: minmax(0, 1fr) 350px;
 
         gap: 3rem;
 
@@ -264,7 +275,7 @@
             h4 {
                 margin: 0;
 
-                font-size: 1.3rem;
+                font-size: 1.4rem;
             }
 
             h1 {
@@ -313,7 +324,6 @@
 
         .img {
             width: 100%;
-            height: 100%;
 
             display: flex;
             flex-direction: column;
@@ -327,8 +337,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
-                flex-shrink: 0;
 
                 padding: 0;
 
@@ -347,11 +355,9 @@
                 transition: .2s ease;
 
                 &:hover {
-                    transform: rotate(180deg) scale(1.05);
+                    transform: rotate(180deg);
 
                     background: rgba(0, 0, 0, 0.5);
-
-                    border-color: rgba(128, 128, 128, 0.5);
                 }
             }
 
@@ -360,38 +366,100 @@
                 max-width: 400px;
                 height: auto;
 
-                display: block;
-
                 object-fit: contain;
-
-                margin-top: auto;
             }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .Home-Header {
+        padding: 0 5rem;
+
+        .Menu-Info {
+            .icone {
+                width: 64px;
+                height: 64px;
+            }
+
+            .text-menu {
+                .Info-Text {
+                    font-size: 2.7rem;
+                }
+
+                .Info-Sub {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .Bnt-Links {
+            left: 52.5%;
+
+            .Links {
+                gap: 3.5rem;
+
+                .link {
+                    a {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+
+        .startNow {
+            padding: 1.1rem 2rem;
+
+            font-size: 1.4rem;
         }
     }
 }
 
 @media (max-width: 1400px) {
     .Home-Header {
-        .menu-princ {
-            gap: 3rem;
+        padding: 0 2rem;
+
+        .Menu-Info {
+            .icone {
+                width: 55px;
+                height: 55px;
+            }
+
+            .text-menu {
+                .Info-Text {
+                    font-size: 2.2rem;
+                }
+
+                .Info-Sub {
+                    font-size: 1.15rem;
+                }
+            }
         }
 
         .Bnt-Links {
+            left: 52.5%;
+
             .Links {
-                gap: 1.5rem;
+                gap: 2.5rem;
 
                 .link {
                     a {
-                        font-size: 1.3rem;
+                        font-size: 1.5rem;
                     }
                 }
             }
+        }
+
+        .startNow {
+            padding: .9rem 1.4rem;
+
+            font-size: 1.25rem;
         }
     }
 
     .fundo {
         .possibilidades {
-            width: 82vw;
+            width: 85vw;
         }
     }
 }
@@ -401,9 +469,11 @@
         padding: 0 1.5rem;
 
         .Menu-Info {
+            gap: .7rem;
+
             .icone {
-                width: 52px;
-                height: 52px;
+                width: 50px;
+                height: 50px;
             }
 
             .text-menu {
@@ -412,65 +482,20 @@
                 }
 
                 .Info-Sub {
-                    font-size: 1.1rem;
+                    font-size: 1.05rem;
                 }
             }
-        }
-
-        .menu-princ {
-            gap: 2rem;
         }
 
         .Bnt-Links {
+            left: 52%;
+
             .Links {
-                gap: 1.1rem;
+                gap: 2rem;
 
                 .link {
                     a {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-
-        .startNow {
-            padding: .9rem 1.3rem;
-
-            font-size: 1.15rem;
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-    .Home-Header {
-        .Menu-Info {
-            .icone {
-                width: 46px;
-                height: 46px;
-            }
-
-            .text-menu {
-                .Info-Text {
-                    font-size: 1.8rem;
-                }
-
-                .Info-Sub {
-                    font-size: 1rem;
-                }
-            }
-        }
-
-        .menu-princ {
-            gap: 1.2rem;
-        }
-
-        .Bnt-Links {
-            .Links {
-                gap: .8rem;
-
-                .link {
-                    a {
-                        font-size: 1.05rem;
+                        font-size: 1.35rem;
                     }
                 }
             }
@@ -479,35 +504,199 @@
         .startNow {
             padding: .8rem 1rem;
 
+            font-size: 1.15rem;
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .Home-Header {
+        .Menu-Info {
+            .text-menu {
+                .Info-Text {
+                    font-size: 1.9rem;
+                }
+
+                .Info-Sub {
+                    display: none;
+                }
+            }
+        }
+
+        .Bnt-Links {
+            left: 51.5%;
+
+            .Links {
+                gap: 1.5rem;
+
+                .link {
+                    a {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+
+        .startNow {
+            width: 44px;
+            height: 44px;
+
+            padding: 0;
+
             p {
                 display: none;
+            }
+
+            i {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .Home-Header {
+        height: 75px;
+
+        padding: 0 1.5rem;
+
+        .Menu-Info {
+            .icone {
+                width: 45px;
+                height: 45px;
+            }
+
+            .text-menu {
+                .Info-Text {
+                    font-size: 1.9rem;
+                }
+
+                .Info-Sub {
+                    display: block;
+
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .abrirMenu {
+            display: flex;
+
+            margin-left: auto;
+        }
+
+        .menu-princ {
+            position: absolute;
+
+            top: 75px;
+            right: 0;
+
+            width: min(380px, 80vw);
+            height: calc(100vh - 75px);
+
+            padding: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+
+            gap: 1.5rem;
+
+            overflow-y: auto;
+
+            background: rgba(0, 0, 0, 0.98);
+
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+
+            box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .Bnt-Links {
+            width: 100%;
+
+            position: static;
+
+            transform: none;
+
+            .Links {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+
+                gap: 1rem;
+
+                .link {
+                    width: 100%;
+
+                    a {
+                        width: 100%;
+
+                        display: block;
+
+                        padding: 1.2rem;
+
+                        font-size: 1.5rem;
+
+                        text-align: center;
+
+                        background: rgba(255, 255, 255, 0.05);
+
+                        border: 1px solid rgba(255, 255, 255, 0.15);
+                        border-radius: 10px;
+
+                        &:hover {
+                            color: white;
+
+                            background: rgba(124, 58, 237, 0.25);
+
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .startNow {
+            width: 100%;
+            height: auto;
+
+            padding: 1.2rem;
+
+            font-size: 1.4rem;
+
+            p {
+                display: block;
             }
         }
     }
 
     .fundo {
         .possibilidades {
-            width: 90vw;
-
-            grid-template-columns: minmax(0, 1fr) 300px;
-
-            gap: 2rem;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .fundo {
-        .possibilidades {
             width: 92vw;
 
             grid-template-columns: 1fr;
 
+            gap: 2rem;
+
             padding: 2rem;
 
             .text-info {
+                h4 {
+                    font-size: 1.3rem;
+                }
+
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 2.6rem;
+                }
+
+                > p {
+                    font-size: 1.45rem;
                 }
             }
 
@@ -520,7 +709,7 @@
                 }
 
                 img {
-                    width: 65%;
+                    width: 60%;
                     max-width: 320px;
 
                     margin: 0 auto;
@@ -530,58 +719,11 @@
     }
 }
 
-@media (max-width: 600px) and (min-width: 481px) {
+@media (max-width: 600px) {
     .Home-Header {
         padding: 0 1rem;
 
         .Menu-Info {
-            .text-menu {
-                .Info-Sub {
-                    display: none;
-                }
-
-                .Info-Text {
-                    font-size: 1.6rem;
-                }
-            }
-
-            .icone {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
-        .Bnt-Links {
-            .Links {
-                gap: .5rem;
-
-                .link {
-                    a {
-                        font-size: .9rem;
-                    }
-                }
-            }
-        }
-
-        .startNow {
-            display: none;
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .Home-Header {
-        height: 75px;
-
-        padding: 0 1rem;
-
-        position: absolute;
-
-        z-index: 1905;
-
-        .Menu-Info {
-            gap: .7rem;
-
             .icone {
                 width: 42px;
                 height: 42px;
@@ -593,94 +735,69 @@
                 }
 
                 .Info-Sub {
-                    font-size: 1rem;
+                    font-size: .95rem;
+                }
+            }
+        }
+
+        .menu-princ {
+            width: min(340px, 85vw);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Home-Header {
+        position: absolute;
+
+        z-index: 1905;
+
+        padding: 0 1rem;
+
+        .Menu-Info {
+            .icone {
+                width: 40px;
+                height: 40px;
+            }
+
+            .text-menu {
+                .Info-Text {
+                    font-size: 1.6rem;
+                }
+
+                .Info-Sub {
+                    font-size: .9rem;
                 }
             }
         }
 
         .abrirMenu {
-            display: flex;
-
-            width: 45px;
-            height: 45px;
+            width: 42px;
+            height: 42px;
 
             font-size: 1.8rem;
         }
 
         .menu-princ {
-            position: absolute;
+            width: 75vw;
 
-            top: 75px;
-            right: 0;
-
-            width: min(75vw, 320px);
-            height: calc(100vh - 75px);
-
-            padding: 2rem 1rem;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-
-            gap: 1.5rem;
-
-            overflow-y: auto;
-
-            background: black;
-
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 1.5rem 1rem;
         }
 
         .Bnt-Links {
-            width: 100%;
-
             .Links {
-                width: 100%;
-
-                flex-direction: column;
-
                 gap: .8rem;
 
                 .link {
-                    width: 100%;
-
                     a {
-                        width: 100%;
-
-                        display: block;
-
-                        padding: 1rem;
-
-                        text-align: center;
-
-                        font-size: 1.3rem;
-
-                        color: white;
-
-                        background: rgba(255, 255, 255, 0.05);
-
-                        border: 1px solid rgba(255, 255, 255, 0.2);
-                        border-radius: 10px;
-
-                        text-decoration: none;
+                        font-size: 1.4rem;
                     }
                 }
             }
         }
 
         .startNow {
-            width: 100%;
-
-            display: flex;
-
-            margin: 0;
-
-            padding: 1rem;
-
-            p {
-                display: block;
-            }
+            font-size: 1.3rem;
         }
     }
 
@@ -701,15 +818,15 @@
                 padding-top: 3rem;
 
                 h4 {
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                 }
 
                 h1 {
-                    font-size: 2.1rem;
+                    font-size: 2.2rem;
                 }
 
                 > p {
-                    font-size: 1.3rem;
+                    font-size: 1.35rem;
                 }
 
                 ul {
@@ -741,10 +858,14 @@
 
 @media (max-width: 360px) {
     .Home-Header {
+        padding: 0 .7rem;
+
         .Menu-Info {
+            gap: .5rem;
+
             .icone {
-                width: 38px;
-                height: 38px;
+                width: 36px;
+                height: 36px;
             }
 
             .text-menu {
@@ -753,22 +874,32 @@
                 }
 
                 .Info-Sub {
-                    font-size: .85rem;
+                    font-size: .8rem;
                 }
             }
         }
 
         .abrirMenu {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
 
             font-size: 1.6rem;
         }
 
         .menu-princ {
             width: 82vw;
+        }
 
-            padding: 1.5rem .8rem;
+        .Bnt-Links {
+            .Links {
+                gap: .7rem;
+
+                .link {
+                    a {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
         }
     }
 
@@ -780,17 +911,11 @@
 
             .text-info {
                 h1 {
-                    font-size: 1.9rem;
+                    font-size: 2rem;
                 }
 
                 > p {
-                    font-size: 1.2rem;
-                }
-            }
-
-            .img {
-                img {
-                    width: 90%;
+                    font-size: 1.25rem;
                 }
             }
         }

@@ -6,11 +6,11 @@ import Item from './item';
 export default function Menu() {
   const [modalAberto, setModalAberto] = useState(false);
   const [menu, setMenu] = useState(
-    () => window.innerWidth > 480
-  )
+    () => window.innerWidth > 900
+  );
 
   function fecharMenu() {
-    if (window.innerWidth < 480) {
+    if (window.innerWidth <= 900) {
       setMenu(false);
     }
   }
