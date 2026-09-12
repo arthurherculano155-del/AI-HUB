@@ -5,6 +5,15 @@ import Item from './item';
 
 export default function Menu() {
   const [modalAberto, setModalAberto] = useState(false);
+  const [menu, setMenu] = useState(
+    () => window.innerWidth > 480
+  )
+
+  function fecharMenu() {
+    if (window.innerWidth < 480) {
+      setMenu(false);
+    }
+  }
 
   return (
     <>
@@ -32,44 +41,53 @@ export default function Menu() {
 
         </div>
 
+        <div className="abrirMenu" onClick={() => setMenu(!menu)}>
+          <i className={menu ? "fa-solid fa-xmark" : "fa-solid fa-bars"} />
+        </div>
 
-        <nav className="Bnt-Links">
+        {menu && (
+          <div className="menu-princ">
 
-          <ul className="Links">
+            <nav className="Bnt-Links">
 
-            <li className="link">
-              <Link to='/'>Início</Link>
-            </li>
+              <ul className="Links">
 
-            <li className="link">
-              <a href="#sobre">Sobre</a>
-            </li>
+                <li onClick={fecharMenu} className="link">
+                  <Link to='/'>Início</Link>
+                </li>
 
-            <li className="link">
-              <Link to='/tutoriais'>Tutoriais </Link>
-            </li>
+                <li onClick={fecharMenu} className="link">
+                  <a href="#sobre">Sobre</a>
+                </li>
 
-            <li className="link">
-              <Link to='/ferramentas'>Ferramentas</Link>
-            </li>
+                <li onClick={fecharMenu} className="link">
+                  <Link to='/tutoriais'>Tutoriais </Link>
+                </li>
 
-            <li className="link">
-              <Link to="/praticas">Boas Práticas</Link>
-            </li>
+                <li onClick={fecharMenu} className="link">
+                  <Link to='/ferramentas'>Ferramentas</Link>
+                </li>
 
-            <li className="link">
-              <Link to="/contato">Contato</Link>
-            </li>
+                <li onClick={fecharMenu} className="link">
+                  <Link to="/praticas">Boas Práticas</Link>
+                </li>
 
-          </ul>
+                <li onClick={fecharMenu} className="link">
+                  <Link to="/contato">Contato</Link>
+                </li>
 
-        </nav>
+              </ul>
+
+            </nav>
 
 
-        <button onClick={() => setModalAberto(true)} className="startNow">
-          <i className="fa-solid fa-brain" />
-          <p>Ver Possibilidades</p>
-        </button>
+            <button onClick={() => setModalAberto(true)} className="startNow">
+              <i className="fa-solid fa-brain" />
+              <p>Ver Possibilidades</p>
+            </button>
+
+          </div>
+        )}
 
       </header>
 

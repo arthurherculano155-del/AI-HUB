@@ -45,3 +45,9 @@ html{
         transform: scale(1.05) translateY(-8px);
     }
 }
+
+@media(max-width: 480px){
+    .informacao{
+        width: 90vw;
+    }
+}

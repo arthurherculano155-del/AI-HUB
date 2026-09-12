@@ -11,7 +11,7 @@ export default function Rodape() {
 
                     <img
                         src="./Assets/Imgs/CerebroFavIcon.png"
-                        alt=""
+                        alt="Ícone"
                     />
 
                     <div className="text">
@@ -32,11 +32,6 @@ export default function Rodape() {
                     Mais conhecimento, mais ideias,<br />
                     mais possibilidades.
                 </p>
-
-            </div>
-
-
-            <div className="redes">
 
             </div>
 

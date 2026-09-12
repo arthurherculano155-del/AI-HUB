@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     border: 0;
 }
 
@@ -11,56 +12,261 @@ html {
 
 body {
     overflow-x: hidden;
-    font-family: "MontSerrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
+
     background:
-        radial-gradient(circle at 85% 50%,
+        radial-gradient(
+            circle at 85% 50%,
             rgba(45, 20, 120, 0.35),
-            transparent 55%),
-        linear-gradient(110deg,
+            transparent 55%
+        ),
+        linear-gradient(
+            110deg,
             #000000 0%,
             #070014 35%,
             #150035 70%,
-            #090b30 100%);
+            #090b30 100%
+        );
 }
 
 .infor {
-    display: flex;
-    width: 40vw;
-    align-items: center;
-    scroll-margin-top: 100px;
-    color: white;
-    font-size: 2.5rem;
-    gap: 2rem;
-    margin: 2rem 3rem;
+    width: 90%;
+    max-width: 1200px;
 
-    .info{
-        p{
-            font-size: 1.3rem;
+    margin: 4rem auto 2rem;
+    padding: 2rem 2.5rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    scroll-margin-top: 100px;
+
+    color: white;
+
+    border: 1px solid rgba(124, 58, 237, 0.35);
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(124, 58, 237, 0.15),
+            transparent 40%
+        ),
+        rgba(0, 0, 0, 0.25);
+
+    .info {
+        flex: 1;
+        min-width: 0;
+
+        h2 {
+            margin-bottom: .5rem;
+
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        p {
+            max-width: 800px;
+
+            font-size: 1.4rem;
+            line-height: 1.6;
+
             color: rgba(255, 255, 255, 0.5);
         }
     }
 
     i {
-        padding: 1.3rem 3.5rem;
+        width: 70px;
+        height: 70px;
+
+        flex-shrink: 0;
+
         display: flex;
-        border: 2px solid rgb(0, 153, 255);
-
-        background: linear-gradient(135deg,
-            rgba(0, 81, 255, 0.7), 
-            rgba(179, 0, 255, 0.7));
-
+        align-items: center;
         justify-content: center;
+
+        font-size: 3rem;
+
+        border: 2px solid rgb(0, 153, 255);
         border-radius: 20px;
 
+        background:
+            linear-gradient(
+                135deg,
+                rgba(0, 81, 255, 0.7),
+                rgba(179, 0, 255, 0.7)
+            );
 
-        font-size: 4.5rem;
+        box-shadow:
+            0 0 20px rgba(0, 81, 255, 0.2);
     }
 }
 
 .ferramentas {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-    gap: 5rem;
-    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 3rem auto 5rem;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 3rem;
+}
+
+
+/* NOTEBOOK */
+
+@media (max-width: 1100px) {
+
+    .infor {
+        width: 92%;
+    }
+
+    .ferramentas {
+        width: 92%;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 2.5rem;
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .infor {
+        width: 92%;
+
+        margin: 3rem auto 2rem;
+        padding: 1.8rem;
+
+        gap: 1.5rem;
+
+        i {
+            width: 60px;
+            height: 60px;
+
+            font-size: 2.5rem;
+
+            border-radius: 15px;
+        }
+
+        .info {
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1.35rem;
+            }
+        }
+    }
+
+    .ferramentas {
+        width: 92%;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 2rem;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .infor {
+        width: 92%;
+
+        margin: 2.5rem auto 2rem;
+        padding: 1.5rem;
+
+        gap: 1.2rem;
+
+        border-radius: 14px;
+
+        i {
+            width: 50px;
+            height: 50px;
+
+            font-size: 2rem;
+
+            border-radius: 12px;
+        }
+
+        .info {
+            flex: 1;
+            min-width: 0;
+
+            h2 {
+                margin-bottom: .4rem;
+
+                font-size: 1.9rem;
+                line-height: 1.25;
+            }
+
+            p {
+                width: 100%;
+
+                font-size: 1.3rem;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .ferramentas {
+        width: 92%;
+
+        margin: 2rem auto 4rem;
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 360px) {
+
+    .infor {
+        width: 94%;
+
+        padding: 1.2rem;
+
+        gap: 1rem;
+
+        i {
+            width: 45px;
+            height: 45px;
+
+            font-size: 1.8rem;
+        }
+
+        .info {
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .ferramentas {
+        width: 94%;
+
+        gap: 1.5rem;
+    }
 }

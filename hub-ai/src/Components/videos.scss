@@ -1,12 +1,20 @@
 .video {
     color: white;
     transition: .2s ease-out;
+
     width: 22vw;
+    max-width: 360px;
+    min-width: 280px;
+
     height: auto;
+
     border-radius: 20px;
     cursor: pointer;
     overflow: hidden;
     padding: 10px;
+
+    box-sizing: border-box;
+
     background:
         radial-gradient(circle at 85% 50%,
             rgba(0, 80, 255, 0.35),
@@ -22,23 +30,36 @@
 
         img {
             width: 100%;
+            height: auto;
+            display: block;
+
             border-radius: 20px;
         }
     }
 
     .card-text {
         text-align: center;
-        width: 4vw;
+
+        width: auto;
+
         float: right;
+
         position: relative;
+
         margin-top: -35px;
-        margin-right: .5vw;
+        margin-right: .5rem;
+
         padding: 5px 15px;
+
         border-radius: 1000px;
-        background: linear-gradient(90deg,
+
+        background:
+            linear-gradient(
+                90deg,
                 rgb(43, 46, 226),
                 darkviolet,
-                rgb(162, 130, 238));
+                rgb(162, 130, 238)
+            );
     }
 
     a {
@@ -47,6 +68,7 @@
     }
 
     .texts {
+
         h2 {
             font-size: 20px;
             margin: 10px 0;
@@ -55,29 +77,144 @@
         p {
             font-size: 16px;
             color: rgba(255, 255, 255, 0.5);
+
             line-height: 30px;
         }
     }
 
     .nivelamento {
-        align-items: center;
         display: flex;
+        align-items: center;
         justify-content: center;
-        width: 50%;
+
+        width: fit-content;
+
         border-radius: 1000px;
+
         background:
-            linear-gradient(90deg,
+            linear-gradient(
+                90deg,
                 rgb(43, 46, 226),
                 darkviolet,
-                rgb(162, 130, 238));
-        ;
-        padding: 5px 10px;
+                rgb(162, 130, 238)
+            );
+
+        padding: 5px 15px;
+
         gap: 10px;
+
         font-size: 15px;
+
         margin-top: 20px;
     }
 
-    &:hover{
+    &:hover {
         transform: scale(1.04) translateY(-8px);
     }
+}
+
+
+@media (max-width: 1024px) {
+
+    .video {
+        width: 40vw;
+
+        .texts {
+
+            h2 {
+                font-size: 19px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .video {
+        width: 80%;
+        max-width: 420px;
+        min-width: 0;
+
+        .card-text {
+            font-size: 14px;
+        }
+
+        .texts {
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 23px;
+            }
+        }
+
+        .nivelamento {
+            font-size: 14px;
+        }
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .video {
+        width: 90vw;
+        max-width: none;
+
+        padding: 8px;
+
+        border-radius: 15px;
+
+        .img {
+
+            img {
+                border-radius: 15px;
+            }
+        }
+
+        .card-text {
+            margin-top: -32px;
+
+            padding: 4px 12px;
+
+            font-size: 12px;
+        }
+
+        .texts {
+
+            h2 {
+                font-size: 17px;
+                margin-top: 15px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 21px;
+            }
+        }
+
+        .nivelamento {
+            font-size: 12px;
+
+            padding: 5px 12px;
+
+            gap: 7px;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+
 }

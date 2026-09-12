@@ -32,6 +32,23 @@
         color: rgba(255, 255, 255, 0.562);
     }
 
+    .abrirMenu {
+        border: 2px solid rgba(128, 128, 128, 0.5);
+        padding: 1rem .8rem;
+        display: flex;
+        justify-content: center;
+        border-radius: 1000px;
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    .menu-princ {
+        display: flex;
+        align-items: center;
+        gap: 15rem;
+    }
+
     .Bnt-Links {
         .Links {
             list-style: none;
@@ -202,6 +219,89 @@
 
             gap: 1.5rem;
             padding: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Home-Header {
+        position: absolute;
+        z-index: 1905;
+
+        .abrirMenu {
+            display: flex;
+            margin-right: 1rem;
+        }
+
+        .menu-princ {
+            position: absolute;
+
+            top: 80px;
+            right: 0;
+
+            width: 70%;
+            height: calc(100vh - 80px);
+
+            background: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 1.5rem;
+
+            padding: 2rem 1rem;
+
+            box-sizing: border-box;
+
+            .Bnt-Links {
+                width: 100%;
+
+                .Links {
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    gap: .8rem;
+
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        width: 100%;
+
+                        a {
+                            display: block;
+
+                            width: 100%;
+                            box-sizing: border-box;
+
+                            padding: 1rem;
+
+                            text-align: center;
+
+                            color: white;
+
+                            background: rgba(255, 255, 255, 0.05);
+
+                            border: 1px solid rgba(255, 255, 255, 0.2);
+                            border-radius: 10px;
+
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .startNow {
+                width: 100%;
+                margin: 0;
+
+                justify-content: center;
+
+                box-sizing: border-box;
+            }
         }
     }
 }

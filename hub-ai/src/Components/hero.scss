@@ -296,3 +296,45 @@ html {
         flex-wrap: wrap;
     }
 }
+
+@media(max-width: 480px) {
+    .heroText {
+        width: 80vw;
+        justify-content: center;
+        gap: 2rem;
+
+        i {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+    }
+
+    .hero-section {
+        flex-direction: column;
+
+        h1 {
+            text-align: center;
+        }
+
+        .hero-bnts{
+            flex-direction: column;
+            
+            .bnt{
+                width: 80vw;
+                margin: 0 auto;
+
+               justify-content: center;
+            }
+        }
+
+
+        .robot {
+            width: 90vw;
+            height: auto;
+            margin: 10px auto;
+        }
+    }
+}

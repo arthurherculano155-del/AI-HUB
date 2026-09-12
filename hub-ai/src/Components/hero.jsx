@@ -69,9 +69,11 @@ export default function HeroSection({
 
                     <img
                         src={`./Assets/Imgs/${imagem}`}
-                        alt=""
+                        alt="Robô"
                         className="robot"
                     />
+
+                
 
                 </section>
 
