@@ -13,6 +13,7 @@
 
 .modal {
     position: relative;
+    z-index: 2000;
     width: 100%;
     max-width: 650px;
     max-height: 85vh;
