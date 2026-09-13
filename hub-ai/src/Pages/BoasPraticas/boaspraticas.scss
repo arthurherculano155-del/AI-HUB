@@ -12,7 +12,9 @@ html {
 
 body {
     overflow-x: hidden;
+
     font-family: "MontSerrat", sans-serif;
+
     background:
         radial-gradient(
             circle at 85% 50%,
@@ -30,38 +32,93 @@ body {
 
 .boaspraticas {
     width: 92%;
-    max-width: 1600px;
+    max-width: 1500px;
 
     margin: 3rem auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
+    display: grid;
 
-    gap: 3rem 5rem;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    column-gap: 3rem;
+    row-gap: 3rem;
+
+    > * {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    .boaspraticas {
+        max-width: 1600px;
+
+        column-gap: 4rem;
+        row-gap: 3.5rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .boaspraticas {
+        width: 94%;
+        max-width: 1250px;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        column-gap: 2.5rem;
+        row-gap: 2.5rem;
+    }
 }
 
 @media (max-width: 1200px) {
     .boaspraticas {
-        width: 94%;
-        gap: 3rem;
+        width: 95%;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        column-gap: 2rem;
+        row-gap: 2.5rem;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .boaspraticas {
-        width: 94%;
-        gap: 2.5rem;
+        width: 96%;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        column-gap: 1.5rem;
+        row-gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .boaspraticas {
         width: 92%;
-        margin: 2.5rem auto;
+        max-width: 750px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
         gap: 2rem;
+
+        margin: 2.5rem auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .boaspraticas {
+        width: 94%;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.8rem;
     }
 }
 
@@ -69,18 +126,22 @@ body {
     .boaspraticas {
         width: 94%;
 
-        margin: 2rem auto;
-
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
 
         gap: 1.5rem;
+
+        margin: 2rem auto;
+
+        > * {
+            width: 100%;
+        }
     }
 }
 
 @media (max-width: 360px) {
     .boaspraticas {
         width: 96%;
+
         gap: 1.2rem;
     }
 }
