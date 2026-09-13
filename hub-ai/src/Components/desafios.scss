@@ -103,7 +103,7 @@
 
     color: white;
 
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 
     background: rgba(255, 255, 255, 0.05);
 
@@ -139,7 +139,7 @@
     > div:last-child > span {
         color: #967fff;
 
-        font-size: 0.72rem;
+        font-size: 1.05rem;
         font-weight: 700;
 
         letter-spacing: 3px;
@@ -148,7 +148,7 @@
     h1 {
         margin: 0.4rem 0 0;
 
-        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-size: clamp(2.8rem, 4vw, 4rem);
 
         strong {
             font-weight: inherit;
@@ -173,7 +173,7 @@
 
         color: rgba(255, 255, 255, 0.55);
 
-        font-size: 0.95rem;
+        font-size: 1.3rem;
         line-height: 1.7;
     }
 }
@@ -190,7 +190,7 @@
 
     color: #a175ff;
 
-    font-size: 2rem;
+    font-size: 2.6rem;
 
     background: rgba(118, 72, 255, 0.12);
 
@@ -217,17 +217,19 @@
 
         color: rgba(255, 255, 255, 0.65);
 
-        font-size: 0.85rem;
+        font-size: 1.15rem;
 
         i {
             color: #a67cff;
+
+            font-size: 1.3rem;
         }
     }
 
     strong {
         color: white;
 
-        font-size: 0.85rem;
+        font-size: 1.15rem;
     }
 }
 
@@ -322,7 +324,8 @@
     h2 {
         margin: 1.2rem 0 0.5rem;
 
-        font-size: 1.25rem;
+        font-size: 1.75rem;
+        line-height: 1.3;
     }
 
     > p {
@@ -330,7 +333,7 @@
 
         color: rgba(255, 255, 255, 0.5);
 
-        font-size: 0.9rem;
+        font-size: 1.25rem;
         line-height: 1.6;
     }
 }
@@ -351,7 +354,7 @@
 
     color: #9c7cff;
 
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 
     background: rgba(116, 72, 255, 0.12);
 
@@ -365,7 +368,7 @@
 
     color: rgba(255, 255, 255, 0.65);
 
-    font-size: 0.7rem;
+    font-size: 1rem;
 
     background: rgba(255, 255, 255, 0.05);
 
@@ -385,10 +388,12 @@
 
     color: #a88cff;
 
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
 
     i {
+        font-size: 1.3rem;
+
         transition: 0.25s ease;
     }
 }
@@ -415,7 +420,7 @@
 
     color: rgba(255, 255, 255, 0.75);
 
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
 
     background: rgba(255, 255, 255, 0.05);
@@ -461,7 +466,7 @@
         > span {
             color: #a184ff;
 
-            font-size: 0.72rem;
+            font-size: 1.05rem;
             font-weight: 700;
 
             letter-spacing: 2px;
@@ -472,7 +477,7 @@
         h1 {
             margin: 0.35rem 0;
 
-            font-size: 1.7rem;
+            font-size: 2.3rem;
         }
 
         p {
@@ -480,6 +485,7 @@
 
             color: rgba(255, 255, 255, 0.5);
 
+            font-size: 1.25rem;
             line-height: 1.6;
         }
     }
@@ -497,7 +503,7 @@
 
     color: white;
 
-    font-size: 1.7rem;
+    font-size: 2.2rem;
 
     border-radius: 18px;
 
@@ -527,7 +533,7 @@
 
         margin: 1rem 0 0;
 
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         line-height: 1.55;
     }
 }
@@ -541,11 +547,11 @@
     color: #9e7fff;
 
     i {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
     }
 
     span {
-        font-size: 0.72rem;
+        font-size: 1.05rem;
         font-weight: 700;
 
         letter-spacing: 2px;
@@ -572,6 +578,8 @@
         margin-top: 2px;
 
         color: #ffc45e;
+
+        font-size: 1.3rem;
     }
 
     p {
@@ -579,7 +587,7 @@
 
         color: rgba(255, 255, 255, 0.62);
 
-        font-size: 0.88rem;
+        font-size: 1.15rem;
         line-height: 1.6;
     }
 }
@@ -594,7 +602,7 @@
 
         color: rgba(255, 255, 255, 0.75);
 
-        font-size: 0.85rem;
+        font-size: 1.15rem;
         font-weight: 600;
     }
 
@@ -614,7 +622,7 @@
 
         font-family: inherit;
 
-        font-size: 0.9rem;
+        font-size: 1.15rem;
         line-height: 1.6;
 
         background: rgba(0, 0, 0, 0.18);
@@ -654,7 +662,7 @@
     > span {
         color: rgba(255, 255, 255, 0.4);
 
-        font-size: 0.75rem;
+        font-size: 1.05rem;
     }
 
     button {
@@ -669,7 +677,7 @@
 
         color: white;
 
-        font-size: 0.82rem;
+        font-size: 1.1rem;
         font-weight: 700;
 
         background: linear-gradient(
@@ -724,6 +732,7 @@
     text-align: left;
 
     font-family: inherit;
+    font-size: 1.2rem;
 
     background: rgba(255, 255, 255, 0.03);
 
@@ -788,7 +797,7 @@
 
     color: #a88cff;
 
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 700;
 
     background: rgba(117, 92, 255, 0.1);
@@ -799,6 +808,7 @@
 }
 
 .opcao-texto {
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 
@@ -846,7 +856,7 @@
 
     > div:last-child {
         > span {
-            font-size: 0.72rem;
+            font-size: 1.05rem;
             font-weight: 700;
 
             letter-spacing: 1px;
@@ -857,7 +867,7 @@
         h3 {
             margin: 0.3rem 0 0.4rem;
 
-            font-size: 1rem;
+            font-size: 1.45rem;
         }
 
         p {
@@ -865,7 +875,7 @@
 
             color: rgba(255, 255, 255, 0.6);
 
-            font-size: 0.88rem;
+            font-size: 1.2rem;
             line-height: 1.65;
         }
     }
@@ -881,7 +891,7 @@
 
     flex-shrink: 0;
 
-    font-size: 1.45rem;
+    font-size: 1.8rem;
 }
 
 .desafio-resultado-texto {
@@ -912,20 +922,20 @@
         strong {
             color: #9b7dff;
 
-            font-size: 2.4rem;
+            font-size: 2.8rem;
         }
 
         span {
             color: rgba(255, 255, 255, 0.45);
 
-            font-size: 0.8rem;
+            font-size: 1.1rem;
         }
     }
 
     > i {
         color: #8b6cff;
 
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 }
 
@@ -947,7 +957,7 @@
 
     border-radius: 11px;
 
-    font-size: 0.82rem;
+    font-size: 1.1rem;
 
     &.passou {
         color: #aaf3d3;
@@ -988,7 +998,7 @@
 
     color: rgba(255, 255, 255, 0.75);
 
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 600;
 
     background: rgba(255, 255, 255, 0.05);
@@ -1033,7 +1043,7 @@
 
     border-radius: 10px;
 
-    font-size: 0.82rem;
+    font-size: 1.1rem;
     font-weight: 700;
 
     cursor: pointer;
@@ -1072,11 +1082,13 @@
 @keyframes abrirDesafios {
     from {
         opacity: 0;
+
         transform: scale(0.97);
     }
 
     to {
         opacity: 1;
+
         transform: scale(1);
     }
 }
@@ -1084,12 +1096,151 @@
 @keyframes aparecerResultado {
     from {
         opacity: 0;
+
         transform: translateY(8px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
+    }
+}
+
+@media (min-width: 1400px) {
+    .desafios-modal {
+        width: min(1250px, 88vw);
+    }
+
+    .desafios-header {
+        > div:last-child > span {
+            font-size: 1.1rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.35rem;
+        }
+    }
+
+    .desafios-progresso {
+        > div,
+        strong {
+            font-size: 1.2rem;
+        }
+    }
+
+    .desafio-card {
+        h2 {
+            font-size: 1.9rem;
+        }
+
+        > p {
+            font-size: 1.3rem;
+        }
+    }
+
+    .desafio-card-bottom {
+        font-size: 1.3rem;
+    }
+
+    .desafio-aberto-header {
+        > div:last-child {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .desafio-enunciado {
+        h2 {
+            font-size: 1.9rem;
+        }
+    }
+
+    .desafio-dica {
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .desafio-resposta-texto {
+        label,
+        textarea {
+            font-size: 1.2rem;
+        }
+    }
+
+    .desafio-opcao {
+        font-size: 1.25rem;
+    }
+
+    .opcao-texto {
+        font-size: 1.25rem;
+    }
+
+    .desafio-feedback {
+        > div:last-child {
+            h3 {
+                font-size: 1.55rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .desafios-header {
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
+    .desafio-card {
+        h2 {
+            font-size: 1.65rem;
+        }
+
+        > p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .desafio-aberto-header {
+        > div:last-child {
+            h1 {
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .desafio-enunciado {
+        h2 {
+            font-size: 1.7rem;
+        }
+    }
+
+    .desafio-opcao,
+    .opcao-texto {
+        font-size: 1.15rem;
     }
 }
 
@@ -1102,6 +1253,16 @@
 
     .resultado-criterios {
         grid-template-columns: 1fr;
+    }
+
+    .desafios-header {
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -1129,24 +1290,140 @@
         gap: 1rem;
 
         padding-right: 2.8rem;
+
+        > div:last-child > span {
+            font-size: .95rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.15rem;
+        }
     }
 
     .desafios-header-icon {
         width: 60px;
         height: 60px;
 
-        font-size: 1.4rem;
+        font-size: 1.8rem;
 
         border-radius: 16px;
     }
 
+    .desafios-progresso {
+        > div,
+        strong {
+            font-size: 1.05rem;
+        }
+    }
+
+    .desafio-card {
+        h2 {
+            font-size: 1.55rem;
+        }
+
+        > p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .desafio-nivel {
+        font-size: .9rem;
+    }
+
+    .desafio-card-bottom {
+        font-size: 1.1rem;
+    }
+
+    .desafio-voltar {
+        font-size: 1.1rem;
+    }
+
     .desafio-aberto-header {
         align-items: flex-start;
+
+        > div:last-child {
+            > span {
+                font-size: .95rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .desafio-enunciado {
+        h2 {
+            font-size: 1.55rem;
+        }
+    }
+
+    .desafio-enunciado-titulo {
+        span {
+            font-size: .95rem;
+        }
+    }
+
+    .desafio-dica {
+        p {
+            font-size: 1.05rem;
+        }
+    }
+
+    .desafio-resposta-texto {
+        label {
+            font-size: 1.05rem;
+        }
+
+        textarea {
+            font-size: 1.05rem;
+        }
     }
 
     .desafio-textarea-footer {
         align-items: flex-start;
         flex-direction: column;
+
+        > span {
+            font-size: .95rem;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+    }
+
+    .desafio-opcao,
+    .opcao-texto {
+        font-size: 1.05rem;
+    }
+
+    .desafio-feedback {
+        > div:last-child {
+            > span {
+                font-size: .95rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1.05rem;
+            }
+        }
+    }
+
+    .criterio {
+        font-size: 1rem;
     }
 
     .desafio-acoes {
@@ -1156,6 +1433,8 @@
     .acao-tentar,
     .acao-outros {
         width: 100%;
+
+        font-size: 1rem;
     }
 }
 
@@ -1164,19 +1443,61 @@
         flex-direction: column;
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
+        }
+
+        p {
+            font-size: 1.05rem;
         }
     }
 
     .desafio-aberto-header {
         flex-direction: column;
+
+        > div:last-child {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            p {
+                font-size: 1.05rem;
+            }
+        }
     }
 
     .desafio-enunciado {
         padding: 1.2rem;
 
         h2 {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .desafio-card {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        > p {
+            font-size: 1.05rem;
+        }
+    }
+
+    .desafio-resposta-texto {
+        textarea {
+            min-height: 150px;
+        }
+    }
+
+    .resultado-score {
+        > div {
+            strong {
+                font-size: 2.5rem;
+            }
+
+            span {
+                font-size: 1rem;
+            }
         }
     }
 }

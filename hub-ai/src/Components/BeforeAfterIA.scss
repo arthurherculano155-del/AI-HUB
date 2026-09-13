@@ -103,7 +103,7 @@
 
     color: white;
 
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 
     background: rgba(255, 255, 255, 0.05);
 
@@ -138,7 +138,7 @@
     > div:last-child > span {
         color: #ffad1f;
 
-        font-size: 0.72rem;
+        font-size: 1.05rem;
         font-weight: 700;
 
         letter-spacing: 3px;
@@ -147,7 +147,7 @@
     h1 {
         margin: 0.4rem 0 0;
 
-        font-size: clamp(2rem, 4vw, 3.4rem);
+        font-size: clamp(2.6rem, 4vw, 4rem);
 
         strong {
             font-weight: inherit;
@@ -172,7 +172,7 @@
 
         color: rgba(255, 255, 255, 0.55);
 
-        font-size: 0.95rem;
+        font-size: 1.3rem;
         line-height: 1.7;
     }
 }
@@ -189,7 +189,7 @@
 
     color: #ffad00;
 
-    font-size: 2rem;
+    font-size: 2.6rem;
 
     border-radius: 22px;
 
@@ -217,6 +217,8 @@
 
     i {
         color: #ffad00;
+
+        font-size: 1.5rem;
     }
 
     p {
@@ -224,7 +226,8 @@
 
         color: rgba(255, 255, 255, 0.65);
 
-        font-size: 0.88rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
 }
 
@@ -272,7 +275,8 @@
 
         color: white;
 
-        font-size: 1.25rem;
+        font-size: 1.75rem;
+        line-height: 1.3;
     }
 
     > p {
@@ -280,7 +284,7 @@
 
         color: rgba(255, 255, 255, 0.5);
 
-        font-size: 0.9rem;
+        font-size: 1.25rem;
         line-height: 1.6;
     }
 }
@@ -297,7 +301,7 @@
 
     color: #ffad00;
 
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 
     background: rgba(255, 166, 0, 0.1);
 
@@ -315,10 +319,12 @@
 
     color: #ffb329;
 
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
 
     i {
+        font-size: 1.3rem;
+
         transition: 0.25s ease;
     }
 }
@@ -345,7 +351,7 @@
 
     color: rgba(255, 255, 255, 0.8);
 
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
 
     background: rgba(255, 255, 255, 0.05);
@@ -388,7 +394,7 @@
     span {
         color: #ffad00;
 
-        font-size: 0.72rem;
+        font-size: 1.05rem;
         font-weight: 700;
 
         letter-spacing: 2px;
@@ -397,7 +403,7 @@
     h1 {
         margin: 0.35rem 0;
 
-        font-size: 1.7rem;
+        font-size: 2.3rem;
     }
 
     p {
@@ -405,6 +411,7 @@
 
         color: rgba(255, 255, 255, 0.5);
 
+        font-size: 1.25rem;
         line-height: 1.6;
     }
 }
@@ -421,7 +428,7 @@
 
     color: white;
 
-    font-size: 1.7rem;
+    font-size: 2.2rem;
 
     background: linear-gradient(
         135deg,
@@ -467,7 +474,7 @@
 
         font-family: inherit;
 
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         line-height: 1.8;
     }
 
@@ -492,10 +499,14 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
     span {
-        font-size: 0.75rem;
+        font-size: 1.05rem;
         font-weight: 700;
 
         letter-spacing: 2px;
+    }
+
+    i {
+        font-size: 1.3rem;
     }
 }
 
@@ -522,7 +533,7 @@
 
     color: #ffad00;
 
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .before-after-improvements {
@@ -546,12 +557,14 @@
 
     i {
         color: #ffad00;
+
+        font-size: 1.5rem;
     }
 
     h2 {
         margin: 0;
 
-        font-size: 1.1rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -578,10 +591,13 @@
 
     color: rgba(255, 255, 255, 0.7);
 
-    font-size: 0.85rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
 
     i {
         color: #ffad00;
+
+        font-size: 1.2rem;
     }
 }
 
@@ -596,6 +612,92 @@
         opacity: 1;
 
         transform: scale(1);
+    }
+}
+
+@media (min-width: 1400px) {
+    .before-after-modal {
+        width: min(1250px, 88vw);
+    }
+
+    .before-after-header {
+        > div:last-child > span {
+            font-size: 1.1rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.35rem;
+        }
+    }
+
+    .before-after-card {
+        h2 {
+            font-size: 1.85rem;
+        }
+
+        > p {
+            font-size: 1.3rem;
+        }
+    }
+
+    .before-after-card-bottom {
+        font-size: 1.25rem;
+    }
+
+    .before-after-opened-header {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    .comparison-box {
+        pre {
+            font-size: 1.25rem;
+        }
+    }
+
+    .improvement-item {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .before-after-header {
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
+    .before-after-card {
+        h2 {
+            font-size: 1.65rem;
+        }
+
+        > p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .before-after-opened-header {
+        h1 {
+            font-size: 2.1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -616,6 +718,12 @@
 
         i {
             transform: rotate(90deg);
+        }
+    }
+
+    .comparison-box {
+        pre {
+            font-size: 1.15rem;
         }
     }
 }
@@ -644,23 +752,83 @@
         padding-right: 2.5rem;
 
         gap: 1rem;
+
+        > div:last-child > span {
+            font-size: .95rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
     }
 
     .before-after-main-icon {
         width: 60px;
         height: 60px;
 
-        font-size: 1.4rem;
+        font-size: 1.8rem;
 
         border-radius: 16px;
     }
 
+    .before-after-info {
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .before-after-card {
+        min-height: 200px;
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        > p {
+            font-size: 1.15rem;
+        }
+    }
+
+    .before-after-card-bottom {
+        font-size: 1.1rem;
+    }
+
     .before-after-opened-header {
         align-items: flex-start;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.15rem;
+        }
+
+        span {
+            font-size: .95rem;
+        }
+    }
+
+    .before-after-voltar {
+        font-size: 1.1rem;
     }
 
     .improvements-grid {
         grid-template-columns: 1fr;
+    }
+
+    .improvements-title {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .improvement-item {
+        font-size: 1.1rem;
     }
 }
 
@@ -669,11 +837,49 @@
         flex-direction: column;
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
+        }
+
+        p {
+            font-size: 1.15rem;
         }
     }
 
     .before-after-opened-header {
         flex-direction: column;
+
+        h1 {
+            font-size: 1.9rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .before-after-card {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        > p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .comparison-box {
+        pre {
+            font-size: 1.05rem;
+        }
+    }
+
+    .comparison-header {
+        span {
+            font-size: .95rem;
+        }
+    }
+
+    .improvement-item {
+        font-size: 1.05rem;
     }
 }
