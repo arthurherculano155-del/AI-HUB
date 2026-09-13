@@ -3,48 +3,64 @@ html {
 }
 
 .heroText {
-    display: flex;
-    margin-top: 53px;
     width: 15vw;
-    gap: 2rem;
-    justify-content: center;
+
+    position: relative;
+    top: 30px;
+
+    display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    justify-content: center;
+
+    gap: 2rem;
+
+    margin-top: 53px;
+    margin-left: 50px;
+
     padding: 5px 20px;
+
+    color: white;
+
+    font-size: 1.5rem;
+
     background: linear-gradient(
         130deg,
         rgba(72, 1, 94, 0.979),
         rgba(104, 0, 148, 0.753)
     );
-    border-radius: 1000px;
-    color: white;
-    position: relative;
-    margin-left: 50px;
-    top: 30px;
+
     border: 1px solid violet;
+    border-radius: 1000px;
 }
 
 .hero-section {
     display: flex;
-    padding: 2rem 0;
     justify-content: space-between;
+
     gap: 3rem;
+
+    padding: 2rem 0;
+
     color: white;
+
     scroll-margin-top: 90px;
 
     .robot {
         width: 45vw;
         height: 330px;
-        object-fit: cover;
-        filter: blur(0);
-        border-radius: 20px;
+
         margin: 0 3rem;
+
+        object-fit: cover;
+
+        border-radius: 20px;
     }
 
     .hero-nav {
         .hero-text {
-            font-size: 1.6rem;
             margin: 3rem 5rem;
+
+            font-size: 1.6rem;
 
             h1 {
                 font-size: 5.5rem;
@@ -52,8 +68,10 @@ html {
 
             p {
                 margin: 1rem 0;
-                line-height: 25px;
+
                 color: rgba(255, 255, 255, 0.829);
+
+                line-height: 25px;
             }
 
             .hero-span {
@@ -74,17 +92,25 @@ html {
 
     .hero-bnts {
         display: flex;
-        margin: 0 4.7rem;
+
         gap: 2.5rem;
+
+        margin: 0 4.7rem;
 
         .bnt {
             width: 20rem;
+
+            display: flex;
+            align-items: center;
+
+            gap: 1rem;
+
             padding: 1.5rem;
+
+            color: white;
 
             font-size: 1.3rem;
             font-weight: 700;
-
-            color: white;
 
             background: linear-gradient(
                 135deg,
@@ -100,13 +126,12 @@ html {
 
             transition: .2s;
 
-            display: flex;
-            align-items: center;
-
-            gap: 1rem;
-
             i {
                 font-size: 2rem;
+            }
+
+            p {
+                margin: 0;
             }
 
             &:hover {
@@ -127,6 +152,7 @@ html {
 
         #transparent-bnt {
             background: none;
+
             border: 1px solid white;
         }
     }
@@ -134,158 +160,224 @@ html {
 
 .hr {
     height: 1px;
+
     background-color: rgba(255, 255, 255, 0.24);
 }
 
-.fundo {
-    .modelito {
-        width: 80vw;
-        max-width: 1200px;
-        height: 90vh;
+.hero-fundo {
+    position: fixed;
+    inset: 0;
 
-        padding: 2rem;
+    width: 100%;
+    height: 100vh;
 
-        overflow-y: auto;
-        overflow-x: hidden;
+    z-index: 3000;
 
-        scrollbar-color: darkviolet violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        background: linear-gradient(
+    padding: 1.5rem;
+
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.modelito {
+    position: relative;
+
+    width: min(1200px, 90vw);
+    max-height: 92vh;
+
+    padding: 3rem;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(125, 0, 185, 0.16),
+            transparent 35%
+        ),
+        linear-gradient(
             135deg,
             rgb(63, 0, 90),
             rgb(0, 0, 73)
         );
 
-        border: 2px solid rgb(146, 0, 209);
-        border-radius: 15px;
+    border: 2px solid rgb(146, 0, 209);
+    border-radius: 18px;
 
-        box-shadow: 0 0 30px rgb(100, 0, 143);
+    box-shadow:
+        0 0 30px rgb(100, 0, 143),
+        0 30px 80px rgba(0, 0, 0, 0.5);
 
-        color: white;
+    scrollbar-color: darkviolet violet;
 
-        position: fixed;
-        top: 50%;
-        left: 50%;
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
 
-        transform: translate(-50%, -50%);
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
 
-        .info-bnts {
-            width: 100%;
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+            violet,
+            darkviolet
+        );
 
-            display: flex;
-            justify-content: flex-end;
+        border-radius: 20px;
+    }
+
+    .info-bnts {
+        position: relative;
+
+        width: 100%;
+
+        display: block;
+
+        .bntss {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            z-index: 20;
 
             button {
-                position: sticky;
-                top: 0;
-
-                margin-left: auto;
+                width: 45px;
+                height: 45px;
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                padding: .5rem 1rem;
+                margin: 0;
+                padding: 0;
+
+                color: white;
 
                 font-size: 1.6rem;
                 font-weight: bold;
 
+                background: rgba(0, 0, 0, 0.25);
+
+                border: 2px solid rgba(255, 255, 255, 0.12);
+                border-radius: 50%;
+
                 cursor: pointer;
 
-                color: white;
-
-                background: rgba(0, 0, 0, 0.2);
-
-                border: 2px solid rgba(128, 128, 128, 0.2);
-                border-radius: 1000px;
-
-                z-index: 10;
-
-                transition: .2s ease-in;
+                transition: .2s ease;
 
                 &:hover {
-                    transform: rotate(180deg) scale(1.05);
+                    transform: rotate(180deg);
 
                     background: rgba(0, 0, 0, 0.5);
 
-                    border-color: rgba(128, 128, 128, 0.5);
+                    border-color: rgba(255, 255, 255, 0.3);
                 }
             }
         }
 
-        h2 {
-            margin: 1rem 0;
+        .text {
+            width: 100%;
+
+            padding: 0 6rem;
 
             text-align: center;
 
-            font-size: 4rem;
+            h2 {
+                margin: 1rem 0;
 
-            span {
-                color: transparent;
+                font-size: 4rem;
+                line-height: 1.2;
 
-                background: linear-gradient(
-                    90deg,
-                    rgb(0, 206, 233),
-                    darkviolet
-                );
+                span {
+                    color: transparent;
 
-                -webkit-background-clip: text;
-                background-clip: text;
+                    background: linear-gradient(
+                        90deg,
+                        rgb(0, 206, 233),
+                        rgb(74, 104, 255),
+                        darkviolet
+                    );
+
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+            }
+
+            p {
+                max-width: 900px;
+
+                margin: 0 auto;
+
+                color: rgba(255, 255, 255, 0.6);
+
+                font-size: 1.5rem;
+                line-height: 1.6;
+
+                text-align: center;
             }
         }
+    }
 
-        p {
-            max-width: 900px;
+    > img {
+        width: 100%;
+        height: auto;
+        max-height: 280px;
 
-            margin: 0 auto;
+        display: block;
 
-            color: rgba(255, 255, 255, 0.6);
+        margin: 3rem auto 0;
 
-            text-align: center;
+        object-fit: cover;
+        object-position: center;
 
-            font-size: 1.5rem;
-            line-height: 1.6;
-        }
-
-        img {
-            display: block;
-
-            width: 95%;
-            height: 300px;
-
-            margin: 2rem auto 1rem;
-
-            object-fit: cover;
-
-            border: 1px solid darkviolet;
-            border-radius: 25px;
-        }
+        border: 1px solid darkviolet;
+        border-radius: 25px;
     }
 }
 
 .items-legais {
-    margin-top: 40px;
+    width: 100%;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
     gap: 3rem;
+
+    margin-top: 4rem;
+
+    > * {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
 .explorarMais {
-    width: 80vw;
-    max-width: 1200px;
-    height: 90vh;
+    position: relative;
 
-    padding: 2rem;
+    width: min(1200px, 90vw);
+    max-height: 92vh;
+
+    padding: 3rem;
 
     overflow-y: auto;
     overflow-x: hidden;
 
-    scrollbar-color: darkviolet violet;
-
-    box-shadow: 0 0 20px darkviolet;
+    color: white;
 
     background: linear-gradient(
         135deg,
@@ -296,13 +388,67 @@ html {
     border: 2px solid darkviolet;
     border-radius: 20px;
 
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    box-shadow:
+        0 0 20px darkviolet,
+        0 30px 80px rgba(0, 0, 0, 0.5);
 
-    transform: translate(-50%, -50%);
+    scrollbar-color: darkviolet violet;
 
-    color: white;
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+            violet,
+            darkviolet
+        );
+
+        border-radius: 20px;
+    }
+
+    > button {
+        position: absolute;
+
+        top: 1.5rem;
+        right: 1.5rem;
+
+        width: 45px;
+        height: 45px;
+
+        z-index: 20;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+        padding: 0;
+
+        color: white;
+
+        font-size: 1.6rem;
+        font-weight: bold;
+
+        background: rgba(0, 0, 0, 0.25);
+
+        border: 2px solid rgba(255, 255, 255, 0.12);
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        transition: .2s ease;
+
+        &:hover {
+            transform: rotate(180deg);
+
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
 
     .explore-text {
         width: 100%;
@@ -313,14 +459,18 @@ html {
 
         gap: 3rem;
 
+        padding-right: 4rem;
+
         > div {
             flex: 1;
+
             min-width: 0;
         }
 
         h4 {
-            font-size: 1.3rem;
             color: rgba(255, 255, 255, .7);
+
+            font-size: 1.3rem;
         }
 
         h2 {
@@ -357,67 +507,110 @@ html {
 
             flex-shrink: 0;
 
-            object-fit: cover;
-
             margin: 0;
+
+            object-fit: cover;
 
             border: 1px solid darkviolet;
             border-radius: 15px;
         }
     }
 
-    > button {
-        position: sticky;
-        top: 0;
-
-        margin-left: auto;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: .5rem 1rem;
-
-        font-size: 1.6rem;
-        font-weight: bold;
-
-        cursor: pointer;
-
-        color: white;
-
-        background: rgba(0, 0, 0, 0.2);
-
-        border: 2px solid rgba(128, 128, 128, 0.2);
-        border-radius: 1000px;
-
-        z-index: 10;
-
-        transition: .2s ease-in;
-
-        &:hover {
-            transform: rotate(180deg) scale(1.05);
-
-            background: rgba(0, 0, 0, 0.5);
-
-            border-color: rgba(128, 128, 128, 0.5);
-        }
-    }
-
     .ferramentas-ias {
         width: 100%;
-
-        margin-top: 3rem;
 
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
 
         gap: 2rem;
+
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .modelito {
+        width: 94vw;
+
+        padding: 2.5rem;
+
+        .info-bnts {
+            .text {
+                h2 {
+                    font-size: 3.7rem;
+                }
+
+                p {
+                    font-size: 1.45rem;
+                }
+            }
+        }
+    }
+
+    .items-legais {
+        gap: 2rem;
+    }
+
+    .explorarMais {
+        width: 94vw;
+
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .modelito {
+        width: 94vw;
+
+        padding: 2rem;
+
+        .info-bnts {
+            .text {
+                padding: 0 5rem;
+
+                h2 {
+                    font-size: 3.3rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        > img {
+            max-height: 240px;
+
+            border-radius: 18px;
+        }
+    }
+
+    .items-legais {
+        gap: 1.8rem;
+    }
+
+    .explorarMais {
+        width: 94vw;
+
+        padding: 2rem;
+
+        .explore-text {
+            gap: 2rem;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            img {
+                width: 42%;
+                height: 190px;
+            }
+        }
     }
 }
 
 @media (max-width: 768px) {
-
     .hero-section {
         gap: 1.5rem;
 
@@ -448,46 +641,83 @@ html {
         }
     }
 
-    .fundo {
-        .modelito {
-            width: 92vw;
-            height: 88vh;
+    .modelito {
+        width: calc(100vw - 2rem);
+        max-height: calc(100vh - 2rem);
 
-            padding: 1.5rem;
+        padding: 2rem 1.5rem;
 
-            h2 {
-                font-size: 3rem;
+        .info-bnts {
+            .bntss {
+                top: 0;
+                right: 0;
+
+                button {
+                    width: 42px;
+                    height: 42px;
+
+                    font-size: 1.4rem;
+                }
             }
 
-            p {
-                font-size: 1.4rem;
-            }
+            .text {
+                padding: 0 4.5rem;
 
-            img {
-                width: 100%;
-                height: 240px;
+                h2 {
+                    margin-top: .5rem;
 
-                border-radius: 18px;
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.35rem;
+                }
             }
         }
     }
 
-    .explorarMais {
-        width: 92vw;
-        height: 88vh;
+    .items-legais {
+        grid-template-columns: 1fr;
 
-        padding: 1.5rem;
+        gap: 1.5rem;
+
+        margin-top: 3rem;
+    }
+
+    .explorarMais {
+        width: calc(100vw - 2rem);
+        max-height: calc(100vh - 2rem);
+
+        padding: 2rem 1.5rem;
+
+        > button {
+            top: 1rem;
+            right: 1rem;
+
+            width: 42px;
+            height: 42px;
+        }
 
         .explore-text {
+            padding-right: 0;
+
+            flex-direction: column;
+            align-items: stretch;
+
             gap: 2rem;
 
             h2 {
+                padding-right: 4rem;
+
                 font-size: 3rem;
             }
 
             img {
-                width: 45%;
-                height: 200px;
+                width: 100%;
+                max-width: none;
+                height: auto;
+
+                aspect-ratio: 16 / 9;
             }
         }
 
@@ -501,15 +731,15 @@ html {
     .heroText {
         width: 90%;
 
-        margin: 8rem auto 0;
-
         top: 1rem;
-
-        padding: 1rem 1.5rem;
 
         justify-content: center;
 
         gap: 1rem;
+
+        margin: 8rem auto 0;
+
+        padding: 1rem 1.5rem;
 
         i {
             font-size: 2.5rem;
@@ -523,11 +753,11 @@ html {
     .hero-section {
         width: 100%;
 
-        padding: 2rem 0;
-
         flex-direction: column;
 
         gap: 2rem;
+
+        padding: 2rem 0;
 
         .hero-nav {
             width: 100%;
@@ -556,18 +786,18 @@ html {
         .hero-bnts {
             width: 90%;
 
-            margin: 0 auto;
-
             flex-direction: column;
 
             gap: 1.5rem;
 
+            margin: 0 auto;
+
             .bnt {
                 width: 100%;
 
-                margin: 0 auto;
-
                 justify-content: center;
+
+                margin: 0 auto;
 
                 padding: 1.5rem;
             }
@@ -577,77 +807,93 @@ html {
             width: 90%;
             height: auto;
 
-            margin: 1rem auto;
-
             display: block;
+
+            margin: 1rem auto;
         }
     }
 
-    .fundo {
-        .modelito {
-            width: 94vw;
-            height: 88vh;
+    .hero-fundo {
+        padding: .5rem;
+    }
 
-            padding: 1.2rem;
+    .modelito {
+        width: calc(100vw - 1rem);
+        max-height: calc(100vh - 1rem);
 
-            border-radius: 15px;
+        padding: 1.5rem 1rem;
 
-            .info-bnts {
+        border-radius: 15px;
+
+        .info-bnts {
+            .bntss {
+                top: 0;
+                right: 0;
+
                 button {
-                    padding: .5rem .9rem;
+                    width: 40px;
+                    height: 40px;
 
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
                 }
             }
 
-            h2 {
-                margin-top: 1rem;
+            .text {
+                padding: 0 3.5rem;
 
-                font-size: 2.4rem;
-                line-height: 1.25;
+                h2 {
+                    margin-top: .6rem;
+
+                    font-size: 2.5rem;
+                    line-height: 1.25;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                    line-height: 1.5;
+                }
             }
+        }
 
-            p {
-                font-size: 1.3rem;
-                line-height: 1.5;
-            }
+        > img {
+            width: 100%;
+            height: auto;
+            max-height: none;
 
-            img {
-                width: 100%;
-                height: auto;
+            aspect-ratio: 16 / 9;
 
-                aspect-ratio: 16 / 9;
+            margin: 2rem auto 0;
 
-                margin: 1.5rem auto 1rem;
+            object-fit: cover;
 
-                object-fit: cover;
-
-                border-radius: 15px;
-            }
+            border-radius: 15px;
         }
     }
 
     .items-legais {
+        grid-template-columns: 1fr;
+
+        gap: 1.3rem;
+
         margin-top: 2.5rem;
-
-        gap: 1.5rem;
-
-        flex-direction: column;
-        align-items: center;
     }
 
     .explorarMais {
-        width: 94vw;
-        height: 88vh;
+        width: calc(100vw - 1rem);
+        max-height: calc(100vh - 1rem);
 
-        padding: 1.2rem;
+        padding: 1.5rem 1rem;
 
         border-radius: 15px;
 
         > button {
-            padding: .5rem .9rem;
+            top: .8rem;
+            right: .8rem;
 
-            font-size: 1.4rem;
+            width: 40px;
+            height: 40px;
+
+            font-size: 1.3rem;
         }
 
         .explore-text {
@@ -658,11 +904,17 @@ html {
 
             gap: 1.5rem;
 
+            padding: 0;
+
             h4 {
+                padding-right: 4rem;
+
                 font-size: 1.2rem;
             }
 
             h2 {
+                padding-right: 3rem;
+
                 font-size: 2.4rem;
                 line-height: 1.25;
             }
@@ -690,18 +942,17 @@ html {
         .ferramentas-ias {
             width: 100%;
 
-            margin-top: 2rem;
-
             flex-direction: column;
             align-items: stretch;
 
             gap: 1.5rem;
+
+            margin-top: 2rem;
         }
     }
 }
 
 @media (max-width: 360px) {
-
     .hero-section {
         .hero-nav {
             .hero-text {
@@ -712,23 +963,23 @@ html {
         }
     }
 
-    .fundo {
-        .modelito {
-            width: 96vw;
+    .modelito {
+        .info-bnts {
+            .text {
+                padding: 0 3rem;
 
-            h2 {
-                font-size: 2.1rem;
-            }
+                h2 {
+                    font-size: 2.2rem;
+                }
 
-            p {
-                font-size: 1.2rem;
+                p {
+                    font-size: 1.15rem;
+                }
             }
         }
     }
 
     .explorarMais {
-        width: 96vw;
-
         .explore-text {
             h2 {
                 font-size: 2.1rem;

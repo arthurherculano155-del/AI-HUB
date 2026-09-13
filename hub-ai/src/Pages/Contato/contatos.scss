@@ -12,6 +12,7 @@ html {
 
 body {
     overflow-x: hidden;
+
     font-family: "MontSerrat", sans-serif;
 
     background:
@@ -31,39 +32,51 @@ body {
 
 .contatosss {
     width: 92%;
-    max-width: 1600px;
+    max-width: 1500px;
 
     margin: 3rem auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
+    display: grid;
 
-    gap: 5rem;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    gap: 3rem;
 }
 
 @media (max-width: 1200px) {
     .contatosss {
         width: 94%;
-        gap: 3.5rem;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 2.5rem;
     }
 }
 
 @media (max-width: 900px) {
     .contatosss {
-        width: 94%;
-        gap: 3rem;
+        width: 92%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .contatosss {
-        width: 92%;
+        width: 90%;
 
-        margin: 2.5rem auto;
+        grid-template-columns: 1fr;
 
         gap: 2rem;
+
+        margin: 2.5rem auto;
     }
 }
 
@@ -71,18 +84,16 @@ body {
     .contatosss {
         width: 94%;
 
-        margin: 2rem auto;
-
-        flex-direction: column;
-        align-items: center;
-
         gap: 1.5rem;
+
+        margin: 2rem auto;
     }
 }
 
 @media (max-width: 360px) {
     .contatosss {
         width: 96%;
+
         gap: 1.2rem;
     }
 }
