@@ -56,23 +56,23 @@ export default function Ferramentas() {
         <Ferramenta
           imagemIA="Perplexity-Logo.png"
           nomeIA="Perplexity"
-          descIA="O Perplexity é uma IA focada em pesquisa rápida com fontes da web."
+          descIA="O Perplexity é uma IA focada em pesquisa rápida e precisas com fontes da web."
           tipoIA="Pesquisa"
           link="https://www.perplexity.ai/"
         />
 
         <Ferramenta
-          imagemIA="Logo-Copilot.png"
-          nomeIA="Github Copilot"
-          descIA="O GitHub Copilot é uma IA que ajuda a programar mais rápido, sugerindo e explicando código."
-          tipoIA="Código"
-          link="https://github.com/features/copilot"
+          imagemIA="Claude-Logo.webp"
+          nomeIA="Claude"
+          descIA="Claude é uma inteligência artificial que ajuda em tarefas como analisar textos e programar."
+          tipoIA="ChatBot"
+          link="https://claude.ai/"
         />
 
         <Ferramenta
           imagemIA="NotionAI-Logo.png"
           nomeIA="Notion AI"
-          descIA="O Notion AI ajuda a escrever, resumir e organizar informações com IA."
+          descIA="O Notion AI ajuda a escrever, resumir e organizar informações com Inteligência Artificial."
           tipoIA="Produtividade"
           link="https://github.com/features/copilot"
         />
