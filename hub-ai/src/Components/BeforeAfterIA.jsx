@@ -126,7 +126,7 @@ A planta produz glicose e libera oxigênio para o ambiente.`,
         {
             titulo: 'Apresentação de projeto',
             descricao: 'Veja como uma ideia simples pode ganhar uma estrutura mais convincente.',
-            icone: 'fa-solid fa-presentation-screen',
+            icone: 'fa-brands fa-github',
             cor: 'ciano',
 
             antes: `Nosso projeto é um site sobre inteligência artificial que mostra algumas ferramentas e informações.`,
