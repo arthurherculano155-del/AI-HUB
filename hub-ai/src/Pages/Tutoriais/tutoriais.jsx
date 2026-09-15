@@ -83,7 +83,7 @@ export default function Tutoriais() {
                     imagem="Capa-Video-MidJourney.png"
                     tempo="15:10"
                     titulo="Midjourney - Como Criar Imagens com IA [Inteligência Artificial]"
-                    desc="Aprenda a criar imagens incríveis com Inteligência Artificial de forma simples usando o Midjourney."
+                    desc="Aprenda a criar imagens incríveis de forma simples usando o Midjourney."
                     nivel="Básico"
                 />
 
@@ -101,7 +101,7 @@ export default function Tutoriais() {
                     imagem="Capa-Video-Prompt.png"
                     tempo="24:58"
                     titulo="Aula Inaugural: 10 prompts avançados do Gemini para Concursos Públicos"
-                    desc="Aprenda a como fazer prompts avançados para organização e aprendizado das questões de um concurso público."
+                    desc="Aprenda a como fazer prompts para organização  de um concurso público."
                     nivel="Intermediário"
                 />
 
