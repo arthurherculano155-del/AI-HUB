@@ -74,7 +74,7 @@ export default function Ferramentas() {
           nomeIA="Notion AI"
           descIA="O Notion AI ajuda a escrever, resumir e organizar informações com Inteligência Artificial."
           tipoIA="Produtividade"
-          link="https://github.com/features/copilot"
+          link="https://www.notion.com/pt"
         />
       </section>
 
