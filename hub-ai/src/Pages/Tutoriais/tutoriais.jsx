@@ -31,9 +31,9 @@ export default function Tutoriais() {
                 <div className="tuts">
 
                     <div className="video-destaque">
-                        <a href="https://www.youtube.com/watch?v=cswHBeqNGt0" 
-                        target='_blank' 
-                        rel='noreferrer'>
+                        <a href="https://www.youtube.com/watch?v=cswHBeqNGt0"
+                            target='_blank'
+                            rel='noreferrer'>
                             <img src="./Assets/Imgs/Capa-Video-Guia.png" alt="" />
                         </a>
 
@@ -97,12 +97,30 @@ export default function Tutoriais() {
                 />
 
                 <Video
+                    link="https://www.youtube.com/watch?v=BFG-PSnzUeQ"
+                    imagem="Capa-Video-Prompt.png"
+                    tempo="24:58"
+                    titulo="Aula Inagural: 10 prompts avançados do Gemini para Concursos Públicos"
+                    desc="Aprenda a como fazer prompts avançados para organização e aprendizado das questões de um concurso público."
+                    nivel="Intermediário"
+                />
+
+                <Video
                     link="https://www.youtube.com/watch?v=LB4IJVrYBZ8"
                     imagem="Capa-Video-Dados.png"
                     tempo="13:15"
                     titulo="Masterizando a Análise de Dados com ChatGPT (em apenas 10 minutos)"
                     desc="Aprenda a analisar dados de forma rápida e eficiente usando os recursos do ChatGPT."
                     nivel="Intermediário"
+                />
+
+                <Video
+                    link="https://www.youtube.com/watch?v=R8zzSZTXzb4"
+                    imagem="Capa-Video-Claude.png"
+                    tempo="24:27"
+                    titulo="O Guia Completo do Claude em 2026: Os 5 Níveis de Uso (Iniciante ao Avançado)"
+                    desc="Aprenda a como utilizar o Claude passo à passo, indo do zero ao avançado."
+                    nivel="Avançado"
                 />
             </section>
 
