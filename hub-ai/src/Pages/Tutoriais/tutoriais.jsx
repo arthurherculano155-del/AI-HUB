@@ -100,7 +100,7 @@ export default function Tutoriais() {
                     link="https://www.youtube.com/watch?v=BFG-PSnzUeQ"
                     imagem="Capa-Video-Prompt.png"
                     tempo="24:58"
-                    titulo="Aula Inagural: 10 prompts avançados do Gemini para Concursos Públicos"
+                    titulo="Aula Inaugural: 10 prompts avançados do Gemini para Concursos Públicos"
                     desc="Aprenda a como fazer prompts avançados para organização e aprendizado das questões de um concurso público."
                     nivel="Intermediário"
                 />
