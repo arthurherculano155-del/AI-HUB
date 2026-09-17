@@ -5,13 +5,13 @@ html {
 .main-footer {
     width: 100%;
 
+    padding: 3rem;
+
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 
     gap: 4rem;
-
-    padding: 3rem;
 
     color: white;
 
@@ -27,13 +27,22 @@ html {
         color: rgba(230, 230, 230, 0.562);
     }
 
+    // =========================
+    // INFORMAÇÕES DO SITE
+    // =========================
+
+    .info-footer {
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+    }
+
     .footer-info {
         display: flex;
         align-items: center;
 
         gap: 1.5rem;
-
-        min-width: 0;
 
         img {
             width: 70px;
@@ -46,10 +55,6 @@ html {
             min-width: 0;
         }
 
-        p {
-            font-size: 2rem;
-        }
-
         h1 {
             font-size: 3rem;
 
@@ -57,39 +62,55 @@ html {
                 color: rgb(97, 40, 230);
             }
         }
+
+        p {
+            font-size: 2rem;
+        }
     }
 
-    .links-rapidos {
+    .bottom-info {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+    // =========================
+    // QR CODE
+    // =========================
+
+    .qr-code {
+        width: clamp(140px, 14vw, 210px);
+        height: auto;
+
+        padding: 1rem;
+
+        object-fit: contain;
+
+        background-color: white;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 0 20px rgba(162, 0, 255, 0.4),
+            0 0 50px rgba(111, 0, 255, 0.2);
+
         flex-shrink: 0;
 
-        h3 {
-            font-size: 1.9rem;
-        }
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
 
-        ul {
-            margin-top: 2rem;
-        }
+        &:hover {
+            transform: translateY(-5px) scale(1.03);
 
-        li {
-            margin-bottom: .8rem;
-        }
-
-        a {
-            color: white;
-
-            text-decoration: none;
-
-            font-size: 1.6rem;
-
-            transition: .2s ease;
-
-            &:hover {
-                color: darkviolet;
-
-                text-decoration: underline;
-            }
+            box-shadow:
+                0 0 25px rgba(162, 0, 255, 0.6),
+                0 0 60px rgba(111, 0, 255, 0.3);
         }
     }
+
+    // =========================
+    // DICA DE IA
+    // =========================
 
     .footer-insc {
         width: min(36vw, 550px);
@@ -116,8 +137,6 @@ html {
             display: flex;
             align-items: center;
 
-            gap: 1rem;
-
             flex-shrink: 0;
 
             i {
@@ -127,6 +146,7 @@ html {
 
         .infos {
             flex: 1;
+
             min-width: 0;
 
             h2 {
@@ -160,7 +180,7 @@ html {
             width: 100%;
 
             margin: 1rem auto;
-            padding: .8rem 2rem;
+            padding: 0.8rem 2rem;
 
             display: flex;
             align-items: center;
@@ -186,7 +206,7 @@ html {
 
             cursor: pointer;
 
-            transition: .2s;
+            transition: 0.2s;
 
             p {
                 color: white;
@@ -198,7 +218,7 @@ html {
             }
 
             &:active {
-                transform: scale(.95);
+                transform: scale(0.95);
 
                 background: linear-gradient(
                     135deg,
@@ -211,20 +231,31 @@ html {
     }
 }
 
+
+// ========================================
+// NOTEBOOKS
+// ========================================
+
 @media (max-width: 1200px) {
+
     .main-footer {
         gap: 2.5rem;
 
         padding: 3rem 2rem;
 
         .footer-info {
-            p {
-                font-size: 1.7rem;
-            }
 
             h1 {
                 font-size: 2.6rem;
             }
+
+            p {
+                font-size: 1.7rem;
+            }
+        }
+
+        .qr-code {
+            width: clamp(130px, 15vw, 180px);
         }
 
         .footer-insc {
@@ -234,12 +265,14 @@ html {
             gap: 2rem;
 
             .info {
+
                 i {
                     font-size: 6rem;
                 }
             }
 
             .infos {
+
                 h2 {
                     font-size: 2.2rem;
                 }
@@ -248,37 +281,58 @@ html {
     }
 }
 
+
+// ========================================
+// TABLETS / NOTEBOOKS MENORES
+// ========================================
+
 @media (max-width: 1000px) {
+
     .main-footer {
         flex-wrap: wrap;
+        justify-content: center;
 
-        .footer-info {
-            flex: 1 1 45%;
+        .info-footer {
+            flex: 1 1 40%;
         }
 
-        .links-rapidos {
-            flex: 1 1 30%;
+        .qr-code {
+            width: 170px;
         }
 
         .footer-insc {
             width: 100%;
             min-width: 0;
 
-            flex: 1 1 100%;
-
             justify-content: center;
         }
     }
 }
 
+
+// ========================================
+// TABLETS
+// ========================================
+
 @media (max-width: 768px) {
+
     .main-footer {
         padding: 2.5rem;
 
         gap: 3rem;
 
+        flex-direction: column;
+
+        text-align: center;
+
+        .info-footer {
+            width: 100%;
+
+            align-items: center;
+        }
+
         .footer-info {
-            flex: 1 1 100%;
+            justify-content: center;
 
             img {
                 width: 65px;
@@ -293,32 +347,27 @@ html {
             }
         }
 
-        .links-rapidos {
-            flex: 1 1 100%;
-
-            h3 {
-                font-size: 1.8rem;
-            }
-
-            a {
-                font-size: 1.5rem;
-            }
+        .qr-code {
+            width: 180px;
         }
 
         .footer-insc {
             width: 100%;
 
+            min-width: 0;
             min-height: auto;
 
             padding: 2rem;
 
             .info {
+
                 i {
                     font-size: 5rem;
                 }
             }
 
             .infos {
+
                 h2 {
                     font-size: 2.1rem;
                 }
@@ -332,12 +381,15 @@ html {
     }
 }
 
+
+// ========================================
+// CELULARES
+// ========================================
+
 @media (max-width: 480px) {
+
     .main-footer {
         padding: 3rem 1.5rem;
-
-        flex-direction: column;
-        align-items: center;
 
         gap: 3rem;
 
@@ -346,15 +398,14 @@ html {
 
             flex-direction: column;
 
-            text-align: center;
-
             gap: 1rem;
 
             img {
-                width: 120px;
+                width: 110px;
             }
 
             .text {
+
                 h1 {
                     font-size: 3rem;
                 }
@@ -369,16 +420,22 @@ html {
             display: none;
         }
 
-        .links-rapidos {
-            display: none;
+        .qr-code {
+            width: min(55vw, 190px);
+
+            padding: 0.8rem;
+
+            border-radius: 14px;
+
+            &:hover {
+                transform: none;
+            }
         }
 
         .footer-insc {
             width: 100%;
-            min-width: 0;
-            min-height: auto;
 
-            margin: 0;
+            min-height: auto;
 
             padding: 2rem 1.5rem;
 
@@ -420,16 +477,24 @@ html {
     }
 }
 
+
+// ========================================
+// CELULARES PEQUENOS
+// ========================================
+
 @media (max-width: 360px) {
+
     .main-footer {
         padding: 2.5rem 1rem;
 
         .footer-info {
+
             img {
                 width: 100px;
             }
 
             .text {
+
                 h1 {
                     font-size: 2.6rem;
                 }
@@ -440,16 +505,22 @@ html {
             }
         }
 
+        .qr-code {
+            width: 160px;
+        }
+
         .footer-insc {
             padding: 1.5rem 1rem;
 
             .info {
+
                 i {
                     font-size: 4rem;
                 }
             }
 
             .infos {
+
                 h2 {
                     font-size: 2rem;
                 }

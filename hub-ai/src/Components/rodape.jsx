@@ -1,5 +1,4 @@
 import './rodape.scss';
-import { Link } from 'react-router-dom';
 
 export default function Rodape() {
     return (
@@ -35,29 +34,11 @@ export default function Rodape() {
 
             </div>
 
-            <div className="links-rapidos">
-                <h3>Links Rápidos</h3>
-                <ul>
-                    <li>
-                        <Link to='/'>Início</Link>
-                    </li>
-                    <li>
-                        <a href="#sobre">Sobre</a>
-                    </li>
-                    <li>
-                        <Link to='/tutoriais'>Tutoriais</Link>
-                    </li>
-                    <li>
-                        <Link to='/ferramentas'>Ferramentas</Link>
-                    </li>
-                    <li>
-                        <Link to="/praticas">Boas Práticas</Link>
-                    </li>
-                    <li>
-                        <Link to='/contato'>Contato</Link>
-                    </li>
-                </ul>
-            </div>
+            <img
+                className="qr-code"
+                src="./Assets/Imgs/qr_code_download_planilha.png"
+                alt="QR Code para baixar a planilha"
+            />
 
             <div className="footer-insc">
                 <div className="info">
