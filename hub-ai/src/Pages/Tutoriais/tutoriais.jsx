@@ -118,7 +118,7 @@ export default function Tutoriais() {
                     link="https://www.youtube.com/watch?v=R8zzSZTXzb4"
                     imagem="Capa-Video-Claude.png"
                     tempo="24:27"
-                    titulo="O Guia Completo do Claude em 2026: Os 5 Níveis de Uso (Iniciante ao Avançado)"
+                    titulo="O Guia Completo do Claude em 2026: Os 5 Níveis de Uso"
                     desc="Aprenda a como utilizar o Claude passo à passo, indo do zero ao avançado."
                     nivel="Avançado"
                 />
