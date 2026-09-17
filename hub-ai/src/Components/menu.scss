@@ -43,6 +43,8 @@
             .Info-Text {
                 margin: 0;
 
+                color: white;
+
                 font-size: 2.4rem;
                 line-height: 1.1;
 
@@ -56,11 +58,12 @@
             .Info-Sub {
                 margin: .4rem 0 0;
 
+                color: rgba(255, 255, 255, 0.55);
+
                 font-size: 1.25rem;
+                line-height: 1.2;
 
                 white-space: nowrap;
-
-                color: rgba(255, 255, 255, 0.55);
             }
         }
     }
@@ -118,7 +121,7 @@
             align-items: center;
             justify-content: center;
 
-            gap: 3rem;
+            gap: 1.5rem;
 
             margin: 0;
             padding: 0;
@@ -129,6 +132,12 @@
                 flex-shrink: 0;
 
                 a {
+                    position: relative;
+
+                    display: block;
+
+                    padding: .8rem 1.4rem;
+
                     color: white;
 
                     font-size: 1.55rem;
@@ -136,14 +145,66 @@
 
                     white-space: nowrap;
 
+                    background: transparent;
+
+                    border: 1px solid transparent;
+                    border-radius: 12px;
+
                     text-decoration: none;
 
-                    transition: .2s ease;
+                    transition:
+                        color .2s ease,
+                        background .2s ease,
+                        border-color .2s ease,
+                        box-shadow .2s ease,
+                        transform .2s ease;
 
                     &:hover {
-                        color: rgb(168, 85, 247);
+                        color: rgb(186, 85, 211);
 
-                        text-decoration: underline;
+                        background: rgba(148, 0, 211, 0.08);
+
+                        border-color: rgba(186, 85, 211, 0.18);
+
+                        transform: translateY(-1px);
+                    }
+
+                    &.Ativo {
+                        color: white;
+
+                        font-weight: 700;
+
+                        background: rgba(170, 65, 225, 0.38);
+
+                        border: 1px solid rgba(206, 130, 245, 0.62);
+                        border-radius: 12px;
+
+                        box-shadow:
+                            inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+                            0 8px 24px rgba(148, 0, 211, 0.20),
+                            0 0 18px rgba(186, 85, 211, 0.18);
+
+                        backdrop-filter: blur(8px);
+                        -webkit-backdrop-filter: blur(8px);
+
+                        text-decoration: none;
+
+                        transform: translateY(-2px);
+                    }
+
+                    &.Ativo:hover {
+                        color: white;
+
+                        background: rgba(180, 75, 230, 0.48);
+
+                        border-color: rgba(215, 150, 248, 0.78);
+
+                        box-shadow:
+                            inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+                            0 9px 27px rgba(148, 0, 211, 0.27),
+                            0 0 23px rgba(186, 85, 211, 0.25);
+
+                        transform: translateY(-2px);
                     }
                 }
             }
@@ -201,6 +262,11 @@
         }
     }
 }
+
+
+/* ================================================= */
+/* MODAL */
+/* ================================================= */
 
 .fundo {
     position: fixed;
@@ -419,17 +485,25 @@
     }
 }
 
+
+/* ================================================= */
+/* TELAS GRANDES */
+/* ================================================= */
+
 @media (min-width: 1600px) {
+
     .Home-Header {
         padding: 0 5rem;
 
         .Menu-Info {
+
             .icone {
                 width: 64px;
                 height: 64px;
             }
 
             .text-menu {
+
                 .Info-Text {
                     font-size: 2.7rem;
                 }
@@ -444,9 +518,10 @@
             left: 52.5%;
 
             .Links {
-                gap: 3.5rem;
+                gap: 2rem;
 
                 .link {
+
                     a {
                         font-size: 1.7rem;
                     }
@@ -460,6 +535,7 @@
     }
 
     .fundo {
+
         .possibilidades {
             width: min(1450px, 90vw);
 
@@ -472,6 +548,7 @@
             padding: 2.8rem;
 
             .text-info {
+
                 h4 {
                     font-size: 1.35rem;
                 }
@@ -492,6 +569,7 @@
             }
 
             .img {
+
                 img {
                     width: min(110%, 600px);
                 }
@@ -500,17 +578,25 @@
     }
 }
 
+
+/* ================================================= */
+/* 1400PX */
+/* ================================================= */
+
 @media (max-width: 1400px) {
+
     .Home-Header {
         padding: 0 2rem;
 
         .Menu-Info {
+
             .icone {
                 width: 55px;
                 height: 55px;
             }
 
             .text-menu {
+
                 .Info-Text {
                     font-size: 2.2rem;
                 }
@@ -525,11 +611,14 @@
             left: 52.5%;
 
             .Links {
-                gap: 2.5rem;
+                gap: 1.3rem;
 
                 .link {
+
                     a {
                         font-size: 1.5rem;
+
+                        padding: .7rem 1rem;
                     }
                 }
             }
@@ -558,6 +647,7 @@
             padding: 1.4rem;
 
             .text-info {
+
                 h4 {
                     font-size: 1rem;
                 }
@@ -578,6 +668,7 @@
             }
 
             .img {
+
                 img {
                     width: min(108%, 480px);
                 }
@@ -586,7 +677,13 @@
     }
 }
 
+
+/* ================================================= */
+/* 1200PX */
+/* ================================================= */
+
 @media (max-width: 1200px) {
+
     .Home-Header {
         padding: 0 1.5rem;
 
@@ -599,6 +696,7 @@
             }
 
             .text-menu {
+
                 .Info-Text {
                     font-size: 2rem;
                 }
@@ -613,11 +711,14 @@
             left: 52%;
 
             .Links {
-                gap: 2rem;
+                gap: .8rem;
 
                 .link {
+
                     a {
                         font-size: 1.35rem;
+
+                        padding: .65rem .85rem;
                     }
                 }
             }
@@ -631,6 +732,7 @@
     }
 
     .fundo {
+
         .possibilidades {
             grid-template-columns:
                 minmax(470px, 540px)
@@ -641,6 +743,7 @@
             padding: 1.2rem;
 
             .text-info {
+
                 h4 {
                     font-size: .95rem;
                 }
@@ -661,6 +764,7 @@
             }
 
             .img {
+
                 img {
                     width: min(108%, 440px);
                 }
@@ -669,66 +773,19 @@
     }
 }
 
-@media (min-width: 901px) and (max-height: 750px) {
-    .fundo {
-        padding: .4rem;
 
-        .possibilidades {
-            width: min(1220px, calc(100vw - .8rem));
-            max-height: calc(100vh - .8rem);
-
-            grid-template-columns:
-                minmax(470px, 560px)
-                minmax(330px, 1fr);
-
-            gap: .9rem;
-
-            padding: .9rem 1.1rem;
-
-            .text-info {
-                h4 {
-                    font-size: .85rem;
-                }
-
-                > h1 {
-                    font-size: 2.35rem;
-                }
-
-                > p {
-                    font-size: 1rem;
-                }
-
-                ul {
-                    margin-top: .7rem;
-
-                    gap: .9rem;
-                }
-            }
-
-            .img {
-                img {
-                    width: min(110%, 460px);
-                    max-height: 84vh;
-                }
-
-                .fechar {
-                    top: -.2rem;
-                    right: -.1rem;
-
-                    width: 40px;
-                    height: 40px;
-
-                    font-size: 1.2rem;
-                }
-            }
-        }
-    }
-}
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
 
 @media (max-width: 1050px) and (min-width: 769px) {
+
     .Home-Header {
+
         .Menu-Info {
+
             .text-menu {
+
                 .Info-Sub {
                     display: none;
                 }
@@ -743,11 +800,14 @@
             left: 51.5%;
 
             .Links {
-                gap: 1.3rem;
+                gap: .5rem;
 
                 .link {
+
                     a {
                         font-size: 1.2rem;
+
+                        padding: .6rem .7rem;
                     }
                 }
             }
@@ -766,12 +826,14 @@
     }
 
     .fundo {
+
         .possibilidades {
             grid-template-columns:
                 minmax(430px, 500px)
                 minmax(290px, 1fr);
 
             .text-info {
+
                 > h1 {
                     font-size: 2.4rem;
                 }
@@ -786,6 +848,7 @@
             }
 
             .img {
+
                 img {
                     width: min(110%, 400px);
                 }
@@ -794,132 +857,31 @@
     }
 }
 
+
+/* ================================================= */
+/* MOBILE */
+/* ================================================= */
+
 @media (max-width: 768px) {
+
     .Home-Header {
         padding: 0 1rem;
 
         .Menu-Info {
+
             .icone {
                 width: 44px;
                 height: 44px;
             }
 
             .text-menu {
+
                 .Info-Text {
                     font-size: 1.7rem;
                 }
 
                 .Info-Sub {
                     display: none;
-                }
-            }
-        }
-
-        .Bnt-Links {
-            .Links {
-                gap: .7rem;
-
-                .link {
-                    a {
-                        font-size: 1rem;
-                    }
-                }
-            }
-        }
-
-        .startNow {
-            display: none;
-        }
-    }
-
-    .fundo {
-        padding: .8rem;
-
-        .possibilidades {
-            width: min(720px, calc(100vw - 1.6rem));
-            max-height: calc(100vh - 1.6rem);
-
-            grid-template-columns: 1fr;
-
-            gap: 1.5rem;
-
-            padding: 1.7rem;
-
-            .text-info {
-                h4 {
-                    font-size: 1rem;
-                }
-
-                > h1 {
-                    font-size: 2.6rem;
-                }
-
-                > p {
-                    font-size: 1.15rem;
-                }
-
-                ul {
-                    margin-top: 1rem;
-
-                    gap: 1.1rem;
-                }
-            }
-
-            .img {
-                position: static;
-
-                min-height: 300px;
-
-                .fechar {
-                    position: absolute;
-
-                    top: 1rem;
-                    right: 1rem;
-
-                    width: 42px;
-                    height: 42px;
-
-                    z-index: 30;
-                }
-
-                img {
-                    width: min(85%, 380px);
-                    max-height: none;
-
-                    transform: none;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .Home-Header {
-        height: 75px;
-
-        position: fixed;
-
-        z-index: 1905;
-
-        padding: 0 1rem;
-
-        .Menu-Info {
-            gap: .7rem;
-
-            .icone {
-                width: 40px;
-                height: 40px;
-            }
-
-            .text-menu {
-                .Info-Text {
-                    font-size: 1.6rem;
-                }
-
-                .Info-Sub {
-                    display: block;
-
-                    font-size: .9rem;
                 }
             }
         }
@@ -933,11 +895,11 @@
         .menu-princ {
             position: absolute;
 
-            top: 75px;
+            top: 80px;
             right: 0;
 
             width: min(75vw, 320px);
-            height: calc(100vh - 75px);
+            height: calc(100vh - 80px);
 
             padding: 1.5rem 1rem;
 
@@ -991,6 +953,57 @@
                         border-radius: 10px;
 
                         text-decoration: none;
+
+                        transition:
+                            color .2s ease,
+                            background .2s ease,
+                            border-color .2s ease,
+                            box-shadow .2s ease,
+                            transform .2s ease;
+
+                        &:hover {
+                            color: rgb(186, 85, 211);
+
+                            background: rgba(148, 0, 211, 0.12);
+
+                            border-color: rgba(186, 85, 211, 0.30);
+
+                            text-decoration: none;
+
+                            transform: translateY(-1px);
+                        }
+
+                        &.Ativo {
+                            color: white;
+
+                            background: rgba(170, 65, 225, 0.38);
+
+                            border-color: rgba(206, 130, 245, 0.62);
+
+                            box-shadow:
+                                inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+                                0 8px 24px rgba(148, 0, 211, 0.20),
+                                0 0 18px rgba(186, 85, 211, 0.18);
+
+                            font-weight: 700;
+
+                            text-decoration: none;
+
+                            transform: translateY(-1px);
+                        }
+
+                        &.Ativo:hover {
+                            color: white;
+
+                            background: rgba(180, 75, 230, 0.48);
+
+                            border-color: rgba(215, 150, 248, 0.78);
+
+                            box-shadow:
+                                inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+                                0 9px 27px rgba(148, 0, 211, 0.27),
+                                0 0 23px rgba(186, 85, 211, 0.25);
+                        }
                     }
                 }
             }
@@ -998,7 +1011,6 @@
 
         .startNow {
             width: 100%;
-            height: auto;
 
             display: flex;
 
@@ -1007,6 +1019,122 @@
             p {
                 display: block;
             }
+        }
+    }
+
+    .fundo {
+
+        padding: .8rem;
+
+        .possibilidades {
+            width: min(720px, calc(100vw - 1.6rem));
+            max-height: calc(100vh - 1.6rem);
+
+            grid-template-columns: 1fr;
+
+            gap: 1.5rem;
+
+            padding: 1.7rem;
+
+            .text-info {
+
+                h4 {
+                    font-size: 1rem;
+                }
+
+                > h1 {
+                    font-size: 2.6rem;
+                }
+
+                > p {
+                    font-size: 1.15rem;
+                }
+
+                ul {
+                    margin-top: 1rem;
+
+                    gap: 1.1rem;
+                }
+            }
+
+            .img {
+                position: static;
+
+                min-height: 300px;
+
+                .fechar {
+                    position: absolute;
+
+                    top: 1rem;
+                    right: 1rem;
+
+                    width: 42px;
+                    height: 42px;
+
+                    z-index: 30;
+                }
+
+                img {
+                    width: min(85%, 380px);
+                    max-height: none;
+
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* ================================================= */
+/* CELULAR */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+    .Home-Header {
+        height: 75px;
+
+        padding: 0 1rem;
+
+        .Menu-Info {
+            gap: .7rem;
+
+            .icone {
+                width: 40px;
+                height: 40px;
+            }
+
+            .text-menu {
+
+                .Info-Text {
+                    font-size: 1.6rem;
+                }
+
+                .Info-Sub {
+                    display: block;
+
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .abrirMenu {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+
+            margin-left: auto;
+        }
+
+        .menu-princ {
+            top: 75px;
+
+            width: min(75vw, 320px);
+            height: calc(100vh - 75px);
+
+            padding: 1.5rem 1rem;
         }
     }
 
@@ -1083,7 +1211,13 @@
     }
 }
 
+
+/* ================================================= */
+/* CELULARES PEQUENOS */
+/* ================================================= */
+
 @media (max-width: 360px) {
+
     .Home-Header {
         padding: 0 .7rem;
 
@@ -1096,6 +1230,7 @@
             }
 
             .text-menu {
+
                 .Info-Text {
                     font-size: 1.45rem;
                 }
@@ -1119,6 +1254,7 @@
     }
 
     .fundo {
+
         .possibilidades {
             padding: 1rem;
 

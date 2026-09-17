@@ -1,5 +1,5 @@
 import './menu.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import Item from './item';
 
@@ -53,7 +53,8 @@ export default function Menu() {
               <ul className="Links">
 
                 <li onClick={fecharMenu} className="link">
-                  <Link to='/'>Início</Link>
+                  <NavLink to='/'
+                  className={({isActive}) => isActive ? "Ativo" : ""}>Início</NavLink>
                 </li>
 
                 <li onClick={fecharMenu} className="link">
@@ -61,19 +62,23 @@ export default function Menu() {
                 </li>
 
                 <li onClick={fecharMenu} className="link">
-                  <Link to='/tutoriais'>Tutoriais </Link>
+                  <NavLink to='/tutoriais'
+                  className={({isActive}) => isActive ? "Ativo" : ""}>Tutoriais </NavLink>
                 </li>
 
                 <li onClick={fecharMenu} className="link">
-                  <Link to='/ferramentas'>Ferramentas</Link>
+                  <NavLink to='/ferramentas'
+                  className={({isActive}) => isActive ? "Ativo" : ""}>Ferramentas</NavLink>
                 </li>
 
                 <li onClick={fecharMenu} className="link">
-                  <Link to="/praticas">Boas Práticas</Link>
+                  <NavLink to="/praticas"
+                  className={({isActive}) => isActive ? "Ativo" : ""}>Boas Práticas</NavLink>
                 </li>
 
                 <li onClick={fecharMenu} className="link">
-                  <Link to="/contato">Contato</Link>
+                  <NavLink to="/contato"
+                  className={({isActive}) => isActive ? "Ativo" : ""}>Contato</NavLink>
                 </li>
 
               </ul>
